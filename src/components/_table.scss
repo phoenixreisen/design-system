@@ -1,0 +1,175 @@
+/*
+
+Tabellen
+
+Markup:
+<table class="{{modifier_class}}">
+    <thead>
+        <tr>
+            <th>Column Name</th>
+            <th>Column Name</th>
+            <th>Column Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Column Content</td>
+            <td>Column Content</td>
+            <td>Column Content</td>
+        </tr>
+        <tr>
+            <td>Column Content</td>
+            <td>Column Content</td>
+            <td>Column Content</td>
+        </tr>
+        <tr>
+            <td>Column Content</td>
+            <td>Column Content</td>
+            <td>Column Content</td>
+        </tr>
+    </tbody>
+</table>
+
+.table--horizontal-bordered - A horizontal bordered table
+.table--vertical-bordered   - A vertical bordered table
+.table--horizontal-striped  - A horizontal striped table
+.table--vertical-striped    - A vertical striped table
+
+Styleguide 5.0
+
+*/
+
+table {
+    width: auto;
+    margin-top: -1px;
+    background-color: $white;
+    border: 1px solid $gray5;
+    border-collapse: collapse;
+}
+
+table tr {
+    padding: 0;
+    margin: 0;
+}
+
+table.table--horizontal-bordered th,
+table.table--horizontal-bordered td {
+    border-bottom: 1px solid $gray5;
+}
+
+table.table--vertical-bordered th,
+table.table--vertical-bordered td {
+    border-right: 1px solid $gray5;
+}
+
+table.table--vertical-striped tbody td:nth-child(odd),
+table.table--horizontal-striped tbody tr:nth-child(odd) td {
+    background-color: $gray6;
+}
+
+
+/*
+
+Zeilen
+
+Zeilenspezifische Styles
+
+Markup:
+<table>
+    <thead>
+        <tr>
+            <th>Column Name</th>
+            <th>Column Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="{{modifier_class}}">
+            <td>Column Content</td>
+            <td>Column Content</td>
+        </tr>
+    </tbody>
+</table>
+
+.table__row--success  - A row that visualizes an success (status)
+.table__row--info     - A row that visualizes a info
+.table__row--warning  - A row that visualizes a warning
+.table__row--error    - A row that visualizes an error (status)
+
+Styleguide 5.1
+
+*/
+
+table .table__row--success td {
+    background-color: $light-success;
+}
+
+table .table__row--info td {
+    background-color: $light-info;
+}
+
+table .table__row--warning td {
+    background-color: $light-warning;
+}
+
+table .table__row--error td {
+    background-color: $light-danger;
+}
+
+
+/* CELL STYLES */
+table th,
+table td {
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+table th {
+    background-color: $gray5;
+}
+
+table .table__cell--success {
+    background-color: $light-success;
+}
+
+table .table__cell--info {
+    background-color: $light-info;
+}
+
+table .table__cell--warning {
+    background-color: $light-warning;
+}
+
+table .table__cell--error {
+    background-color: $light-danger;
+}
+
+/*
+
+Spalten
+
+Spaltenspezifische Styles
+
+Markup:
+<table>
+    <thead>
+        <tr>
+            <th>Column Name</th>
+            <th>Column Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="{{modifier_class}}">Column Content</td>
+            <td>Column Content</td>
+        </tr>
+    </tbody>
+</table>
+
+.table__cell--success - A cell that visualizes an success (status)
+.table__cell--info    - A cell that visualizes a info
+.table__cell--error   - A cell that visualizes an error
+.table__cell--warning - A cell that visualizes a warning
+
+Styleguide 5.2
+
+*/

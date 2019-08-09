@@ -1,0 +1,173 @@
+/*
+
+Buttons
+
+Markup:
+<a href="#" class="btn {{modifier_class}}">Button</a>
+
+.btn--primary         - "Primary"
+.btn--secondary       - "Secondary" (weniger prominent als Primary)
+.btn--stretched       - langgezogen
+.btn--link            - Linkstyle
+.btn--success         - Hinweis / Erfolg
+.btn--info            - Hinweis / Info
+.btn--warning         - Fehler / Warnung
+.btn--danger          - Fehler / Gefahr
+
+Styleguide 2.0
+
+*/
+
+.btn {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    padding: 0.75rem;
+    margin: 0 auto;
+    color: $white;
+    border: 0 solid transparent;
+    border-radius: 0.2rem;
+    text-align: center;
+    user-select: none;
+    box-sizing: border-box;
+    background-color: $primary;
+    cursor: pointer;
+    transition: 
+        background-color 250ms linear,
+        outline 50ms linear;
+
+    &:link,
+    &:visited {
+        color: $white;
+        text-decoration: none;
+    }
+    &:focus,
+    &:hover {
+        color: $white;
+        background-color: $primary-dark;
+    }
+    &:focus {
+        outline: 0.25rem dotted $gray3;
+    }
+    &:active {
+        border-top-width: 0.1rem;
+        border-left-width: 0.1rem;
+        background-color: $primary-dark;
+    }
+}
+
+.btn--secondary {
+    color: $gray1;
+    background-color: $gray6;
+
+    &:link,
+    &:visited {
+        color: $gray1;
+    }
+    &:focus,
+    &:hover {
+        color: $gray1;
+        background-color: $gray5;
+    }
+    &:active {
+        color: $gray1;
+        background-color: $gray4;
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+.btn--link {
+    color: $link;
+    background-color: transparent;
+
+    &:link,
+    &:visited {
+        color: $link;
+    }
+    &:focus,
+    &:hover {
+        color: $link--hover;
+        background-color: $gray6;
+    }
+    &:active {
+        color: $link--active;
+        background-color: $gray5;
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+.btn--stretched {
+    @media all and (min-width: $M) {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+}
+
+/** 
+ * Status Buttons
+ */
+
+.btn--success {
+    background-color: $success;
+
+    &:focus,
+    &:hover {
+        background-color: $dark-success;
+    }
+    &:active {
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+.btn--warning {
+    background-color: $warning;
+
+    &:focus,
+    &:hover {
+        background-color: $dark-warning;
+    }
+    &:active {
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+.btn--info {
+    background-color: $info;
+
+    &:focus,
+    &:hover {
+        background-color: $dark-info;
+    }
+    &:active {
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+.btn--danger {
+    background-color: $danger;
+
+    &:hover,
+    &:focus {
+        background-color: $dark-danger;
+    }
+    &:active {
+        border-left-width: 0.1rem;
+        border-top-width: 0.1rem;
+    }
+}
+
+
+/**
+ * Styles automatisch auf Buttons setzen
+ */
+
+[type=button],
+[type=submit],
+button {
+    @extend .btn;
+}

@@ -1,0 +1,82 @@
+/*
+
+Wrapper
+
+Standard-Container in verschiedenen Größen zentriert auf der Seite.
+
+Markup:
+<div class="wrapper {{modifier_class}} ba">
+  <div>Element 1</div>
+  <div>Element 2</div>
+  <div>Element ...</div>
+  <div class="mt2">Die CSS Klasse "ba" sorgt übrigens nur für den border und kann weg.</div>
+</div>
+
+.wrapper          - Normaler Wrapper
+.wrapper--large   - Breiterer Wrapper
+.wrapper--small   - Schmaler Wrapper
+
+Styleguide 4.0
+
+*/
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem 0.5rem;
+
+  @media all and (min-width: $S) {
+    padding: 1rem 2rem;
+  }
+
+  .header & {
+    padding: 1rem 1rem;
+    
+    @media all and (min-width: $S) {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.wrapper--large{
+  max-width: 1200px;
+}
+
+.wrapper--small{
+  max-width: 640px;
+}
+
+///
+
+/* Folgende Klassen koennen verwendet werden, um Elemente abhaengig von der
+   Azeigegroesse nicht sichtbar zu machen. Das kann bei Elementen hilfreich
+   sein, die nur schwer oder gar nicht responsive implementiert werden koennen,
+   wie zum Beispiel `table`. */
+
+/* Das Element ist nicht sichtbar soglange die Anzeige klein ist. */
+@media (max-width: 599px){
+  .visible--medium{
+    display: none;
+  }
+}
+
+/* Das Element ist nicht sichtbar soglange die Anzeige medium oder gross ist. */
+@media (min-width: 600px){
+  .invisible--medium{
+    display: none;
+  }
+}
+
+/* Das Element ist nicht sichtbar soglange die Anzeige klein oder medium ist. */
+@media (max-width: 959px){
+  .visible--large{
+    display: none;
+  }
+}
+
+/* Das Element ist nicht sichtbar soglange die Anzeige gross ist. */
+@media (min-width: 960px){
+  .invisible--large{
+    display: none;
+  }
+}

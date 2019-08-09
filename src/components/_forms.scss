@@ -1,0 +1,353 @@
+/*
+
+Formulare
+
+Markup:
+<form>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label">Name</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Desktop</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Mobile</span>
+  </label>
+  <label class="select">
+    <select name="select">
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+    </select>
+    <span class="select__label" for="select">Favorite Ice Cream</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label">Comments</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox__label">Check mich!</span>
+  </label>
+  <br/>
+  <div class="mt3">
+    <input class="btn btn--primary" type="submit" value="Abschicken" />
+    <button class="btn btn--success">Kaufen</button>
+    <button class="btn btn--secondary">Abbrechen</button>
+  </div>
+  <div class="mt3">
+    <button class="btn btn--warning">Löschen</button>
+    <button class="btn btn--danger">Alles löschen</button>
+  </div>
+</form>
+
+Styleguide 3.0
+
+*/
+
+//
+// Shared Styles
+//
+// All form controls
+//
+
+.disabled{
+  cursor: default;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.radio [disabled],
+.checkbox [disabled],
+.select [disabled],
+.textfield [disabled]{
+  @extend .disabled;
+
+  & + * {
+    @extend .disabled;
+  }
+}
+
+[type=button][disabled],
+[type=submit][disabled],
+button[disabled]{
+  @extend .disabled;
+}
+
+//
+// Shared Styles
+//
+// Radio and Checkbox
+//
+
+.radio,
+.checkbox{
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem 0 1.5rem;
+  position: relative;
+
+  &:before{
+    background-color: $white;
+    border: 2px solid $gray4;
+    content: '';
+    height: 16px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+  }
+}
+
+.checkbox input[type=checkbox],
+.radio input[type=radio]{
+  opacity: 0;
+  position: absolute;
+}
+
+.radio__label,
+.checkbox__label{
+  color: $gray3;
+  line-height: 1;
+}
+
+.radio__label:after,
+.checkbox__label:after{
+  border: 1px solid transparent;
+  content: '';
+  height: 18px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 18px;
+}
+
+.radio input[type=radio]:focus + .radio__label:after,
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
+  border-color: $primary;
+  box-shadow: 0 1px 2px 1px $gray5 inset;
+}
+
+//
+// Shared Styles
+//
+// Textfield and Select
+//
+
+.textfield,
+.select{
+  background-color: $white;
+  display: block;
+  margin-top: -2px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.textfield__label,
+.select__label{
+  background-color: $white;
+  position: absolute;
+  left: 1px;
+  line-height: 1;
+  padding: 0.3rem;
+  right: 1px;
+  top: 2px;
+  font-size: 0.8rem;
+}
+
+.textfield input,
+.textfield textarea,
+.select select {
+  background-color: transparent;
+  border: 1px solid $gray4;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 1.5rem 1.6rem 0.3rem 0.3rem;
+  position: relative;
+  width: 100%;
+}
+
+.textfield *:focus,
+.select select:focus{
+  border-bottom-color: $primary;
+  box-shadow: 0 1px 2px 0 $gray5 inset;
+  outline: none;
+}
+
+//
+// Shared Styles
+//
+// Textfield and Select
+//
+
+.checkbox__label,
+.textfield__label,
+.select__label{
+  line-height: 0.9;
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="radio {{modifier_class}}">
+  <input type="radio" />
+  <span class="radio__label">Radio</span>
+</label>
+
+.disabled - disabled
+
+Styleguide 3.1
+
+*/
+
+.radio:before,
+.radio__label:after{
+  border-radius: 20px;
+}
+
+.radio input[type=radio]:checked + .radio__label:before{
+  background-color: $primary-dark;
+  border-radius: 20px;
+  content: '';
+  height: 10px;
+  left: 5px;
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+}
+
+/*
+
+Checkbox
+
+Markup:
+<label class="checkbox {{modifier_class}}">
+  <input type="checkbox" />
+  <span class="checkbox__label">Checkbox</span>
+</label>
+
+.disabled - disabled
+
+Styleguide 3.2
+
+*/
+
+.checkbox:before,
+.checkbox__label:after{
+  border-radius: 2px;
+}
+
+.checkbox--table {
+  margin-bottom: 0;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox__label:after {
+  color: $primary-dark;
+  content: '\2714';
+  font-size: $font-size;
+  line-height: 18px;
+  text-align: center;
+}
+
+/*
+
+Input and Textareas
+
+Markup:
+<label class="textfield {{modifier_class}}">
+  <input type="text" />
+  <span class="textfield__label">Input</span>
+</label>
+<label class="textfield {{modifier_class}}">
+  <textarea></textarea>
+  <span class="textfield__label">Textarea</span>
+</label>
+
+.disabled - disabled
+
+Styleguide 3.3
+
+*/
+
+/*
+
+Select
+
+Markup:
+<label class="select {{modifier_class}}">
+  <select>
+    <option disabled="disabled" selected="selected">Select</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <span class="select__label">Select Label</span>
+</label>
+
+.disabled - disabled
+
+Styleguide 3.4
+
+*/
+
+.select{
+  &:after{
+    content: '';
+    border-left: .4rem solid transparent;
+    border-right:.4rem solid transparent;
+    border-top: .4rem solid $phoenix-blue-light;
+    height: 0;
+    margin-top: -.5rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 0.8rem;
+    width: 0;
+  }
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+
+.select option[disabled]{
+  background-color: $gray6;
+  color: $gray2;
+}
+
+/*
+
+Formular Box
+
+Fasst das Formular optisch als Box zusammen.
+
+Markup:
+<div class="form-box">
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label">Input</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label">Textarea</span>
+  </label>
+  <button>Senden</button>
+</div>
+
+Styleguide 3.5
+
+*/
+
+.form-box {
+  padding: 1rem;
+  background-color: $whitegray;
+  border: 1px solid $gray4;
+  box-shadow: $box-shadow-4;
+}

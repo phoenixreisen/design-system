@@ -1,0 +1,15 @@
+.DS_Store
+.stylelintcache
+npm-debug.log
+
+dist/
+docs/
+
+.git/
+.hg/
+.sass-cache/
+
+node_modules/
+template/node_modules/
+syntax: glob
+*.swp

@@ -1,0 +1,78 @@
+// A beautiful selection of our branded colors
+//
+// Styleguide
+
+// Primärfarben
+$phoenix-blue-light:  #009EB4 !default;
+$phoenix-blue-dark:   #00377A !default;
+
+$primary:       $phoenix-blue-light !default;
+$primary-dark:  $phoenix-blue-dark !default;
+$light-blue:    $phoenix-blue-light !default;
+$dark-blue:     $phoenix-blue-dark !default;
+
+$link:          $phoenix-blue-light !default;
+$link--hover:   darken($link, 5%) !default;
+$link--active:  darken($link, 15%) !default;
+
+// Dunkle Grautöne
+$gray1:         #333333 !default;
+$gray2:         #666666 !default;
+$gray3:         #7d7d7e !default;
+
+// Helle Grautöne
+$gray4:         #cdcdce !default;
+$gray5:         #DCE0E7 !default;
+$gray6:         #EEEEF4 !default;
+
+// Diverse Farben
+$black:         #000000 !default;
+$white:         #ffffff !default;
+$whitegray:     #fafafa !default;
+$yellow:        #face49 !default;
+
+// Statusfarben (fuer Alerts, etc.)
+$info:      #1F8DD6;    // Blau
+$danger:    #CA3C3C;    // Rot
+$success:   #1CB841;    // Gruen
+$warning:   #DF7514;    // Orange
+$staging:   #FFD700;    // Gelb
+
+// Transformationen von existierenden Farben (shading)
+$lighten-grade: 45%;
+$darken-grade: 15%;
+
+$dark-info:     darken($info, $darken-grade);
+$dark-danger:   darken($danger, $darken-grade);
+$dark-success:  darken($success, $darken-grade);
+$dark-warning:  darken($warning, $darken-grade);
+
+$light-info:    lighten($info, $lighten-grade);
+$light-danger:  lighten($danger, $lighten-grade);
+$light-success: lighten($success, $lighten-grade);
+$light-warning: lighten($warning, $lighten-grade);
+
+
+// Typografie
+//
+// Styleguide
+
+$font-size:       16px !default;
+$font-size-xl:    $font-size + 4;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
+$base-font:       'Titillium Web', 'Segoe UI', 'Verdana', sans-serif !default;
+
+$body:            $base-font !default;
+$heading:         $base-font !default;
+$monospace:       $monospace-font !default;
+
+
+// Breakpoints
+//
+// Styleguide
+
+$XS: 320px;
+$S: 480px;
+$M: 640px;
+$L: 960px;
+$XL: 1400px;

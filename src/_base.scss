@@ -1,0 +1,271 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+    font-family: $base-font;
+    font-size: $font-size;
+    line-height: 1.5rem;
+    color: $gray1;
+
+    @media(min-width: $L) {
+        font-size: $font-size-xl;
+        line-height: 2rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading;
+    font-weight: 500;
+    color: $gray1;
+}
+
+h1,
+h2,
+h3 {
+    padding: 1.5rem 0 1rem;
+}
+
+h4,
+h5,
+h6 {
+    padding: 1.5rem 0 1rem;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 2rem;   }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem;   }
+h6 { font-size: 1rem;   }
+
+p {
+    padding-bottom: 1rem;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+ 
+a:link {
+    display: inline-block;
+    text-decoration: none;
+    color: $link;
+}
+a:visited {
+    color: $link;
+}
+a:hover,
+a:focus {
+    color: $link--hover;
+}
+a:active {
+    color: $link--active;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+video {
+    max-width: 100%;
+    display: table;
+}
+
+hr {
+    height: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &:before {
+        background-color: $gray4;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+}
+
+ol,
+ul {
+    margin-left: 2rem;
+    padding: 1rem 0;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    padding-bottom: 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    padding-bottom: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem 0.5rem;
+    border-left: .3rem solid $gray4;
+    padding: 0.3rem;
+
+    p:last-child {
+        padding-bottom: 0;
+    }
+}
+
+
+figure {
+    margin: 0 auto;
+    padding-bottom: 2.4rem;
+
+    img {
+        display: table;
+        margin: 0 auto;
+    }
+}
+
+table {
+    border-radius: 2px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    th {
+        font-weight: 500;
+        text-align: left;
+    }
+
+    th,
+    td {
+        padding: 0 .6rem;
+    }
+}
+
+label {
+    color: $gray3;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+    display: block;
+    resize: none;
+    font-size: $font-size;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    @media(min-width: $L) {
+        font-size: $font-size-xl;
+    }
+}
+
+/* remove yellow from chrome auto-fill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    color: $gray1;
+    -webkit-text-fill-color: $gray1;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+
+/**
+ * Exotischere Elemente
+ **/
+
+dfn,
+abbr {
+    border-bottom: .1rem dotted $gray2;
+    cursor: default;
+}
+
+q {
+    &:before {
+        content: "'";
+    }
+
+    &:after {
+        content: "'";
+    }
+
+    &>q {
+        font-style: italic;
+    }
+}
+
+dt {
+    font-style: italic;
+}
+
+dd {
+    padding-left: 2rem;
+}
+
+pre,
+code,
+samp,
+kbd {
+    background-color: $gray6;
+    color: $primary-dark;
+    font-family: $monospace;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+code,
+samp,
+kbd {
+    border-radius: 2px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: .4rem .4rem .2rem;
+}
+
+pre {
+    border-radius: 2px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 1.2rem 1rem;
+    margin: 0 0 1rem;
+
+    code,
+    samp,
+    kbd {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+}

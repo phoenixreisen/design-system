@@ -1,0 +1,114 @@
+@import '../../src/variables';
+
+/**
+ * KSS-Variablen auf PHX trimmen 
+ */
+$kss-colors-background    : $white;
+$kss-colors-foreground    : $gray1;
+$kss-colors-heading       : $gray1;
+$kss-colors-quotes        : $gray2;
+
+$kss-colors-link          : $link;
+$kss-colors-link-visited  : $link;
+$kss-colors-link-hover    : $link--hover;
+$kss-colors-link-active   : $link--active;
+
+$kss-font-body            : $base-font;
+$kss-font-code            : $monospace-font;
+
+$kss-font-size            : $font-size;
+$kss-vertical-rhythm      : $kss-font-size * 1.5;
+
+
+/**
+ * Template-Anpassungen 
+ **/
+
+body#kss-node {
+    margin-top: 2rem;
+    
+    .kss-jumbo {
+        margin-top: 2.5rem;
+    }
+
+
+    // ---
+    // Topbar
+    // ---
+
+    .kss-topbar {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        padding: 10px 20px;
+        align-content: center;
+        justify-content: space-between;
+        background-color: $phoenix-blue-light;
+        box-shadow: 0 20px 20px -20px #000000;
+        z-index: 9999999;
+        color: white;
+        left: 0;
+        top: 0;
+
+        a,
+        a:hover, 
+        a:active, 
+        a:focus {
+            color: white;
+        }
+    }
+
+    .kss-topbar .kss-topbar__right {
+        display: inline-block;
+        @media all and (min-width: 769px) {
+            display: none;
+        }
+    }
+
+
+    // ---
+    // Sidebar
+    // ---
+
+    .kss-sidebar {
+        display: none;
+        @media all and (min-width: 769px) {
+            display: block;
+        }
+    }
+
+    
+    // ---
+    // Navigation
+    // ---
+    
+    .kss-nav__sub-menu {
+        font-size: 0.85rem;
+    }
+    
+    .kss-style .kss-nav__separator {
+        width: 70%;
+        border: 0;
+        height: 1px;
+        background-image: 
+            linear-gradient(to right, 
+                rgba(0, 0, 0, 0), 
+                rgba(0, 0, 0, 0.75), 
+                rgba(0, 0, 0, 0)
+            );
+    }
+    
+    .kss-nav__menu > li > a.kss-nav__menu-link {
+        display: block;
+        padding: 0.5rem;
+        border-radius: 5px;
+
+        &:hover, 
+        &:focus {
+            background-color: $gray6;
+        }
+        &:active {
+            background-color: $gray5;
+        }
+    }
+}

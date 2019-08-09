@@ -1,0 +1,20 @@
+// Phx generic values (Variables, Mixins, etc.)
+@import "variables";
+
+// Used 3rd party vendor libs
+@import "vendors/tachyons";
+@import "vendors/animate";
+@import "vendors/pikaday";
+
+// Phx standards
+@import "base";
+
+// Phx utilities
+@import "utilities/wrapper";
+@import "utilities/colors";
+// Phx components
+@import "components/headlines";
+@import "components/buttons";
+@import "components/forms";
+@import "components/table";
+@import "components/alerts";

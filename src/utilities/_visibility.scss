@@ -1,0 +1,21 @@
+.invisible {
+    visibility: hidden;
+}
+
+.nowhere {
+    position: absolute;
+    left: -11111px;
+    top: -11111px;
+}
+
+.mobile-only {
+    @media all and (min-width: $M) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @media all and (max-width: $M) {
+        display: none !important;        
+    }
+}

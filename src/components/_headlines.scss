@@ -1,0 +1,28 @@
+%img-headline {
+    background-position:  center center;
+    background-repeat: repeat-x;
+    background-size: cover;
+
+    > .wrapper {
+        position: relative;
+        min-height: 15rem;
+
+        @media all and (min-width: $M) {
+            min-height: 20rem;
+        }
+    }
+
+    > .wrapper > h1 {
+        position: absolute;
+        display: inline-block;
+        left: 0; bottom: 1rem;
+        padding: 0 1rem;
+        margin: 0;
+        color: $phoenix-blue-dark;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        @media all and (min-width: $S) {
+            margin: 0 1rem;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+$pd-text-color: $gray1 !default;
+$pd-title-color: $link !default;
+$pd-title-bg: $white !default;
+$pd-picker-bg: $white !default;
+$pd-picker-border: $whitegray !default;
+$pd-picker-border-bottom: $gray6 !default;
+$pd-picker-shadow: rgba(0,0,0,.5) !default;
+$pd-th-color: $gray1 !default;
+$pd-day-color: $gray1 !default;
+$pd-day-bg: $gray6!default;
+$pd-day-hover-color: $gray1 !default;
+$pd-day-hover-bg: $gray5 !default;
+$pd-day-today-color: $info !default;
+$pd-day-selected-color: $white !default;
+$pd-day-selected-bg: $light-blue !default;
+$pd-day-selected-shadow: $light-blue !default;
+$pd-day-disabled-color: $gray1 !default;
+$pd-week-color: $gray1 !default;
+
+@import 'pikaday/scss/pikaday.scss';

@@ -1,0 +1,65 @@
+/*
+
+Alerts
+
+Hervorgehobene Boxen, die aufgrund ihrer Farben verschiedene Status (Erfolg, Hinweis, Fehler, etc.) ausdrücken.
+
+Markup:
+<p class="alert {{modifier_class}}">Ich bin eine Alert-Box und habe etwas zu sagen.</p>
+
+.alert--success         - Erfolgsmeldung
+.alert--info            - Infomeldung
+.alert--warning         - Warnmeldung
+.alert--danger          - Fehlermeldung
+
+Styleguide 1.0
+
+*/
+
+.alert {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    
+    a { text-decoration: underline; }
+    a:hover { text-decoration: none; }
+}
+
+.alert--danger {
+    color: $danger;
+    border-color: $danger;
+    background-color: $light-danger;
+    a { color: $danger; }
+}
+
+.alert--success {
+    color: $success;
+    border-color: $success;
+    background-color: $light-success;
+    a { color: $success; }
+}
+
+.alert--warning {
+    color: $warning;
+    border-color: $warning;
+    background-color: $light-warning;
+    a { color: $warning; }
+}
+
+.alert--info {
+    color: $info;
+    border-color: $info;
+    background-color: $light-info;
+    a { color: $info; }
+}
+
+.alert--icon {
+    position: relative;
+    padding-left: 3rem;
+
+    > i.fas {
+        position: absolute;
+        left: 1rem; top: 50%;
+        transform: translateY(-50%);
+    }
+}
