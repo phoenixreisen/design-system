@@ -16,7 +16,7 @@
 
 <h2>Prinzipien</h2>
 
-<p>Dieser Styleguide & auch sonstige Frontends werden auf Basis folgender Prinzipien entwickelt.</p>
+<p>Neue & bestehende Frontends werden auf Basis folgender Prinzipien entwickelt.</p>
 <ul>
   <li>mobile first</li>
   <li><a href="#osw">Open Source Welcome</a></li>
@@ -26,6 +26,18 @@
     </a>
   </li>
   <li>wie sieht das in Türkis aus?</li>
+</ul>
+
+<hr />
+
+<h2>Hitlist</h2>
+
+<p>
+  Unter anderem in folgenden Anwendungen steckt das Design-System & seine diversen Komponenten.
+</p>
+<ul>
+  <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
+  <li><a href="https://https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Katalog-Bestellung</a></li>
 </ul>
 
 <hr />
@@ -55,6 +67,7 @@
   <li><code>$S: 480px;</code></li>
   <li><code>$M: 640px;</code></li>
   <li><code>$L: 960px;</code></li>
+  <li><code>$XL: 1400px;</code></li>
 </ul>
 
 <hr id="osw" />
