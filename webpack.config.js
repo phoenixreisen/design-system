@@ -53,11 +53,8 @@ module.exports = {
             "source": "./src",
             "destination": "./dist",
             "builder": "./template/",
-            "css": [
-                `./${filename}.css`
-            ],
-            "js": [
-            ]
+            "js": [`./${filename}.js`],
+            "css": [`./${filename}.css`],
         }),
         new StyleLintPlugin({
             failOnError: false,
