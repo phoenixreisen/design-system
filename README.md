@@ -37,21 +37,31 @@ Die HTML-Dokumentation wird durch KSS auf Grundlage des Ordners ```template``` g
 Build für Produktion in den Ordner ```dist```:
 
 ```bash
-npm run build
+npm run build       # reiner Build
+npm run generate    # lintet den Code & generiert auch die Doku
 ```
-
-Zuvor wird das SCSS durch [Stylelint](https://github.com/stylelint/stylelint) gelintet. Bei einem Fehler
-wird der Build abgebrochen.
 
 ### Deployment-Prozess
 
-Deployment (inklusive obigem build) mittels:
+#### Code
+
+Um die Änderungen für alle Projekte als neue Version zur Verfügung zu stellen, müssen sie auf npm veröffentlicht werden.
 
 ```bash
-./bin/deploy.sh
+npm run generate                # baut den Code
+npm version major|minor|patch   # erhöht die Version entsprechend
+npm publish                     # veröffentlicht auf npm
 ```
 
-Kompiliert ```src``` nach ```dist``` und generiert mittels ```kss``` die HTML-Dokumentation. Anschließend wird alles auf das entsprechende Hostsystem transferiert und nach NPM published.
+#### Dokumenation
+
+Deployed wird über & auf [Netlify](https://www.netlify.com). 
+
+Im [Netlify-Backend](https://www.netlify.com) kann ein Deployment über Knopfdruck angestoßen werden.
+
+Netlify zieht sich dazu selbstständig die Sourcen von [Github](https://github.com/phoenixreisen/design-system) und ruft danach den npm-Befehl `npm run generate` auf - siehe `package.json`.
+
+Dieser kompiliert `src` nach `dist` und generiert mittels `kss` die HTML-Dokumentation (ebenfalls nach `dist`). Anschließend wird das Kompilat bei Netlify abgelegt und ersetzt das Bisherige.
 
 ## KSS Dokumentation
 
