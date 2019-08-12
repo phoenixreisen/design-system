@@ -1,11 +1,16 @@
 # Phoenix Reisen Design System
 
-Das Design System der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es stellt allgemeine Styles für diverse autarke Web-Applikationen von Phoenix Reisen bereit - noch aber nicht für die Website selbst.
+Das Design System der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es stellt übergreifende CI Styles für diverse autarke Web-Applikationen von Phoenix Reisen bereit.
 
-Unterstützt wird es durch diverse Drittbibliotheken (JS & CSS), die da wären:
+Zum Beispiel für:
+
+- [Mein Phoenix](https://meinereise.phoenixreisen.com)
+- [Katalogbestellung](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20) 
+
+Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 
 - [KSS Knyle Style Sheets - CSS Dokumentationsgenerator](https://warpspire.com/kss/)
-- [Tachyions.css - funktionales CSS Framework für unter der Haube](https://tachyons.io/)
+- [Tachyions.css - funktionales CSS Framework für unter der Haube](https://tachyons.io/docs/)
 - [Animate.css - Animationssammlung für auf der Haube](https://daneden.github.io/animate.css/)
 - [Pikaday](https://pikaday.com/)
 
@@ -38,7 +43,7 @@ Build für Produktion in den Ordner ```dist```:
 
 ```bash
 npm run build       # reiner Build
-npm run generate    # lintet den Code & generiert auch die Doku
+npm run generate    # lintet den Code & generiert die Doku
 ```
 
 ### Deployment-Prozess
@@ -78,14 +83,20 @@ npm run build:docs
 Für das Projekt sollte ein SCSS-Kontext eingerichtet sein. Möglichst vor den Projekt-Styles werden die Styles des Design-Systems eingebunden, um auf alle Variablen und Werte zugreifen zu können.
 
 ```scss
+// SCSS Datei
+
 @import '@phoenixreisen/phoenix-design-system/src/index.scss';
+
+// custom styles...
 ```
 
 ### Font innerhalb eines Service installieren
 
-Innerhalb eines mit Webpack aufgesetzten Service bietet das Design-System die Möglichkeit, angebotene Fonts auf folgende Weise in den Service zu inkludieren:
+Innerhalb eines mit Webpack aufgesetzten Projekts bietet das Design-System die Möglichkeit, angebotene Fonts auf folgende Weise in den Service zu inkludieren:
 
 ```js
+// JS Datei
+
 // Bsp. für Titillium
 require('@phoenixreisen/phoenix-design-system/src/fonts/titillium.css');
 ```

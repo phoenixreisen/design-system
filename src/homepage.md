@@ -1,5 +1,5 @@
 <div class="kss-jumbo">
-  <div class="wrapper wrapper--large ta-center alert alert--info">
+  <div class="alert alert--info">
     <div>
       <img class="kss-doc-title" src="./kss-assets/phx.logo.svg" />
     </div>
@@ -16,7 +16,7 @@
 
 <h2>Prinzipien</h2>
 
-<p>Neue & bestehende Frontends werden auf Basis folgender Prinzipien entwickelt.</p>
+<p>Neue & bestehende Frontends werden inhouse auf Basis folgender Prinzipien entwickelt.</p>
 <ul>
   <li>mobile first</li>
   <li><a href="#osw">Open Source Welcome</a></li>
@@ -37,7 +37,21 @@
 </p>
 <ul>
   <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
-  <li><a href="https://https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Katalog-Bestellung</a></li>
+  <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Katalog-Bestellung</a></li>
+  <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
+</ul>
+
+<hr id="osw" />
+
+<h2>Open Source to the rescue!</h2>
+
+<p>Folgende designprägende 3rd party Styles werden im Design-System via SCSS importiert, erleichtern das Leben und verkürzen die Entwicklungszeit.
+
+<ul>
+  <li><a href="https://warpspire.com/kss/" target="_blank">KSS Knyle Style Sheets</a> - CSS Dokumentationsgenerator für in der Haube</li>
+  <li><a href="https://tachyons.io/docs/" target="_blank">Tachyons</a> - funktionales CSS Framework für unter der Haube</li>
+  <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
+  <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker für Eingabefelder</li>
 </ul>
 
 <hr />
@@ -45,7 +59,7 @@
 <h2>Typografie</h2>
 
 <p>
-  Grundschriftart ist <code>Titillium Web</code> <small><a href="https://fonts.google.com/specimen/Titillium+Web">(Website)</a></small><br />
+  Grundschriftart ist <code>Titillium Web</code> <small><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">(Website)</a></small><br />
   mit einer Basisgröße von <code>16px</code> (<code>20px</code> ab großen Auflösungen).
 </p>
 <p>
@@ -69,19 +83,11 @@
   <li><code>$L: 960px;</code></li>
   <li><code>$XL: 1400px;</code></li>
 </ul>
-
-<hr id="osw" />
-
-<h2>Open Source to the rescue!</h2>
-
-<p>Folgende 3rd party Bibliotheken sind hier enthalten, erleichtern das Leben und verkürzen die Entwicklungszeit.
-
-<ul>
-  <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
-  <li><a href="https://tachyons.io/" target="_blank">Tachyons</a> - funktionales CSS Framework für unter der Haube</li>
-  <li><a href="https://warpspire.com/kss/" target="_blank">KSS Knyle Style Sheets</a> - CSS Dokumentationsgenerator für in der Haube</li>
-  <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker für Eingabefelder</li>
-</ul>
+<p class="tr">
+  <a href="https://github.com/phoenixreisen/design-system/blob/master/src/_variables.scss" target="_blank">
+    <small>Weitere Variablen <i class="fas fa-arrow-right ml1"></i></small>
+  </a>
+</p>
 
 <hr />
 
@@ -272,6 +278,11 @@
     </div>
   </article>
 </section>
+<p class="tr">
+  <a href="https://github.com/phoenixreisen/design-system/blob/master/src/_variables.scss" target="_blank">
+    <small>Weitere Variablen <i class="fas fa-arrow-right ml1"></i></small>
+  </a>
+</p>
 
 <hr />
 
