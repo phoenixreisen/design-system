@@ -6,6 +6,7 @@ Zum Beispiel für:
 
 - [Mein Phoenix](https://meinereise.phoenixreisen.com)
 - [Katalogbestellung](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20) 
+- Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See
 
 Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 

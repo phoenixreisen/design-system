@@ -39,6 +39,7 @@
   <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
   <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Katalog-Bestellung</a></li>
   <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
+  <li>Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See</li>
 </ul>
 
 <hr id="osw" />
