@@ -13,6 +13,7 @@ Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 - [KSS Knyle Style Sheets - CSS Dokumentationsgenerator](https://warpspire.com/kss/)
 - [Tachyions.css - funktionales CSS Framework für unter der Haube](https://tachyons.io/docs/)
 - [Animate.css - Animationssammlung für auf der Haube](https://daneden.github.io/animate.css/)
+- [Fort Awesome - hippe Icon Schriftart](https://fortawesome.com/sets/font-awesome-4)
 - [Pikaday](https://pikaday.com/)
 
 ## Installation
