@@ -59,9 +59,9 @@
 <p>Selbstentwickelte Komponenten werden natürlich auch - so gut es geht - wiederverwendet.</p>
 
 <ul>
-  <li><a href="" target="_blank">Phoenix Header</a></li>
+  <li><a href="https://bitbucket.org/phoenixreisen/header" target="_blank">Phoenix Header</a></li>
   <li>Phoenix Footer (coming soon)</li>
-  <li><a href="" target="_blank">Phoenix Web Tabs</a></li>
+  <li><a href="https://github.com/phoenixreisen/tabs" target="_blank">Phoenix Web Tabs</a></li>
   <li>Phoenix Select Box (coming soon)</li>
 </ul>
 
