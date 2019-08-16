@@ -54,6 +54,7 @@
   <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
   <li><a href="https://fortawesome.com/sets/font-awesome-4" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
   <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - übersichtlicher Datepicker für Eingabefelder</li>
+  <li><a href="https://idangero.us/swiper/" target="_blank">Swiper</a> - fancy touch Slider<li>
 </ul>
 
 <p>Selbstentwickelte Komponenten werden natürlich auch - so gut es geht - wiederverwendet.</p>
