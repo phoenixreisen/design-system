@@ -8,6 +8,12 @@
 html {
     height: 100%;
     box-sizing: border-box;
+    font-size: $font-size;
+    line-height: 150%;
+
+    @media(min-width: $L) {
+        font-size: $font-size-xl;
+    }
 }
 
 body {
@@ -15,14 +21,7 @@ body {
     min-height: 100%;
     box-sizing: border-box;
     font-family: $base-font;
-    font-size: $font-size;
-    line-height: 1.5rem;
     color: $gray1;
-
-    @media(min-width: $L) {
-        font-size: $font-size-xl;
-        line-height: 2rem;
-    }
 }
 
 h1,
@@ -32,6 +31,7 @@ h4,
 h5,
 h6 {
     font-family: $heading;
+    line-height: 150%;
     font-weight: 500;
     color: $gray1;
 }
