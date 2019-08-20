@@ -61,9 +61,9 @@
 
 <ul>
   <li><a href="https://bitbucket.org/phoenixreisen/header" target="_blank">Phoenix Header</a></li>
-  <li>Phoenix Footer (coming soon)</li>
+  <li>Phoenix Footer (kommt)</li>
   <li><a href="https://github.com/phoenixreisen/tabs" target="_blank">Phoenix Web Tabs</a></li>
-  <li>Phoenix Select Box (coming soon)</li>
+  <li>Phoenix Select Box (kommt)</li>
 </ul>
 
 <hr />
