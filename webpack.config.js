@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const KssWebpackPlugin = require('kss-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 /* filename of generated files */
 const filename = 'phx-design-system';
@@ -44,6 +45,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new CopyPlugin([
+            { 
+                from: 'node_modules/@phoenixreisen/footer/src/icons/', 
+                to: 'template/kss-assets/footer-icons/'
+            },
+        ]),
         new MiniCssExtractPlugin({
             filename: `${filename}.css`,
             chunkFilename: `[id].${filename}.css`,
