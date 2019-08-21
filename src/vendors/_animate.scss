@@ -1,1 +1,22 @@
 @import "~animate.css/animate.css";
+
+
+/**
+ * DEPRECATED!
+ * Nur wegen Abwärtskompatiblität noch drin.
+ **/
+.fade-in {
+    position: relative;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms ease;
+}
+.fade-out {
+    position: absolute;
+    top: -1000em;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 100ms linear;
+}
