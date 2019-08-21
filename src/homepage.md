@@ -16,7 +16,7 @@
 
 <h2>Prinzipien</h2>
 
-<p>Neue & bestehende Frontends werden inhouse auf Basis folgender Prinzipien entwickelt.</p>
+<p>Neue & bestehende Frontends werden <strong>inhouse</strong> auf Basis folgender Prinzipien entwickelt.</p>
 <ul>
   <li>mobile first</li>
   <li><a href="#osw">Open Source Welcome</a></li>
