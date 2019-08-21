@@ -61,9 +61,18 @@
 <p>Selbstentwickelte Komponenten werden natürlich auch - so gut es geht - wiederverwendet.</p>
 
 <ul>
-  <li><a href="https://bitbucket.org/phoenixreisen/header" target="_blank">Phoenix Header</a></li>
-  <li>Phoenix Footer (kommt)</li>
-  <li><a href="https://github.com/phoenixreisen/tabs" target="_blank">Phoenix Web Tabs</a></li>
+  <li>
+    <a href="section-6.html#kssref-6-1" title="Vorschau">Phoenix Header</a>
+    <small class="ml1">(<a href="https://bitbucket.org/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a>)</small>
+  </li>
+  <li>
+    <a href="section-6.html#kssref-6-2" title="Vorschau">Phoenix Footer</a>
+    <small class="ml1">(<a href="https://bitbucket.org/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a>)</small>
+  </li>
+  <li>
+    <a href="section-6.html#kssref-6-3" title="Vorschau">Phoenix Web Tabs</a>
+    <small class="ml1">(<a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a>)</small>
+  </li>
   <li>Phoenix Select Box (kommt)</li>
   <li>Phoenix Loader (kommt)</li>
 </ul>
