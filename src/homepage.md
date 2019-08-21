@@ -37,7 +37,8 @@
 </p>
 <ul>
   <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
-  <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Katalog-Bestellung</a></li>
+  <li>Phoenix Kabinenpräsente (kommt)</li>
+  <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Phoenix Katalog</a></li>
   <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
   <li>Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See</li>
 </ul>
@@ -53,7 +54,7 @@
   <li><a href="https://tachyons.io/docs/" target="_blank">Tachyons</a> - funktionales CSS Framework für unter der Haube</li>
   <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
   <li><a href="https://fortawesome.com/sets/font-awesome-4" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
-  <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - übersichtlicher Datepicker für Eingabefelder</li>
+  <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker</li>
   <li><a href="https://idangero.us/swiper/" target="_blank">Swiper</a> - fancy touch Slider</li>
 </ul>
 
@@ -64,6 +65,7 @@
   <li>Phoenix Footer (kommt)</li>
   <li><a href="https://github.com/phoenixreisen/tabs" target="_blank">Phoenix Web Tabs</a></li>
   <li>Phoenix Select Box (kommt)</li>
+  <li>Phoenix Loader (kommt)</li>
 </ul>
 
 <hr />

@@ -5,7 +5,8 @@ Das Design System der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es s
 Zum Beispiel für:
 
 - [Mein Phoenix](https://meinereise.phoenixreisen.com)
-- [Katalogbestellung](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20) 
+- Phoenix Kabinenpräsente (kommt)
+- [Phoenix Katalog](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20)
 - [Phoenix Design System](https://design-system.phoenixreisen.net)
 - Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See
 
@@ -16,7 +17,7 @@ Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 - [Animate.css - Animationssammlung für auf der Haube](https://daneden.github.io/animate.css/)
 - [Fort Awesome - hippe Icon Schriftart](https://fortawesome.com/sets/font-awesome-4)
 - [Swiper - fancy touch Slider](https://idangero.us/swiper/)
-- [Pikaday](https://pikaday.com/)
+- [Pikaday - cooler Datepicker](https://pikaday.com/)
 
 Sowie durch einige Phoenix spezifische Eigenentwicklungen.
 
