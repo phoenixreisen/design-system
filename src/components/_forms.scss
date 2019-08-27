@@ -326,6 +326,51 @@ Styleguide 3.4
 
 /*
 
+Validierung
+
+Hervorhebung durch Warnfarbe bei fehlerhafter Eingabe, meistens instant während des Tippens.
+
+Markup:
+<div>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label alert--warning">
+      Bitte nur Ziffern
+    </span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label alert--warning">
+      Viel zu lang!
+    </span>
+  </label>
+  <div class="mb3">
+    <label class="radio alert--warning">
+      <input type="radio" name="example" />
+      <span class="radio__label">Entweder</span>
+    </label>
+    <label class="radio alert--warning">
+      <input type="radio" name="example" />
+      <span class="radio__label">Oder</span>
+    </label>
+  </div>
+  <div class="mb3">
+    <label class="checkbox alert--warning">
+      <input type="checkbox" />
+      <span class="checkbox__label">Check mich!</span>
+    </label>
+  </div>
+  <button disabled="disabled">
+    Senden
+  </button>
+</div>
+
+Styleguide 3.5
+
+*/
+
+/*
+
 Formular Box
 
 Fasst das Formular optisch als Box zusammen.
@@ -343,7 +388,7 @@ Markup:
   <button>Senden</button>
 </div>
 
-Styleguide 3.5
+Styleguide 3.6
 
 */
 

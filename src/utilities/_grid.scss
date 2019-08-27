@@ -1,0 +1,105 @@
+/*
+
+Grid
+
+Positioniert Elemente gleichmäßig & responsive nebeneinander.
+
+Styleguide 6.0
+
+*/
+
+/*
+
+Grid - zweizeilig
+
+Markup:
+<div class="row row--2er">
+    <div class="ba pa2">Spalte 1</div>
+    <div class="ba pa2">Spalte 2</div>
+</div>
+
+Styleguide 6.1
+
+*/
+
+/*
+
+Grid - dreizeilig
+
+Markup:
+<div class="row {{modifier_class}}">
+    <div class="ba pa2">Spalte 1</div>
+    <div class="ba pa2">Spalte 2</div>
+    <div class="ba pa2">Spalte 3</div>
+</div>
+
+.row--3er                   - Reponsive schrumpfen alle gleich und erstrecken sich dann über ganze Breite
+.row--3er-first-stretched   - Responsive streckt sich zunächst das 1. Element über volle Breite
+.row--3er-last-stretched    - Responsive streckt sich zunächst das 3. Element über volle Breite
+
+Styleguide 6.2
+
+*/
+.row {
+    display: block;
+
+    > * {
+        margin-top: 0.5rem;
+    }
+
+    @media all and (min-width: $S) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+
+    &--2er {
+        > * {
+            @media all and (min-width: $S) {
+                width: 49%;
+                margin-top: 0;
+            }
+        }
+    }
+    &--3er {
+        > * {
+            @media all and (min-width: $M) {
+                width: 33%;
+                margin-top: 0;
+            }
+        }
+    }
+    &--3er-first-stretched {
+        @media all and (min-width: $S) and (max-width: $M - 1) {
+            > * {
+                width: 49%;
+            }
+            > *:first-child {
+                width: 100%;
+            }
+        }
+        @media all and (min-width: $M) {
+            > * {
+                width: 33%;
+                margin-top: 0;
+            }
+        }
+    }
+    &--3er-last-stretched {
+        @media all and (min-width: $S) and (max-width: $M - 1) {
+            > * {
+                width: 49%;
+            }
+            > *:last-child {
+                width: 100%;
+            }
+        }
+        @media all and (min-width: $M) {
+            > * {
+                width: 33%;
+                margin-top: 0;
+            }
+        }
+    }
+}

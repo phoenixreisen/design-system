@@ -10,11 +10,14 @@
 @import "base";
 
 // Phx utilities
-@import "utilities/wrapper";
+@import "utilities/grid";
 @import "utilities/colors";
+@import "utilities/wrapper";
+@import "utilities/visibility";
 // Phx components
 @import "components/headlines";
 @import "components/buttons";
 @import "components/forms";
 @import "components/table";
 @import "components/alerts";
+@import "components/accordeon";
