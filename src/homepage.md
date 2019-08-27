@@ -106,7 +106,7 @@
   <li><code>$L: 960px;</code></li>
   <li><code>$XL: 1400px;</code></li>
 </ul>
-<p class="tr">
+<p>
   <a href="https://github.com/phoenixreisen/design-system/blob/master/src/_variables.scss" target="_blank">
     <small>Weitere Variablen <i class="fas fa-arrow-right ml1"></i></small>
   </a>
@@ -301,7 +301,7 @@
     </div>
   </article>
 </section>
-<p class="tr">
+<p>
   <a href="https://github.com/phoenixreisen/design-system/blob/master/src/_variables.scss" target="_blank">
     <small>Weitere Variablen <i class="fas fa-arrow-right ml1"></i></small>
   </a>
