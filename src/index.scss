@@ -1,8 +1,13 @@
 // Phx generic values (Variables, Mixins, etc.)
 @import "variables";
 
-// Phx standards
-@import "base";
+// Phx components
+@import "components/headlines";
+@import "components/buttons";
+@import "components/forms";
+@import "components/table";
+@import "components/alerts";
+@import "components/accordeon"; 
 
 // Phx utilities
 @import "utilities/grid";
@@ -10,15 +15,10 @@
 @import "utilities/wrapper";
 @import "utilities/visibility";
 
-// Phx components
-@import "components/headlines";
-@import "components/buttons";
-@import "components/forms";
-@import "components/table";
-@import "components/alerts";
-@import "components/accordeon";
-
 // Used 3rd party vendor libs
 @import "vendors/pikaday";
 @import "vendors/animate";
 @import "vendors/tachyons";
+
+// Phx standards
+@import "base";
