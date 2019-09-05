@@ -1,6 +1,6 @@
 /*
 
-Komponenten
+Layout
 
 Styleguide 10.0
 
@@ -117,35 +117,5 @@ Markup:
 </footer>
 
 Styleguide 10.2
-
-*/
-
-/*
-
-Web Tabs
-
-[Github](https://github.com/phoenixreisen/tabs)
-
-Markup:
-<article class="phx-tabs">
-    <div class="phx-tabs__tabs-bar">
-        <span class="phx-tab phx-tab-0 phx-tab--link is-inactive-tab">Tab 1</span>
-        <span class="phx-tab phx-tab-1 phx-tab--link is-active-tab">Tab 2</span>
-        <span class="phx-tab phx-tab-2 phx-tab--link is-inactive-tab">Tab 3</span>
-    </div>
-    <div class="phx-tabs__tabs-content">
-        <div class="phx-tab-content phx-tab-content-0 is-hidden-tab">
-            <div style="padding: 1rem;">Ich bin Content von Tab 1</div>
-        </div>
-        <div class="phx-tab-content phx-tab-content-1 is-visible-tab">
-            <div style="padding: 1rem;">Ich bin Content von Tab 2</div>
-        </div>
-        <div class="phx-tab-content phx-tab-content-2 is-hidden-tab">
-            <div style="padding: 1rem;">Ich bin Content von Tab 3</div>
-        </div>
-    </div>
-</article>
-
-Styleguide 10.3
 
 */
