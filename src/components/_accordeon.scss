@@ -2,15 +2,9 @@
 
 Akkordion
 
-Akkordion-Style
+Animation durch CSS Transitions.
 
-Styleguide 7.0
-
-*/
-
-/*
-
-Zustände
+Styleguide 8.0
 
 Markup:
 <div>
@@ -66,9 +60,8 @@ Markup:
 
 .phx-acc-section--open - wenn gesetzt, dann offen
 
-Styleguide 7.1
-
 */
+
 a.phx-acc-opener {
     display: flex;
     padding: 0.5rem;
