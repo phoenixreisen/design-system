@@ -40,7 +40,6 @@
   <li>Phoenix Kabinenpräsente (kommt)</li>
   <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Phoenix Katalog</a></li>
   <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
-  <li>Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See</li>
 </ul>
 
 <hr id="osw" />
@@ -56,6 +55,7 @@
   <li><a href="https://fortawesome.com/sets/font-awesome-4" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
   <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker</li>
   <li><a href="https://idangero.us/swiper/" target="_blank">Swiper</a> - fancy touch Slider</li>
+  <li><a href="https://github.com/kamranahmedse/driver.js" target="_blank">Driver</a> - smoothe Page Tour</li>
 </ul>
 
 <p>Selbstentwickelte Komponenten werden natürlich auch - so gut es geht - wiederverwendet.</p>

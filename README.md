@@ -18,6 +18,7 @@ Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 - [Fort Awesome - hippe Icon Schriftart](https://fortawesome.com/sets/font-awesome-4)
 - [Swiper - fancy touch Slider](https://idangero.us/swiper/)
 - [Pikaday - cooler Datepicker](https://pikaday.com/)
+- [Driver - smoothe Page Tour](https://github.com/kamranahmedse/driver.js)
 
 Sowie durch einige Phoenix spezifische Eigenentwicklungen.
 
