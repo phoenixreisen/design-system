@@ -18,10 +18,14 @@ Markup:
   </label>
   <label class="select">
     <select name="select">
-      <option disabled="disabled" selected="selected">Flavors</option>
-      <option>Chocolate</option>
+      <option disabled="disabled" selected="selected">Bitte wählen</option>
+      <option>MS Amadea</option>
+      <option>MS Amera</option>
+      <option>MS Artania</option>
+      <option>MS Albatros</option>
+      <option>MS Deutschland</option>
     </select>
-    <span class="select__label" for="select">Favorite Ice Cream</span>
+    <span class="select__label" for="select">Lieblingsschiff</span>
   </label>
   <label class="textfield">
     <textarea></textarea>
