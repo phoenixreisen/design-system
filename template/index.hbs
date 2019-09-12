@@ -28,13 +28,13 @@
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__name">Übersicht</span>
+          <i class="fas fa-angle-right mr1"></i> <span class="kss-nav__name">Übersicht</span>
         </a>
       </li>
     {{#each menu}}
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-{{referenceURI}}.html">
-          <span class="kss-nav__name">{{header}}</span>
+          <i class="fas fa-angle-right mr1"></i> <span class="kss-nav__name">{{header}}</span>
         </a>
         {{#if isActive}}
           {{#if children}}
@@ -43,7 +43,7 @@
               <li class="kss-nav__menu-item">
                 <a class="kss-nav__menu-link" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
                   <span class="kss-nav__ref {{#if isGrandChild}}kss-nav__ref-child{{/if}}"></span>
-                  <span class="kss-nav__name">{{header}}</span>
+                  <i class="fas fa-angle-right mr1"></i> <span class="kss-nav__name">{{header}}</span>
                 </a>
               </li>
             {{/each}}
@@ -58,7 +58,6 @@
 
     <ul class="kss-nav__menu kss-nav__sub-menu">
       <li><a href="https://github.com/phoenixreisen" target="_blank">Github</a></li>
-      <li><a href="https://bitbucket.org/account/user/phoenixreisen/projects/WEB" target="_blank">Bitbucket</a></li>
       <li><a href="https://meinereise.phoenixreisen.com" target="_blank">Mein Phoenix</a></li>
       <li><a href="https://www.phoenixreisen.com" target="_blank">phoenixreisen.com</a></li>
     </ul>
