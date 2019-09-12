@@ -69,11 +69,21 @@ a.phx-acc-opener {
     align-items: center;
     justify-content: space-between;
     background-color: $light-blue;
+    transition: padding-left 200ms ease-in-out;
+
+    &:hover {
+        color: $white;
+        padding-left: 0.75rem;
+    }
 
     &--grayed {
         color: $gray2;
         background-color: $gray5;
         border: 1px solid $whitegray;
+
+        &:hover {
+            color: $gray1;
+        }
     }
 }
 
