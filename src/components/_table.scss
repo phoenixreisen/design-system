@@ -40,11 +40,13 @@ Styleguide 5.0
 */
 
 table {
-    width: auto;
+    width: 100%;
     margin-top: -1px;
+    margin-bottom: 1rem;
     background-color: $white;
     border: 1px solid $gray5;
     border-collapse: collapse;
+    border-radius: 2px;
 }
 
 table tr {
