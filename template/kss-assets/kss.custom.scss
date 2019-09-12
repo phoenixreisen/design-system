@@ -29,6 +29,9 @@ body#kss-node {
     
     .kss-jumbo {
         margin-top: 2.5rem;
+        padding: 0.5rem;
+        border: 1px solid $gray5;
+        background-color: $whitegray;
     }
 
 
@@ -125,13 +128,14 @@ body#kss-node {
         display: block;
         padding: 0.5rem;
         border-radius: 5px;
+        transition: none;
+        color: $light-blue;
 
-        &:hover, 
-        &:focus {
-            background-color: $gray6;
-        }
+        &:hover,
+        &:focus,
         &:active {
-            background-color: $gray5;
+            color: $white;
+            background-color: $light-blue;
         }
     }
 }

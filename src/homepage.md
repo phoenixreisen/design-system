@@ -1,17 +1,15 @@
 <div class="kss-jumbo">
-  <div class="alert alert--info">
-    <div>
-      <img class="kss-doc-title" src="./kss-assets/phx.logo.svg" />
-    </div>
-    <p>
-      Grundlegende Designwerte & -elemente der <a target="_blank" href="https://www.phoenixreisen.com">
-      Phoenix Reisen GmbH</a> in Bonn<br />
-      <small>(mehr oder weniger automatisch generiert)</small>
-    </p>
-    <p>
-      <a target="_blank" href="https://www.phoenixreisen.com">www.phoenixreisen.com</a>
-    </p>
+  <div>
+    <img class="kss-doc-title" src="./kss-assets/phx.logo.svg" />
   </div>
+  <p>
+    Grundlegende Designwerte & -elemente der <a target="_blank" href="https://www.phoenixreisen.com">
+    Phoenix Reisen GmbH</a> in Bonn<br />
+    <small>(mehr oder weniger automatisch generiert)</small>
+  </p>
+  <p>
+    <a target="_blank" href="https://www.phoenixreisen.com">www.phoenixreisen.com</a>
+  </p>
 </div>
 
 <h2>Prinzipien</h2>
@@ -63,11 +61,11 @@
 <ul>
   <li>
     <a href="section-6.html#kssref-6-1" title="Vorschau">Phoenix Header</a>
-    <small class="ml1">(<a href="https://bitbucket.org/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a>)</small>
+    <small class="ml1">(<a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
   <li>
     <a href="section-6.html#kssref-6-2" title="Vorschau">Phoenix Footer</a>
-    <small class="ml1">(<a href="https://bitbucket.org/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a>)</small>
+    <small class="ml1">(<a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
   <li>
     <a href="section-6.html#kssref-6-3" title="Vorschau">Phoenix Web Tabs</a>
