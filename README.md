@@ -8,7 +8,6 @@ Zum Beispiel für:
 - Phoenix Kabinenpräsente (kommt)
 - [Phoenix Katalog](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20)
 - [Phoenix Design System](https://design-system.phoenixreisen.net)
-- Schiff-Mailer - Intranet-Applikation für Gäste an Bord zum versenden von Emails auf hoher See
 
 Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
 
@@ -29,7 +28,7 @@ Weitere Informationen auf [design-system.phoenixreisen.net](https://design-syste
 Die Installation erfolgt via npm.
 
 ```
-npm install @phoenixreisen/phoenix-design-system
+npm install @phoenixreisen/design-system
 ```
 
 ## Entwicklung 
@@ -95,7 +94,7 @@ Für das Projekt sollte ein SCSS-Kontext eingerichtet sein. Möglichst vor den P
 ```scss
 // SCSS Datei
 
-@import '@phoenixreisen/phoenix-design-system/src/index.scss';
+@import '@phoenixreisen/design-system/src/index.scss';
 
 // custom styles...
 ```
@@ -108,7 +107,7 @@ Innerhalb eines mit Webpack aufgesetzten Projekts bietet das Design-System die M
 // JS Datei
 
 // Bsp. für Titillium
-require('@phoenixreisen/phoenix-design-system/src/fonts/titillium.css');
+require('@phoenixreisen/design-system/src/fonts/titillium.css');
 ```
 
 Wird im Service die index.js des Design-System inkludiert, so sind die Font-Imports bereits enthalten.

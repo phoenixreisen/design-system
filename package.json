@@ -1,5 +1,5 @@
 {
-  "name": "@phoenixreisen/phoenix-design-system",
+  "name": "@phoenixreisen/design-system",
   "author": "Phoenix Reisen GmbH",
   "contributors": [
     "Phoenix Reisen <it@phoenixreisen.com>",
@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "Design System & Styleguide der Phoenix Reisen GmbH.",
   "homepage": "https://www.phoenixreisen.com",
-  "version": "5.0.8",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/phoenixreisen/design-system.git"
