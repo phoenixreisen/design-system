@@ -9,7 +9,7 @@ Zum Beispiel für:
 - [Phoenix Katalog](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20)
 - [Phoenix Design System](https://design-system.phoenixreisen.net)
 
-Unterstützt wird es durch diverse Drittbibliotheken, die da wären:
+Unterstützt wird es durch diverse designprägende Drittbibliotheken, die da wären:
 
 - [KSS Knyle Style Sheets - CSS Dokumentationsgenerator](https://warpspire.com/kss/)
 - [Tachyions.css - funktionales CSS Framework für unter der Haube](https://tachyons.io/docs/)
