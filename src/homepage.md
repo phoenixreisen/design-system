@@ -60,15 +60,15 @@
 
 <ul>
   <li>
-    <a href="section-6.html#kssref-6-1" title="Vorschau">Phoenix Header</a>
+    <a href="section-10.html#kssref-10-1" title="Vorschau">Phoenix Header</a>
     <small class="ml1">(<a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
   <li>
-    <a href="section-6.html#kssref-6-2" title="Vorschau">Phoenix Footer</a>
+    <a href="section-10.html#kssref-10-2" title="Vorschau">Phoenix Footer</a>
     <small class="ml1">(<a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
   <li>
-    <a href="section-6.html#kssref-6-3" title="Vorschau">Phoenix Web Tabs</a>
+    <a href="section-7.html" title="Vorschau">Phoenix Web Tabs</a>
     <small class="ml1">(<a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
   <li>Phoenix Select Box (kommt)</li>
