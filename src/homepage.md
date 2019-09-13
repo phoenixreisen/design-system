@@ -71,8 +71,10 @@
     <a href="section-7.html" title="Vorschau">Phoenix Web Tabs</a>
     <small class="ml1">(<a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a>)</small>
   </li>
+  <li>
+    <a href="section-10.html#kssref-10-3" title="Vorschau">Phoenix Loader</a>
+  </li>
   <li>Phoenix Select Box (kommt)</li>
-  <li>Phoenix Loader (kommt)</li>
 </ul>
 
 <hr />
