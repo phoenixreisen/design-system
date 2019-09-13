@@ -203,7 +203,13 @@ Radio
 
 Markup:
 <label class="radio {{modifier_class}}">
-  <input type="radio" />
+  <input
+    type="radio"
+    name=""
+    value=""
+    checked=""
+    onclick=""
+  />
   <span class="radio__label">Radio</span>
 </label>
 
@@ -236,7 +242,13 @@ Checkbox
 
 Markup:
 <label class="checkbox {{modifier_class}}">
-  <input type="checkbox" />
+  <input 
+    type="checkbox"
+    name=""
+    value=""
+    checked=""
+    onclick=""
+  />
   <span class="checkbox__label">Checkbox</span>
 </label>
 
@@ -269,11 +281,19 @@ Input & Textareas
 
 Markup:
 <label class="textfield {{modifier_class}}">
-  <input type="text" />
+  <input 
+    type="text"
+    name=""
+    value=""
+    oninput=""
+    maxlength=""
+    autocomplete=""
+    placeholder="..."
+  />
   <span class="textfield__label">Input</span>
 </label>
 <label class="textfield {{modifier_class}}">
-  <textarea></textarea>
+  <textarea name="" oninput="" value="" placeholder="..." maxlength=""></textarea>
   <span class="textfield__label">Textarea</span>
 </label>
 
@@ -289,11 +309,11 @@ Select
 
 Markup:
 <label class="select {{modifier_class}}">
-  <select>
-    <option disabled="disabled" selected="selected">Select</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
+  <select name="" onchange="">
+    <option selected="">Select</option>
+    <option value="">Option 1</option>
+    <option value="">Option 2</option>
+    <option value="">Option 3</option>
   </select>
   <span class="select__label">Select Label</span>
 </label>
