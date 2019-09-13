@@ -2,7 +2,9 @@
 
 Akkordion
 
-Animation durch CSS Transitions.
+Durch das Setzen der Klasse `.phx-acc-animated` auf `.phx-acc-section`
+kann das Öffnen und Schließen einer Sektion (s.u.) animiert werden. 
+Sie fährt dann raus und rein.
 
 Styleguide 8.0
 
@@ -58,9 +60,17 @@ Markup:
     </a>
 </div>
 
-.phx-acc-section--open - wenn gesetzt, dann offen
+.phx-acc-section--open - wenn gesetzt, dann offen, sonst geschlossen.
 
 */
+@keyframes slideIn {
+    from { margin-top: -150%; }
+    to { margin-top: 0.5rem; }
+}
+@keyframes slideOut {
+    from { margin-top: 0.5rem; }
+    to { margin-top: -150%; }
+}
 
 a.phx-acc-opener {
     display: flex;
@@ -71,7 +81,10 @@ a.phx-acc-opener {
     background-color: $light-blue;
     transition: padding-left 200ms ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
         color: $white;
         padding-left: 0.75rem;
     }
@@ -81,26 +94,38 @@ a.phx-acc-opener {
         background-color: $gray5;
         border: 1px solid $whitegray;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
             color: $gray1;
         }
     }
 }
 
 .phx-acc-section {
-    max-height: 0;
+    position: relative;
     overflow: hidden;
     background-color: $whitegray;
-    transition: max-height 350ms ease-in-out;
 
-    &--open {
-        max-height: 100%;
+    .phx-acc-inner {
+        padding: 0 0.5rem;
+        margin: -150% 0.5rem 0.5rem 0.5rem;
+        animation: slideOut;
+        background-color: $white;
+        border: 1px solid $gray6;
     }
-}
-
-.phx-acc-inner {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background-color: $white;
-    border: 1px solid $gray6;
+    &--open {
+        .phx-acc-inner {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            animation: slideIn;
+        }
+    }
+    &.phx-acc-animated {
+        .phx-acc-inner {
+            animation-duration: 750ms;
+            animation-fill-mode: both;
+        }
+    }
 }
