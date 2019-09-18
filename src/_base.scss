@@ -7,11 +7,12 @@
 
 html {
     height: 100%;
+    line-height: 160%;
     box-sizing: border-box;
     font-size: $font-size;
-    line-height: 140%;
 
     @media(min-width: $L) {
+        line-height: 150%;
         font-size: $font-size-xl;
     }
 }
@@ -31,7 +32,7 @@ h4,
 h5,
 h6 {
     font-family: $heading;
-    line-height: 150%;
+    line-height: 140%;
     font-weight: 500;
     color: $gray1;
 }
@@ -56,7 +57,7 @@ h5 { font-size: 1rem;   }
 h6 { font-size: 1rem;   }
 
 p {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 b,
