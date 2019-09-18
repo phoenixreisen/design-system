@@ -7,12 +7,12 @@
 
 html {
     height: 100%;
-    line-height: 160%;
+    line-height: 170%;
     box-sizing: border-box;
     font-size: $font-size;
 
     @media(min-width: $L) {
-        line-height: 150%;
+        line-height: 160%;
         font-size: $font-size-xl;
     }
 }
@@ -161,6 +161,7 @@ button,
 textarea {
     display: block;
     resize: none;
+    line-height: 150%;
     font-size: $font-size;
     -webkit-appearance: none;
     -moz-appearance: none;
