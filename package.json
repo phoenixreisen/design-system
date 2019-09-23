@@ -28,11 +28,11 @@
     "lint:scss": "stylelint \"src/**/*.scss\" --fix"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.1",
+    "@fortawesome/fontawesome-free": "^5.11.1",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@phoenixreisen/footer": "0.0.2",
-    "@phoenixreisen/header": "0.0.1",
-    "@phoenixreisen/tabs": "^1.1.11",
+    "@phoenixreisen/header": "0.0.2",
+    "@phoenixreisen/tabs": "^1.1.12",
     "animate.css": "^3.7.2",
     "pikaday": "^1.8.0",
     "tachyons-sass": "^4.9.5"
@@ -52,13 +52,13 @@
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
-    "sass-loader": "^7.3.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0",
-    "stylelint-config-standard": "^18.3.0",
+    "sass-loader": "^8.0.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^19.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }
