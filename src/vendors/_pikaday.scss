@@ -17,4 +17,6 @@ $pd-day-selected-shadow: $light-blue !default;
 $pd-day-disabled-color: $gray1 !default;
 $pd-week-color: $gray1 !default;
 
-@import 'pikaday/scss/pikaday.scss';
+.pika-single {
+    @import 'pikaday/scss/pikaday.scss';
+}

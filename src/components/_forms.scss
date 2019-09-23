@@ -59,6 +59,45 @@ Styleguide 3.0
 // All form controls
 //
 
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  color: $gray3;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  display: block;
+  resize: none;
+  line-height: 150%;
+  font-size: $font-size;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  @media(min-width: $L) {
+      font-size: $font-size-xl;
+  }
+}
+
+/* remove yellow from chrome auto-fill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  color: $gray1;
+  -webkit-text-fill-color: $gray1;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
 .disabled{
   cursor: default;
   opacity: .5;
