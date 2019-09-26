@@ -9,9 +9,9 @@ Styleguide 7.0
 Markup:
 <article class="phx-tabs">
     <div class="phx-tabs__tabs-bar">
-        <span class="phx-tab phx-tab-0 phx-tab--link is-inactive-tab">Tab 1</span>
-        <span class="phx-tab phx-tab-1 phx-tab--link is-active-tab">Tab 2</span>
-        <span class="phx-tab phx-tab-2 phx-tab--link is-inactive-tab">Tab 3</span>
+        <a class="phx-tab phx-tab-0 phx-tab--link is-inactive-tab">Tab 1</a>
+        <a class="phx-tab phx-tab-1 phx-tab--link is-active-tab">Tab 2</a>
+        <a class="phx-tab phx-tab-2 phx-tab--link is-inactive-tab">Tab 3</a>
     </div>
     <div class="phx-tabs__tabs-content">
         <div class="phx-tab-content phx-tab-content-0 is-hidden-tab">
@@ -45,6 +45,7 @@ Markup:
         vertical-align: bottom;
         border: 1px solid $gray6;
         border-bottom: 0;
+        color: $gray1;
     
         &:first-child {
             margin-left: 1px;
