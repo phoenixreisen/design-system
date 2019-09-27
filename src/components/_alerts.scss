@@ -21,35 +21,31 @@ Styleguide 1.0
     line-height: 150%;
     margin-bottom: 0.5rem;
     border: 1px solid transparent;
-    
+
     a { text-decoration: underline; }
     a:hover { text-decoration: none; }
 }
 
 .alert--danger {
     color: $danger;
-    border-color: $danger;
     background-color: $light-danger;
     a { color: $danger; }
 }
 
 .alert--success {
     color: $success;
-    border-color: $success;
     background-color: $light-success;
     a { color: $success; }
 }
 
 .alert--warning {
     color: $warning;
-    border-color: $warning;
     background-color: $light-warning;
     a { color: $warning; }
 }
 
 .alert--info {
     color: $info;
-    border-color: $info;
     background-color: $light-info;
     a { color: $info; }
 }
