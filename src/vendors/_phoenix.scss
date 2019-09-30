@@ -64,7 +64,7 @@ Footer
 [Github](https://github.com/phoenixreisen/footer)
 
 Markup:
-<footer class="footer">
+<footer class="phx-footer">
     <div class="social-media">
         <div class="mb1">
             <strong>Sie finden uns auch auf</strong>
@@ -101,44 +101,44 @@ Markup:
             <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
         </div>
     </div>
-    <div class="wrapper wrapper--large footer__wrapper">
-        <ul class="footer__menu noprint">
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich" class="footer__menu-link">
+    <div class="wrapper wrapper--large phx-footer__wrapper">
+        <ul class="phx-footer__menu noprint">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i> Reisebüro-/Profibereich
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB" class="footer__menu-link">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i> AGB
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung" class="footer__menu-link">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i>Datenschutzerklärung
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite" class="footer__menu-link">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i> Kontakt
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen" class="footer__menu-link">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i> Nutzungsbedingungen
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum" class="footer__menu-link">
+            <li class="phx-footer__menu-item">
+                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum" class="phx-footer__menu-link">
                     <i class="fa fa-angle-right"></i> Impressum
                 </a>
             </li>
         </ul>
-        <div class="footer__logos">
-            <span class="footer__logo">
+        <div class="phx-footer__logos">
+            <span class="phx-footer__logo">
                 <img src="template/kss-assets/footer-icons/DRV-Logo.png">
             </span>
-            <span class="footer__logo">
+            <span class="phx-footer__logo">
                 <img src="template/kss-assets/footer-icons/QG-Logo.svg">
             </span>
         </div>
@@ -149,7 +149,7 @@ Styleguide 10.2
 
 */
 
-.footer {
+.phx-footer {
     $footerborder: 5px solid $phoenix-blue-light;
 
     margin: 2rem 0 0 0;
@@ -163,18 +163,18 @@ Styleguide 10.2
     }
 }
 
-.footer__wrapper {
+.phx-footer__wrapper {
     padding: 1rem;
     text-align: center;
 }
 
-.footer__menu,
-.footer__logos {
+.phx-footer__menu,
+.phx-footer__logos {
     padding: 0.3rem 0;
     margin: 0;
 }
 
-.footer__menu {
+.phx-footer__menu {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -186,7 +186,7 @@ Styleguide 10.2
     }
 }
 
-.footer__menu-item {
+.phx-footer__menu-item {
     display: inline-block;
     margin: 0.2rem 1%;
     font-size: 90%;
@@ -197,7 +197,7 @@ Styleguide 10.2
     }
 }
 
-.footer__menu-link {
+.phx-footer__menu-link {
     position: relative;
     padding-left: 15px;
 
@@ -214,7 +214,7 @@ Styleguide 10.2
     }
 }
 
-.footer__logo {
+.phx-footer__logo {
     display: inline-block;
     vertical-align: middle;
     margin: 1rem 5%;
@@ -225,11 +225,11 @@ Styleguide 10.2
     }
 }
 
-.footer .social-media {
+.phx-footer .social-media {
     margin-top: 0.5rem;
     text-align: center;
 }
-.footer .social-media__icons {
+.phx-footer .social-media__icons {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
