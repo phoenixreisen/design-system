@@ -38,6 +38,9 @@ Markup:
   <br/>
   <div class="mt3">
     <input class="btn btn--primary" type="submit" value="Abschicken" />
+    <button class="btn btn--primary" disabled="disabled">
+      <i class="fas fa-spinner fa-spin mr1"></i> Abschicken
+    </button>
     <button class="btn btn--success" disabled="disabled">
       <i class="fas fa-check mr1"></i> Gekauft
     </button>
