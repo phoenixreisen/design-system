@@ -9,6 +9,7 @@
 @import "components/alerts";
 @import "components/loader";
 @import "components/accordeon"; 
+@import "components/tabs";
 
 // Phx utilities
 @import "utilities/grid";
@@ -20,6 +21,7 @@
 @import "vendors/pikaday";
 @import "vendors/animate";
 @import "vendors/tachyons";
+@import "vendors/phoenix";
 
 // Phx standards
 @import "base";
