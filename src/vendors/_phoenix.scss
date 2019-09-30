@@ -28,6 +28,35 @@ Styleguide 10.1
 
 */
 
+.phx-header {
+    position: relative;
+
+    .phx-header__logo {
+        display: inline-block;
+        line-height: 1;
+        width: 200px;
+        padding: 0;
+        margin: 0;
+
+        @media all and (min-width: $M) {
+            width: 250px;
+        }
+
+        > img {
+            display: inline-block;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    
+    .phx-header__version {
+        margin: 0;
+        margin-top: -5px;
+        padding: 0 10px;
+        font-size: smaller;
+    }    
+}
+
 /*
 
 Footer
@@ -119,3 +148,114 @@ Markup:
 Styleguide 10.2
 
 */
+
+.footer {
+    $footerborder: 5px solid $phoenix-blue-light;
+
+    margin: 2rem 0 0 0;
+    background-color: $whitegray;
+    border-top: $footerborder;
+    border-bottom: $footerborder;
+
+    &.staging {
+        border-top-color: $yellow;
+        border-bottom-color: $yellow;
+    }
+}
+
+.footer__wrapper {
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__menu,
+.footer__logos {
+    padding: 0.3rem 0;
+    margin: 0;
+}
+
+.footer__menu {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+
+    @media all and (max-width: $S) {
+        line-height: 2em;
+    }
+}
+
+.footer__menu-item {
+    display: inline-block;
+    margin: 0.2rem 1%;
+    font-size: 90%;
+    width: 48%;
+
+    @media all and (min-width: $M) {
+        width: 31.3%;
+    }
+}
+
+.footer__menu-link {
+    position: relative;
+    padding-left: 15px;
+
+    > i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        transition: all 0.2s ease;
+    }
+
+    &:hover > i {
+        left: 4px;
+    }
+}
+
+.footer__logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1rem 5%;
+
+    > img {
+        display: block;
+        height: 45px;
+    }
+}
+
+.footer .social-media {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.footer .social-media__icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    @media all and (min-width: $M) {
+        display: block;
+    }
+
+    a {
+        display: inline-block;
+        margin: 0.5rem 0.5rem;
+        height: 1.5rem;
+
+        @media all and (min-width: $M) {
+            margin: 0.5rem 0.75rem;
+        }
+
+        &:hover img,
+        &:active img {
+            transform: scale(1.2);
+            transition: transform 100ms ease-in;
+        }
+    }
+    img {
+        display: block;
+        max-height: 100%;
+        border-radius: 5px;
+    }
+}

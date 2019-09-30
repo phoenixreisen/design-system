@@ -3,15 +3,12 @@
 // Styleguide
 
 // Primärfarben
-$phoenix-blue-light:  #009EB4 !default;
-$phoenix-blue-dark:   #00377A !default;
+$primary:       #009EB4 !default;
+$primary-dark:  #00377A !default;
+$light-blue:    $primary !default;
+$dark-blue:     $primary-dark !default;
 
-$primary:       $phoenix-blue-light !default;
-$primary-dark:  $phoenix-blue-dark !default;
-$light-blue:    $phoenix-blue-light !default;
-$dark-blue:     $phoenix-blue-dark !default;
-
-$link:          $phoenix-blue-light !default;
+$link:          $primary !default;
 $link--hover:   darken($link, 5%) !default;
 $link--active:  darken($link, 15%) !default;
 

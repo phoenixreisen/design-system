@@ -2,7 +2,7 @@
 
 Akkordion
 
-Durch das Setzen der Klasse `.phx-acc-animated` auf `.phx-acc-section`
+Durch das Setzen der Klasse `.acc-animated` auf `.acc-section`
 kann das Öffnen und Schließen einer Sektion (s.u.) animiert werden. 
 Sie fährt dann raus und rein.
 
@@ -10,16 +10,16 @@ Styleguide 8.0
 
 Markup:
 <div>
-    <a href="javascript:" class="phx-acc-opener">
+    <a href="javascript:" class="acc-opener">
         <span><i class="fas fa-ship mr1"></i> Hafen 1</span>
         <i class="fas fa-chevron-up ml1"></i>
     </a>
-    <a href="javascript:" class="phx-acc-opener phx-acc-opener--grayed">
+    <a href="javascript:" class="acc-opener acc-opener--grayed">
         <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
         <i class="fas fa-chevron-down ml1"></i>
     </a>
-    <section class="phx-acc-section {{modifier_class}}">
-        <div class="phx-acc-inner">
+    <section class="acc-section {{modifier_class}}">
+        <div class="acc-inner">
             <p>Content</p>
             <p>Content</p>
             <p>Content</p>
@@ -27,12 +27,12 @@ Markup:
             <p>Content</p>
         </div>
     </section>
-    <a href="javascript:" class="phx-acc-opener phx-acc-opener--grayed">
+    <a href="javascript:" class="acc-opener acc-opener--grayed">
         <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
         <i class="fas fa-chevron-up ml1"></i>
     </a>
-    <section class="phx-acc-section">
-        <div class="phx-acc-inner">
+    <section class="acc-section">
+        <div class="acc-inner">
             <p>Content</p>
             <p>Content</p>
             <p>Content</p>
@@ -40,27 +40,27 @@ Markup:
             <p>Content</p>
         </div>
     </section>
-    <a href="javascript:" class="phx-acc-opener">
+    <a href="javascript:" class="acc-opener">
         <span><i class="fas fa-ship mr1"></i> Hafen 2</span>
         <i class="fas fa-chevron-up ml1"></i>
     </a>
-    <section class="phx-acc-section {{modifier_class}}">
-        <div class="phx-acc-inner">
+    <section class="acc-section {{modifier_class}}">
+        <div class="acc-inner">
             <p>Content</p>
             <p>Content</p>
         </div>
     </section>
-    <a href="javascript:" class="phx-acc-opener phx-acc-opener--grayed">
+    <a href="javascript:" class="acc-opener acc-opener--grayed">
         <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
         <i class="fas fa-chevron-up ml1"></i>
     </a>
-    <a href="javascript:" class="phx-acc-opener phx-acc-opener--grayed">
+    <a href="javascript:" class="acc-opener acc-opener--grayed">
         <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
         <i class="fas fa-chevron-up ml1"></i>
     </a>
 </div>
 
-.phx-acc-section--open - wenn gesetzt, dann offen, sonst geschlossen.
+.acc-section--open - wenn gesetzt, dann offen, sonst geschlossen.
 
 */
 @keyframes slideIn {
@@ -72,7 +72,7 @@ Markup:
     to { margin-top: -150%; }
 }
 
-a.phx-acc-opener {
+a.acc-opener {
     display: flex;
     padding: 0.5rem;
     color: $white;
@@ -103,12 +103,12 @@ a.phx-acc-opener {
     }
 }
 
-.phx-acc-section {
+.acc-section {
     position: relative;
     overflow: hidden;
     background-color: $whitegray;
 
-    .phx-acc-inner {
+    .acc-inner {
         padding: 0 0.5rem;
         margin: -150% 0.5rem 0.5rem 0.5rem;
         animation: slideOut;
@@ -116,14 +116,14 @@ a.phx-acc-opener {
         border: 1px solid $gray6;
     }
     &--open {
-        .phx-acc-inner {
+        .acc-inner {
             margin: 0.5rem;
             padding: 0.5rem;
             animation: slideIn;
         }
     }
-    &.phx-acc-animated {
-        .phx-acc-inner {
+    &.acc-animated {
+        .acc-inner {
             animation-duration: 750ms;
             animation-fill-mode: both;
         }

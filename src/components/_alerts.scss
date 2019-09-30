@@ -29,25 +29,49 @@ Styleguide 1.0
 .alert--danger {
     color: $danger;
     background-color: $light-danger;
-    a { color: $danger; }
+    
+    a {
+        color: $danger;
+        &:hover, &:active, &:focus {
+            color: $dark-danger;
+        }
+    }
 }
 
 .alert--success {
     color: $success;
     background-color: $light-success;
-    a { color: $success; }
+
+    a {
+        color: $success;
+        &:hover, &:active, &:focus {
+            color: $dark-success;
+        }
+    }
 }
 
 .alert--warning {
     color: $warning;
     background-color: $light-warning;
-    a { color: $warning; }
+    
+    a {
+        color: $warning;
+        &:hover, &:active, &:focus {
+            color: $dark-warning;
+        }
+    }
 }
 
 .alert--info {
     color: $info;
     background-color: $light-info;
-    a { color: $info; }
+    
+    a {
+        color: $info;
+        &:hover, &:active, &:focus {
+            color: $dark-info;
+        }
+    }
 }
 
 .alert--icon {

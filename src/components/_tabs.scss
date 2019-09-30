@@ -7,20 +7,20 @@ Styleguide 7.0
 [Github](https://github.com/phoenixreisen/tabs)
 
 Markup:
-<article class="phx-tabs">
-    <div class="phx-tabs__tabs-bar">
-        <a class="phx-tab phx-tab-0 phx-tab--link is-inactive-tab">Tab 1</a>
-        <a class="phx-tab phx-tab-1 phx-tab--link is-active-tab">Tab 2</a>
-        <a class="phx-tab phx-tab-2 phx-tab--link is-inactive-tab">Tab 3</a>
+<article class="tabs">
+    <div class="tabs__tabs-bar">
+        <a class="tab tab-0 tab--link is-inactive-tab">Tab 1</a>
+        <a class="tab tab-1 tab--link is-active-tab">Tab 2</a>
+        <a class="tab tab-2 tab--link is-inactive-tab">Tab 3</a>
     </div>
-    <div class="phx-tabs__tabs-content">
-        <div class="phx-tab-content phx-tab-content-0 is-hidden-tab">
+    <div class="tabs__tabs-content">
+        <div class="tab-content tab-content-0 is-hidden-tab">
             <div style="padding: 1rem;">Ich bin Content von Tab 1</div>
         </div>
-        <div class="phx-tab-content phx-tab-content-1 is-visible-tab">
+        <div class="tab-content tab-content-1 is-visible-tab">
             <div style="padding: 1rem;">Ich bin Content von Tab 2</div>
         </div>
-        <div class="phx-tab-content phx-tab-content-2 is-hidden-tab">
+        <div class="tab-content tab-content-2 is-hidden-tab">
             <div style="padding: 1rem;">Ich bin Content von Tab 3</div>
         </div>
     </div>
@@ -28,9 +28,9 @@ Markup:
 
 */
 
-.phx-tabs {
+.tabs {
     
-    .phx-tabs__tabs-bar {
+    .tabs__tabs-bar {
         width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
@@ -38,7 +38,7 @@ Markup:
         border-bottom: 2px solid $gray6;
     }
     
-    .phx-tab {
+    .tab {
         display: inline-block;
         padding: 1em 1.5em;
         margin: 0 0.2em;
@@ -59,7 +59,7 @@ Markup:
         }
     }
     
-    .phx-tab-content {
+    .tab-content {
         margin: 0;
         background-color: $gray6;
     
@@ -68,7 +68,7 @@ Markup:
         }
     }
 
-    .phx-tab--link {
+    .tab--link {
         cursor: pointer;
     }
 }

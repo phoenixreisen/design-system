@@ -5,28 +5,28 @@ Ladeanzeige
 Styleguide 10.3
 
 Markup:
-<div class="phx-loader-parent gray6" style="height: 200px">
-    <article class="phx-loader {{modifier_class}}">
-        <p class="phx-loader__spinner">
+<div class="loader-parent gray6" style="height: 200px">
+    <article class="loader {{modifier_class}}">
+        <p class="loader__spinner">
             <i class="fas fa-spinner fa-spin"></i><br />
             Daten werden geladen...
         </p>
     </article>
 </div>
 
-.phx-loader--overlay - zentriert & absolut positioniert über Container mit `.phx-loader-parent` - inkl. seichtem Hintergrund
+.loader--overlay - zentriert & absolut positioniert über Container mit `.loader-parent` - inkl. seichtem Hintergrund
 
 */
-.phx-loader-parent {
+.loader-parent {
     position: relative;
 }
 
-.phx-loader {
+.loader {
     padding: 1.5rem 0;
     text-align: center;
 }
 
-.phx-loader--overlay {
+.loader--overlay {
     position: absolute;
     top: 0; bottom: 0;
     left: 0; right: 0;
@@ -35,7 +35,7 @@ Markup:
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
 
-    > .phx-loader__spinner {
+    > .loader__spinner {
         display: inline-block;
         position: absolute;
         top: 50%; left: 50%;
@@ -43,7 +43,7 @@ Markup:
     }
 }
 
-.phx-loader__spinner {
+.loader__spinner {
     font-size: 1rem;
     text-align: center;
     line-height: 1.5rem;

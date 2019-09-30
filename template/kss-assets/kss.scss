@@ -40,8 +40,8 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-color__preview {
     height: 5rem;
 
-    &.primary { background-color: $phoenix-blue-light; }
-    &.primary-dark { background-color: $phoenix-blue-dark; }
+    &.primary { background-color: $primary; }
+    &.primary-dark { background-color: $primary-dark; }
     
     &.link { background-color: $link; }
     &.link-hover { background-color: $link--hover; }
@@ -296,7 +296,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 
     &.is-in-viewport:before {
       width: 10px;
-      background-color: $phoenix-blue-light;
+      background-color: $primary;
       transition: background-color .2s, width .6s;
     }
   }
