@@ -73,7 +73,7 @@
     <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
-    <a href="section-11.html" title="Vorschau">Phoenix Loader</a>
+    <a href="section-11.html" title="Vorschau">Phoenix Loader</a> | 
     <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
