@@ -1,16 +1,14 @@
 {
   "name": "@phoenixreisen/design-system",
+  "version": "1.0.9",
   "author": "Phoenix Reisen GmbH",
   "contributors": [
     "Phoenix Reisen <it@phoenixreisen.com>",
-    "Fabian Marcus <f.marcus@phoenixreisen.com>",
-    "Jan Hermanns <j.hermanns@phoenixreisen.com>",
-    "Leon Schmitz <l.schmitz@phoenixreisen.com>"
+    "Fabian Marcus <f.marcus@phoenixreisen.com>"
   ],
   "license": "ISC",
   "description": "Design System & Styleguide der Phoenix Reisen GmbH.",
   "homepage": "https://www.phoenixreisen.com",
-  "version": "1.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/phoenixreisen/design-system.git"
