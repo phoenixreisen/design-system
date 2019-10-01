@@ -5,9 +5,10 @@ Das Design System der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es s
 Zum Beispiel für:
 
 - [Mein Phoenix](https://meinereise.phoenixreisen.com)
-- Phoenix Kabinenpräsente (kommt)
 - [Phoenix Katalog](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20)
 - [Phoenix Design System](https://design-system.phoenixreisen.net)
+- Phoenix Kabinenpräsente (kommt)
+- Phoenix Schiffmail (nur Intranet)
 
 Unterstützt wird es durch diverse designprägende Drittbibliotheken, die da wären:
 

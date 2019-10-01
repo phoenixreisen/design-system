@@ -1,0 +1,115 @@
+/*
+
+Share
+
+Styleguide 10.0
+
+Markup:
+<article class="share-bar">
+    <div class="wrapper wrapper--large">
+        <div class="tc">
+            <h3 class="tc pt0">Sagen Sie es Familie & Freunden</h3>
+        </div>
+        <div class="tc">
+            <a href="https://api.whatsapp.com/send?text=Beste Kreuzfahrten: https://www.phoenixreisen.com" 
+                title="App per WhatsApp empfehlen" class="share-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:?subject=Erreichbarkeit auf hoher See&body=Beste Kreuzfahrten: https://www.phoenixreisen.com" 
+                title="App per Email empfehlen" class="share-email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.phoenixreisen.com" 
+                title="App per Facebook empfehlen" class="share-facebook"
+                rel="noopener noreferrer" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="javascript:" onclick="alert('Adresse in Zwischenablage kopiert')"  +
+                title="Adresse in Zwischenablage kopieren" class="share-clipboard"
+                data-clipboard-text="Beste Kreuzfahrten überhaupt: https://www.phoenixreisen.com">
+                <i class="fas fa-clipboard"></i>
+            </a>
+        </div>
+    </div>
+</article>
+
+*/
+
+.share-bar {
+    margin: 3rem 0;
+    position: relative;
+    min-height: 10rem;
+    box-shadow: $box-shadow-1;
+    border-bottom: 1px solid $gray4;
+    background-image: url('./images/share.S.jpg');
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: cover;
+
+    @media (min-width: 640px) {
+        .img-separator {
+            min-height: 15rem;
+            background-image: url('./images/share.L.jpg');
+        }
+    }
+    @media (min-width: 960px) {
+        .img-separator {
+            background-image: url('./images/share.XL.jpg');
+        }
+    }
+
+    h3 {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        color: $dark-blue;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    a {
+        top: 0;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0.5rem;
+        position: relative;
+        display: inline-block;
+        background-color: $gray4;
+        border-radius: 100%;
+        transition: top 250ms ease-in-out;
+
+        &:hover {
+            top: -0.25rem;
+        }
+    }
+    a.share-whatsapp {
+        color: $white;
+        background-color: #25D366;
+    }
+    a.share-email {
+        color: $white;
+        background-color: $light-blue;
+    }
+    a.share-facebook {
+        color: $white;
+        background-color: #3B5998;
+    }
+    a.share-clipboard {
+        color: $white;
+        background-color: $light-blue;
+    }
+    a.share-clipboard--clipped {
+        color: $white;
+        background-color: $success;
+    }
+
+    i.fas, 
+    i.fab {
+        padding: 1rem;
+        position: absolute;
+        font-size: 1.5rem;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

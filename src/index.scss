@@ -2,14 +2,16 @@
 @import "variables";
 
 // Phx components
-@import "components/headlines";
-@import "components/buttons";
+@import "components/tabs";
 @import "components/forms";
 @import "components/table";
+@import "components/share";
 @import "components/alerts";
 @import "components/loader";
-@import "components/accordeon"; 
-@import "components/tabs";
+@import "components/select";
+@import "components/buttons";
+@import "components/headlines";
+@import "components/accordeon";
 
 // Phx utilities
 @import "utilities/grid";

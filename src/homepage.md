@@ -35,9 +35,10 @@
 </p>
 <ul>
   <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
-  <li>Phoenix Kabinenpräsente (kommt)</li>
   <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Phoenix Katalog</a></li>
   <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
+  <li>Phoenix Kabinenpräsente (kommt)</li>
+  <li>Phoenix Schiffmail (nur Intranet)</li>
 </ul>
 
 <hr id="osw" />
@@ -51,30 +52,32 @@
   <li><a href="https://tachyons.io/docs/" target="_blank">Tachyons</a> - funktionales CSS Framework für unter der Haube</li>
   <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
   <li><a href="https://fortawesome.com/sets/font-awesome-4" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
+  <li><a href="https://github.com/kamranahmedse/driver.js" target="_blank">Driver</a> - smoothe Page Tour</li>
   <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker</li>
   <li><a href="https://idangero.us/swiper/" target="_blank">Swiper</a> - fancy touch Slider</li>
-  <li><a href="https://github.com/kamranahmedse/driver.js" target="_blank">Driver</a> - smoothe Page Tour</li>
 </ul>
 
 <p>Selbstentwickelte Komponenten werden natürlich auch - so gut es geht - wiederverwendet.</p>
 
 <ul>
   <li>
-    <a href="section-10.html#kssref-10-1" title="Vorschau">Phoenix Header</a>
-    <small class="ml1">(<a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a>)</small>
+    <a href="section-10.html#kssref-10-1" title="Vorschau">Phoenix Header</a> | 
+    <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
-    <a href="section-10.html#kssref-10-2" title="Vorschau">Phoenix Footer</a>
-    <small class="ml1">(<a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a>)</small>
+    <a href="section-10.html#kssref-10-2" title="Vorschau">Phoenix Footer</a> | 
+    <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
-    <a href="section-7.html" title="Vorschau">Phoenix Web Tabs</a>
-    <small class="ml1">(<a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a>)</small>
+    <a href="section-7.html" title="Vorschau">Phoenix Web Tabs</a> | 
+    <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
     <a href="section-10.html#kssref-10-3" title="Vorschau">Phoenix Loader</a>
   </li>
-  <li>Phoenix Select Box (kommt)</li>
+  <li>
+    <a href="section-8.html" title="Vorschau">Phoenix Select</a>
+  </li>
 </ul>
 
 <hr />

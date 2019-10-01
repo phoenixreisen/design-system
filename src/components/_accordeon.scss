@@ -6,7 +6,7 @@ Durch das Setzen der Klasse `.acc-animated` auf `.acc-section`
 kann das Öffnen und Schließen einer Sektion (s.u.) animiert werden. 
 Sie fährt dann raus und rein.
 
-Styleguide 8.0
+Styleguide 9.0
 
 Markup:
 <div>
@@ -63,6 +63,7 @@ Markup:
 .acc-section--open - wenn gesetzt, dann offen, sonst geschlossen.
 
 */
+
 @keyframes slideIn {
     from { margin-top: -150%; }
     to { margin-top: 0.5rem; }

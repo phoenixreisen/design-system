@@ -1,8 +1,8 @@
 /*
 
-Ladeanzeige
+Loader
 
-Styleguide 10.3
+Styleguide 11.0
 
 Markup:
 <div class="loader-parent gray6" style="height: 200px">
@@ -17,6 +17,7 @@ Markup:
 .loader--overlay - zentriert & absolut positioniert über Container mit `.loader-parent` - inkl. seichtem Hintergrund
 
 */
+
 .loader-parent {
     position: relative;
 }
