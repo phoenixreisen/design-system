@@ -75,13 +75,17 @@ body#kss-node {
 
     .kss-sidebar {
         @media all and (max-width: 769px) {
-            max-height: 0;
             opacity: 0;
-            overflow: hidden;
+            max-height: 0;
             margin-top: 0;
+            overflow: hidden;
         }
         @media all and (min-width: 769px) {
+            height: 100%;
+            margin-top: 0;
+            top: 0; left: 0;
             max-height: none;
+            padding-top: 60px;
         }
     }
     .kss-sidebar--visible {
