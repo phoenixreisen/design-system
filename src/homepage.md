@@ -77,7 +77,8 @@
     <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
-    <a href="section-8.html" title="Vorschau">Phoenix Select</a>
+    <a href="section-8.html" title="Vorschau">Phoenix Select</a> | 
+    <span class="ml1"><a href="https://github.com/phoenixreisen/select" target="_blank" title="zum Repo">Repo</a></span>
   </li>
 </ul>
 
