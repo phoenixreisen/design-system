@@ -61,11 +61,11 @@
 
 <ul>
   <li>
-    <a href="section-10.html#kssref-10-1" title="Vorschau">Phoenix Header</a> | 
+    <a href="https://design-system.phoenixreisen.net/section-20.html#kssref-20-1" title="Vorschau">Phoenix Header</a> | 
     <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
-    <a href="section-10.html#kssref-10-2" title="Vorschau">Phoenix Footer</a> | 
+    <a href="https://design-system.phoenixreisen.net/section-20.html#kssref-20-2" title="Vorschau">Phoenix Footer</a> | 
     <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a></span>
   </li>
   <li>
