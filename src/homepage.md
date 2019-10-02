@@ -38,7 +38,7 @@
   <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Phoenix Katalog</a></li>
   <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
   <li>Phoenix Kabinenpräsente (kommt)</li>
-  <li>Phoenix Schiffmail (nur Intranet)</li>
+  <li>Phoenix Schiffmail (nur Intranet bzw. an Bord)</li>
 </ul>
 
 <hr id="osw" />
