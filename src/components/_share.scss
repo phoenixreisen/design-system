@@ -1,8 +1,14 @@
 /*
 
-Share
+Banners
 
 Styleguide 10.0
+
+*/
+
+/*
+
+Share
 
 Markup:
 <article class="share-bar">
@@ -32,6 +38,8 @@ Markup:
         </div>
     </div>
 </article>
+
+Styleguide 10.1
 
 */
 
@@ -111,5 +119,58 @@ Markup:
         font-size: 1.5rem;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+/*
+
+Newsletter
+
+Markup:
+<article class="img-separator">
+    <div class="img-separator__textbox">
+        <p>Aktuelle Infos, Schnäppchen und Aktionen immer mit als erstes erfahren!</p>
+        <p>
+            <a href="https://www.phoenixreisen.com/phoenix-reisen-newsletter-anmeldung.html">
+                <i class="fas fa-angle-right"></i> Newsletter abonnieren
+            </a>
+        </p>
+    </div>
+</article>
+
+Styleguide 10.2
+
+*/
+
+.img-separator {
+    position: relative;
+    min-height: 10rem;
+    box-shadow: $box-shadow-1;
+    border-bottom: 1px solid $gray4;
+    background-image: url('./images/phoenix-herzhaende.S.jpg');
+    background-position:  top center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    
+    @media all and (min-width: $M) {
+        min-height: 15rem;
+        background-image: url('./images/phoenix-herzhaende.L.jpg');
+    }
+    @media all and (min-width: $L) {
+        background-image: url('./images/phoenix-herzhaende.XL.jpg');
+    }
+
+    .img-separator__textbox {
+        margin: 0;
+        padding: 0 1rem;
+        position: absolute;
+        display: inline-block;
+        right: 1rem; bottom: 1rem;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: $primary-dark;
+
+        @media all and (min-width: $S) {
+            margin: 0 1rem;
+        }
     }
 }
