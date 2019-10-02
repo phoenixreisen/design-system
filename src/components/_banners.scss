@@ -55,15 +55,11 @@ Styleguide 10.1
     background-size: cover;
 
     @media (min-width: 640px) {
-        .img-separator {
-            min-height: 15rem;
-            background-image: url('./images/share.L.jpg');
-        }
+        min-height: 15rem;
+        background-image: url('./images/share.L.jpg');
     }
     @media (min-width: 960px) {
-        .img-separator {
-            background-image: url('./images/share.XL.jpg');
-        }
+        background-image: url('./images/share.XL.jpg');
     }
 
     h3 {
@@ -127,8 +123,8 @@ Styleguide 10.1
 Newsletter
 
 Markup:
-<article class="img-separator">
-    <div class="img-separator__textbox">
+<article class="newsletter-banner">
+    <div class="newsletter-banner__textbox">
         <p>Aktuelle Infos, Schnäppchen und Aktionen immer mit als erstes erfahren!</p>
         <p>
             <a href="https://www.phoenixreisen.com/phoenix-reisen-newsletter-anmeldung.html">
@@ -142,7 +138,7 @@ Styleguide 10.2
 
 */
 
-.img-separator {
+.newsletter-banner {
     position: relative;
     min-height: 10rem;
     box-shadow: $box-shadow-1;
@@ -160,7 +156,7 @@ Styleguide 10.2
         background-image: url('./images/phoenix-herzhaende.XL.jpg');
     }
 
-    .img-separator__textbox {
+    .newsletter-banner__textbox {
         margin: 0;
         padding: 0 1rem;
         position: absolute;
