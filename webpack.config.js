@@ -1,6 +1,8 @@
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const KssWebpackPlugin = require('kss-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -8,6 +10,17 @@ const CopyPlugin = require('copy-webpack-plugin');
 const filename = 'phx-design-system';
 
 module.exports = {
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: false,
+                parallel: true,
+                sourceMap: true,
+                extractComments: true,
+            }),
+            new OptimizeCSSAssetsPlugin({}),
+        ],
+    },
     output: {
         filename: `${filename}.js`
     },
@@ -53,7 +66,7 @@ module.exports = {
         ]),
         new MiniCssExtractPlugin({
             filename: `${filename}.css`,
-            chunkFilename: `[id].${filename}.css`,
+            chunkFilename: `${filename}.[id].css`,
         }),
         new KssWebpackPlugin({
             "title": "Phoenix Reisen Styleguide",
