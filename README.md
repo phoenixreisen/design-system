@@ -1,6 +1,6 @@
 # Phoenix Reisen Design System
 
-Das Design System der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es stellt übergreifende CI Styles für diverse autarke Web-Applikationen von Phoenix Reisen bereit.
+Das [Design System](https://design-system.phoenixreisen.net) der [Phoenix Reisen GmbH](https://www.phoenixreisen.com). Es stellt übergreifende CI Styles für diverse autarke Web-Applikationen von Phoenix Reisen bereit.
 
 Zum Beispiel für:
 
