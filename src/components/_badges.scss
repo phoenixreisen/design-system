@@ -1,0 +1,63 @@
+/*
+
+Badges
+
+Markup:
+<span class="badge {{modifier_class}}">obacht!</span>
+
+.badge--primary         - "Primary"
+.badge--secondary       - "Secondary" (weniger prominent als Primary)
+.badge--success         - Erfolg | Hinweis
+.badge--info            - Info | Hinweis
+.badge--warning         - Warnung
+.badge--danger          - krasse Warnung
+.badge--smaller         - etwas kleiner
+.badge--shadow          - mit Schatten
+.badge--uppercased      - alles groß geschrieben
+.badge--superscripted   - etwas hochgestellt (parent muss `overflow: visible;` sein)
+
+Styleguide 12.0
+
+*/
+
+.badge {
+    color: $white;
+    line-height: 1rem;
+    border-radius: 5px;
+    margin: 0 0.3rem;
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: $primary;
+
+    &.badge--smaller {
+        font-size: 0.8rem;
+    }
+    &.badge--shadow {
+        box-shadow: $box-shadow-1;
+    }
+    &.badge--superscripted {
+        top: -20px;
+    }
+    &.badge--uppercased {
+        text-transform: uppercase;
+    }
+
+    &.badge--secondary {
+        color: $gray1;
+        background-color: $gray6;
+    }
+    &.badge--success {
+        @extend .alert--success;
+    }
+    &.badge--danger {
+        @extend .alert--danger;
+    }
+    &.badge--warning {
+        @extend .alert--warning;
+    }
+    &.badge--info {
+        @extend .alert--info;
+    }
+}
