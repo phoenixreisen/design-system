@@ -68,7 +68,7 @@ npm version major|minor|patch   # erhöht die Version entsprechend
 npm publish                     # veröffentlicht auf npm
 ```
 
-#### Dokumenation
+#### Dokumentation
 
 Deployed wird über & auf [Netlify](https://www.netlify.com). 
 
@@ -95,6 +95,12 @@ Für das Projekt sollte ein SCSS-Kontext eingerichtet sein. Möglichst vor den P
 ```scss
 // SCSS Datei
 
+// Pfad zu Images setzen
+// (kann auch Projektordner sein, nur müssen dann bestimmte Bilder hinterlegt werden)
+$phxDesignSystemImagePath: '~@phoenixreisen/design-system/src/images';
+
+// Alles importieren 
+// (siehe index.scss falls nur Stücke importiert werden sollen)
 @import '@phoenixreisen/design-system/src/index.scss';
 
 // custom styles...
