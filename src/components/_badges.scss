@@ -22,17 +22,20 @@ Styleguide 100.0
 
 .badge {
     color: $white;
-    line-height: 1rem;
+    font-size: 0.85rem;
+    line-height: 0.85rem;
     border-radius: 5px;
     margin: 0 0.3rem;
     overflow: visible;
     position: relative;
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    vertical-align: middle;
+    padding: 0.25rem 0.5rem;
     background-color: $primary;
 
     &.badge--smaller {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        line-height: 0.7rem;
     }
     &.badge--shadow {
         box-shadow: $box-shadow-1;
