@@ -49,17 +49,17 @@ Styleguide 200.1
     min-height: 10rem;
     box-shadow: $box-shadow-1;
     border-bottom: 1px solid $gray4;
-    background-image: url('./images/share.S.jpg');
+    background-image: url(#{$assetPath}/images/share.S.jpg);
     background-position: center center;
     background-repeat: repeat-x;
     background-size: cover;
 
     @media (min-width: 640px) {
         min-height: 15rem;
-        background-image: url('./images/share.L.jpg');
+        background-image: url(#{$assetPath}/images/share.L.jpg);
     }
     @media (min-width: 960px) {
-        background-image: url('./images/share.XL.jpg');
+        background-image: url(#{$assetPath}/images/share.XL.jpg);
     }
 
     h3 {
@@ -143,17 +143,17 @@ Styleguide 200.2
     min-height: 10rem;
     box-shadow: $box-shadow-1;
     border-bottom: 1px solid $gray4;
-    background-image: url('./images/phoenix-herzhaende.S.jpg');
+    background-image: url(#{$assetPath}/images/phoenix-herzhaende.S.jpg);
     background-position:  top center;
     background-repeat: repeat-x;
     background-size: cover;
     
     @media all and (min-width: $M) {
         min-height: 15rem;
-        background-image: url('./images/phoenix-herzhaende.L.jpg');
+        background-image: url(#{$assetPath}/images/phoenix-herzhaende.L.jpg);
     }
     @media all and (min-width: $L) {
-        background-image: url('./images/phoenix-herzhaende.XL.jpg');
+        background-image: url(#{$assetPath}/images/phoenix-herzhaende.XL.jpg);
     }
 
     .newsletter-banner__textbox {
