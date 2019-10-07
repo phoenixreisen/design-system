@@ -77,7 +77,7 @@ select,
 button,
 textarea {
   display: block;
-  resize: none;
+  resize: vertical;
   line-height: 150%;
   font-size: $font-size;
   -webkit-appearance: none;
