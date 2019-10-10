@@ -160,7 +160,7 @@ button[disabled]{
 .radio__label,
 .checkbox__label{
   color: $gray3;
-  line-height: 1;
+  line-height: 125%;
 }
 
 .radio__label:after,
@@ -233,8 +233,7 @@ button[disabled]{
 // Textfield and Select
 //
 
-.checkbox__label,
-.textfield__label,
+.textfield__label
 .select__label{
   line-height: 0.9;
 }
