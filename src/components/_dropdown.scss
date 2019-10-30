@@ -1,46 +1,46 @@
 /*
 
-Select
+Dropdown
 
 Auf dem Opening liegt eine Transition. Standardmäßig sind `max-height: 10rem` eingestellt, die bei höherem
 Bedarf überschrieben werden müssten.
 
 Styleguide 700.0
 
-[Github](https://github.com/phoenixreisen/select)
+[Github](https://github.com/phoenixreisen/dropdown)
 
 Markup:
 <div style="height: 13rem; padding-left: 1rem;">
-    <article class="phx-select {{modifier_class}}">
+    <article class="dropdown {{modifier_class}}">
         <a href="javascript:">
             <i class="fas fa-user mr1" aria-hidden="true"></i> Optionen
         </a>
-        <div class="phx-select-items">
-            <div key="item-0" class="phx-select-item phx-select-item-0">
+        <div class="dropdown-items">
+            <div key="item-0" class="dropdown-item dropdown-item-0">
                 <a href="javascript:">Option eins</a>
             </div>
-            <div key="item-1" class="phx-select-item phx-select-item-1">
+            <div key="item-1" class="dropdown-item dropdown-item-1">
                 <a href="javascript:">Option zwei</a>
             </div>
-            <div key="item-2" class="phx-select-item phx-select-item-2">
+            <div key="item-2" class="dropdown-item dropdown-item-2">
                 <a href="javascript:">Option drei</a>
             </div>
         </div>
     </article>
 </div>
 
-.phx-select--open - wenn gesetzt, dann offen, sonst geschlossen.
+.dropdown--open - wenn gesetzt, dann offen, sonst geschlossen.
 
 */
 
-.phx-select {
+.dropdown {
     display: inline-block;
     position: relative;
     overflow: visible;
     border-bottom: 1px solid $gray5;
 }
 
-.phx-select-items {
+.dropdown-items {
     width: auto;
     max-height: 0;
     display: block;
@@ -56,13 +56,13 @@ Markup:
     overflow: hidden;
     z-index: 100;
 
-    .phx-select--open & {
+    .dropdown--open & {
         max-height: 10rem;
         transition: max-height 100ms ease-in;
     }
 }
 
-.phx-select-item {
+.dropdown-item {
     display: block;
     padding: 0.75rem 1rem;
     margin: 0;
