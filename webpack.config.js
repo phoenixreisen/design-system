@@ -29,10 +29,11 @@ module.exports = {
             {
                 test: /\.(scss|css)/,
                 use: [
-                    'css-hot-loader',
+                    { loader: 'css-hot-loader' },
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
+                    { loader: 'css-loader' },
+                    { loader: 'postcss-loader' },
+                    { loader: 'sass-loader' },
                 ],
             }, {
                 test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)/,
