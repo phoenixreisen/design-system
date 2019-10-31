@@ -142,4 +142,23 @@ body#kss-node {
             background-color: $light-blue;
         }
     }
+
+
+    // ---
+    // Spezielle Overrides für Komponenten
+    // für eine korrekte Ansicht im DS
+    // ---
+
+    .kss-modifier__example {
+        // Modal static 
+        // statt fixed darstellen
+        .modal {
+            position: static;
+            transform: translate(0, 0);
+        }
+        .modal__bg {
+            z-index: -1;
+            position: absolute;
+        }
+    }
 }

@@ -31,7 +31,7 @@
 <h2>Hitlist</h2>
 
 <p>
-  Unter anderem in folgenden Anwendungen steckt das Design-System & seine diversen Komponenten.
+  Unter anderem in folgenden Anwendungen steckt das Design-System & seine diversen Komponenten <strong>bisher</strong>.
 </p>
 <ul>
   <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
@@ -62,23 +62,27 @@
 <ul>
   <li>
     <a href="/section-2000.html#kssref-2000-1" title="Vorschau">Phoenix Header</a> | 
-    <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Repo</a></span>
+    <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
     <a href="/section-2000.html#kssref-2000-2" title="Vorschau">Phoenix Footer</a> | 
-    <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Repo</a></span>
+    <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
     <a href="/section-800.html#kssref-800" title="Vorschau">Phoenix Web Tabs</a> | 
-    <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Repo</a></span>
+    <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
     <a href="/section-600.html" title="Vorschau">Phoenix Loader</a> | 
-    <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Repo</a></span>
+    <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-700.html#kssref-700" title="Vorschau">Phoenix Dropdown</a> | 
-    <span class="ml1"><a href="https://github.com/phoenixreisen/dropdown" target="_blank" title="zum Repo">Repo</a></span>
+    <a href="/section-350.html#kssref-350" title="Vorschau">Phoenix Dropdown</a> | 
+    <span class="ml1"><a href="https://github.com/phoenixreisen/dropdown" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-700.html" title="Vorschau">Phoenix Modal</a> | 
+    <span class="ml1">kommt...</span>
   </li>
 </ul>
 

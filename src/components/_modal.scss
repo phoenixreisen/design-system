@@ -1,0 +1,187 @@
+/*
+
+Modal
+
+Styleguide 700.0
+
+**Module:** kommt...
+
+**Das Modal ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert.** Normalerweise würde es sich mit einem 
+seichten Hintergrund `fixed` über die gesamte Website legen. Dabei wird es standardmäßig nicht größer als 75% der Höhe und 75% der 
+Breite des Browserfensters.
+
+Auf dem Öffnen und Schließen des Modals bzw. auf `.modal` und `.modal--visible` liegt eine Animation, die mit `.animated` aktiviert werden kann. 
+**Wichtig zu wissen** ist, dass `.animated` nicht initial gesetzt sein darf, da das Modal ansonsten bei Aufruf der Seite die schließende 
+Animation ausführt.
+
+Markup:
+<div class="flex">
+    <article class="modal modal--visible {{modifier_class}}">
+        <div class="modal__title">
+            <span class="modal__headline">
+                Phoenix Reisen Modal
+            </span>
+            <a class="modal__toggle" href="javascript:">
+                <span class="desktop-only">schließen</span>
+                <i class="fas fa-times-circle"></i>
+            </a>
+        </div>
+        <div class="modal__content">
+            <h3 class="pt0">Überschrift</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Spalte 1</th>
+                        <th>Spalte 2</th>
+                        <th>Spalte 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="modal__footer tr">
+            <button type="button" class="btn btn--link mr1">schließen</button>
+            <button type="button">Speichern</button>
+        </div>
+    </article>
+    <article class="modal__bg"></article>
+</div>
+
+.modal--visible - Modal ist sichtbar
+.modal--50-50   - max. 50% des Bildschirms breit, max. 50% hoch
+.modal--50-75   - max. 50% des Bildschirms breit, max. 75% breit
+.modal--75-90   - max. 75% des Bildschirms breit, max. 90% hoch
+.modal--90-90   - max. 90% des Bildschirms breit, max. 90% hoch 
+
+*/
+
+.modal {
+    display: none;
+    //--- SIZE
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+    max-height: 75vh;
+    overflow: hidden;
+    //--- POSITION
+    z-index: 301;
+    position: fixed;
+    margin: 0 auto;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    //--- STYLE
+    outline: 0;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+    border: 1px solid $gray4;
+    box-shadow: $box-shadow-5;
+    background-color: white;
+    //--- ANIMATION
+    animation-name: bounceOut;
+
+    @media all and (min-width: $M) {
+        max-width: 75%;
+
+        &--75-90 {
+            max-width: 75%;
+            max-height: 90vh;
+        }
+        &--90-90 {
+            max-width: 90%;
+            max-height: 90vh;
+        }
+        &--50-50 {
+            max-width: 50%;
+            max-height: 50vh;
+        }
+        &--50-75 {
+            max-width: 50%;
+            max-height: 75vh;
+        }
+    }
+    &--visible {
+        display: flex;
+        flex-direction: column;
+        animation-name: bounceIn;
+    }
+}
+
+.modal__title {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: $white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: $light-blue;
+    justify-content: space-between;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    div.modal__headline {
+        margin-right: 2rem;
+    }
+    a.modal__toggle {
+        display: inline-block;
+        margin-left: 2rem;
+        color: white;
+
+        > i.fas {
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.modal__content {
+    flex: 1 1 auto;
+    -ms-flex: 1 0 0;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.modal__footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid $gray4;
+    background-color: $whitegray;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.modal__bg {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    width: 100vw;
+    height: 100vh;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    &--visible {
+        display: block;
+    }    
+}
+.modal--visible ~ .modal__bg {
+    display: block;
+}
