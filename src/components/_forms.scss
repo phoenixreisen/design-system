@@ -397,18 +397,26 @@ Hervorhebung durch Warnfarbe bei fehlerhafter Eingabe, meistens instant während
 
 Markup:
 <div>
+  <div class="alert alert--info">
+    <i class="fas fa-exclamation-triangle mr1"></i>
+    Bitte nur Ziffern eingeben
+  </div>
   <label class="textfield">
     <input type="text" />
     <span class="textfield__label alert--warning">
-      Bitte nur Ziffern
+      Buchungsnummer
     </span>
   </label>
   <label class="textfield">
     <textarea></textarea>
     <span class="textfield__label alert--warning">
-      Viel zu lang!
+      Kommentar
     </span>
   </label>
+  <div class="alert alert--info">
+    <i class="fas fa-exclamation-triangle mr1"></i>
+    Bitte noch wählen
+  </div>
   <div class="mb3">
     <label class="radio alert--warning">
       <input type="radio" name="example" />
