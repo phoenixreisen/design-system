@@ -1,7 +1,7 @@
 @import '../../src/variables';
 
 /**
- * KSS-Variablen auf PHX trimmen 
+ * KSS-Variablen auf PHX trimmen
  */
 $kss-colors-background    : $white;
 $kss-colors-foreground    : $gray1;
@@ -21,12 +21,12 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 
 
 /**
- * Template-Anpassungen 
+ * Template-Anpassungen
  **/
 
 body#kss-node {
     margin-top: 2rem;
-    
+
     .kss-jumbo {
         margin-top: 2.5rem;
         padding: 0.5rem;
@@ -54,8 +54,8 @@ body#kss-node {
         top: 0;
 
         a,
-        a:hover, 
-        a:active, 
+        a:hover,
+        a:active,
         a:focus {
             color: white;
         }
@@ -101,33 +101,33 @@ body#kss-node {
             padding-left: 1rem;
             background-color: white;
             box-shadow: $box-shadow-6;
-            transition: 
+            transition:
                 max-height 500ms linear,
                 opacity 200ms linear;
         }
     }
 
-    
+
     // ---
     // Navigation
     // ---
-    
+
     .kss-nav__sub-menu {
         font-size: 0.85rem;
     }
-    
+
     .kss-style .kss-nav__separator {
         width: 70%;
         border: 0;
         height: 1px;
-        background-image: 
-            linear-gradient(to right, 
-                rgba(0, 0, 0, 0), 
-                rgba(0, 0, 0, 0.75), 
+        background-image:
+            linear-gradient(to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.75),
                 rgba(0, 0, 0, 0)
             );
     }
-    
+
     .kss-nav__menu > li > a.kss-nav__menu-link {
         display: block;
         padding: 0.5rem;
@@ -150,11 +150,16 @@ body#kss-node {
     // ---
 
     .kss-modifier__example {
-        // Modal static 
+        // Modal static
         // statt fixed darstellen
         .modal {
+            margin: 0 auto;
             position: static;
             transform: translate(0, 0);
+        }
+        .modal--visible {
+            animation: none;
+            animation-fill-mode: none;
         }
         .modal__bg {
             z-index: -1;

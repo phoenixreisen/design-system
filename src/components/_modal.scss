@@ -4,15 +4,11 @@ Modal
 
 Styleguide 700.0
 
-**Module:** kommt...
+**Module:** [Mithril](https://github.com/phoenixreisen/modal)
 
-**Das Modal ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert.** Normalerweise würde es sich mit einem 
-seichten Hintergrund `fixed` über die gesamte Website legen. Dabei wird es standardmäßig nicht größer als 75% der Höhe und 75% der 
-Breite des Browserfensters.
-
-Auf dem Öffnen und Schließen des Modals bzw. auf `.modal` und `.modal--visible` liegt eine Animation, die mit `.animated` aktiviert werden kann. 
-**Wichtig zu wissen** ist, dass `.animated` nicht initial gesetzt sein darf, da das Modal ansonsten bei Aufruf der Seite die schließende 
-Animation ausführt.
+**Das Modal ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert.** Normalerweise würde es sich mit einem
+seichten Hintergrund `fixed` über die Website legen. Auf dem Öffnen des Modals bzw. auf `.modal--visible` liegt eine `pulse`-Animation,
+die hier nur deaktiviert wurde.
 
 Markup:
 <div class="flex">
@@ -65,54 +61,72 @@ Markup:
     <article class="modal__bg"></article>
 </div>
 
-.modal--visible - Modal ist sichtbar
-.modal--50-50   - max. 50% des Bildschirms breit, max. 50% hoch
-.modal--50-75   - max. 50% des Bildschirms breit, max. 75% breit
-.modal--75-90   - max. 75% des Bildschirms breit, max. 90% hoch
-.modal--90-90   - max. 90% des Bildschirms breit, max. 90% hoch 
+.modal--visible - Modal ist sichtbar, passt sich dem Content an, wird aber nicht höher als 95% und nicht breiter als 75% des Bildschirms
+.modal--visible.modal--50-50   - max. 50% des Bildschirms breit, max. 50% hoch
+.modal--visible.modal--50-75   - max. 50% des Bildschirms breit, max. 75% hoch
+.modal--visible.modal--75-90   - max. 75% des Bildschirms breit, max. 90% hoch
+.modal--visible.modal--90-90   - max. 90% des Bildschirms breit, max. 90% hoch
 
 */
+
+@keyframes modal {
+    from {
+        -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
+        transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
+    }
+    to {
+        -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    }
+}
+
 
 .modal {
     display: none;
     //--- SIZE
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 90%;
     max-height: 75vh;
     overflow: hidden;
-    //--- POSITION
-    z-index: 301;
-    position: fixed;
-    margin: 0 auto;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     //--- STYLE
     outline: 0;
     border-radius: 5px;
-    transition: opacity 0.5s;
     border: 1px solid $gray4;
     box-shadow: $box-shadow-5;
     background-color: white;
-    //--- ANIMATION
-    animation-name: bounceOut;
 
     @media all and (min-width: $M) {
         max-width: 75%;
+        max-height: 90vh;
+        height: auto;
+        width: auto;
 
         &--75-90 {
+            width: 100%;
+            height: 100%;
             max-width: 75%;
             max-height: 90vh;
         }
         &--90-90 {
+            width: 100%;
+            height: 100%;
             max-width: 90%;
             max-height: 90vh;
         }
         &--50-50 {
+            width: 100%;
+            height: 100%;
             max-width: 50%;
             max-height: 50vh;
         }
         &--50-75 {
+            width: 100%;
+            height: 100%;
             max-width: 50%;
             max-height: 75vh;
         }
@@ -120,17 +134,24 @@ Markup:
     &--visible {
         display: flex;
         flex-direction: column;
-        animation-name: bounceIn;
+        //--- POSITION
+        margin: 0;
+        z-index: 301;
+        position: fixed;
+        top: 50%; left: 50%;
+        //--- ANIMATION
+        animation-name: modal;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
     }
 }
 
-.modal__title {
+.modal .modal__title {
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
     color: $white;
     padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
     background-color: $light-blue;
     justify-content: space-between;
     border-top-right-radius: 5px;
@@ -150,14 +171,15 @@ Markup:
     }
 }
 
-.modal__content {
+.modal .modal__content {
     flex: 1 1 auto;
     -ms-flex: 1 0 0;
-    overflow: auto;
+    overflow: hidden;
+    overflow-y: auto;
     padding: 1rem;
 }
 
-.modal__footer {
+.modal .modal__footer {
     flex-grow: 0;
     flex-shrink: 0;
     padding: 0.75rem 1rem;
@@ -165,6 +187,9 @@ Markup:
     background-color: $whitegray;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+.modal .modal__content .modal__footer {
+    margin: 1rem -1rem -1rem -1rem;
 }
 
 .modal__bg {
@@ -180,7 +205,7 @@ Markup:
 
     &--visible {
         display: block;
-    }    
+    }
 }
 .modal--visible ~ .modal__bg {
     display: block;
