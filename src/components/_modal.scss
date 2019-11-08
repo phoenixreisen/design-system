@@ -13,7 +13,7 @@ die hier nur deaktiviert wurde.
 Markup:
 <div class="flex">
     <article class="modal modal--visible {{modifier_class}}">
-        <div class="modal__title">
+        <div class="modal__header">
             <span class="modal__headline">
                 Phoenix Reisen Modal
             </span>
@@ -146,16 +146,17 @@ Markup:
     }
 }
 
-.modal .modal__title {
+.modal .modal__header {
     display: flex;
     flex-grow: 0;
     flex-shrink: 0;
-    color: $white;
+    min-height: 1rem;
     padding: 0.5rem 1rem;
     background-color: $light-blue;
     justify-content: space-between;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    color: $white;
 
     div.modal__headline {
         margin-right: 2rem;
