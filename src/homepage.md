@@ -61,28 +61,28 @@
 
 <ul>
   <li>
-    <a href="/section-2000.html#kssref-2000-1" title="Vorschau">Phoenix Header</a> | 
+    <a href="/section-2000.html#kssref-2000-1" title="Vorschau">Phoenix Header</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-2000.html#kssref-2000-2" title="Vorschau">Phoenix Footer</a> | 
+    <a href="/section-2000.html#kssref-2000-2" title="Vorschau">Phoenix Footer</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-800.html#kssref-800" title="Vorschau">Phoenix Web Tabs</a> | 
+    <a href="/section-800.html#kssref-800" title="Vorschau">Phoenix Web Tabs</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-600.html" title="Vorschau">Phoenix Loader</a> | 
+    <a href="/section-600.html" title="Vorschau">Phoenix Loader</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-350.html#kssref-350" title="Vorschau">Phoenix Dropdown</a> | 
+    <a href="/section-350.html#kssref-350" title="Vorschau">Phoenix Dropdown</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/dropdown" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-700.html" title="Vorschau">Phoenix Modal</a> | 
-    <span class="ml1">kommt...</span>
+    <a href="/section-700.html" title="Vorschau">Phoenix Modal</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/modal" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
 </ul>
 
@@ -104,8 +104,8 @@
 <h2>Responsivität</h2>
 
 <p>
-  Folgende Breakpoints werden für grundsätzliche gerätespezifische 
-  Responsivität eingesetzt. Darüber hinaus werden aber auch Breakpoints so gesetzt, wie es für die jeweilige Designstelle 
+  Folgende Breakpoints werden für grundsätzliche gerätespezifische
+  Responsivität eingesetzt. Darüber hinaus werden aber auch Breakpoints so gesetzt, wie es für die jeweilige Designstelle
   optimal ist.
 </p>
 <ul>
@@ -135,7 +135,7 @@
       <div><code>#009EB4</code></div>
     </div>
   </article>
-  
+
   <article class="kss-color">
     <div class="kss-color__preview primary-dark"></div>
     <div class="kss-color__properties">
