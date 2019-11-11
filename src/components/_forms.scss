@@ -283,7 +283,7 @@ Checkbox
 
 Markup:
 <label class="checkbox {{modifier_class}}">
-  <input 
+  <input
     type="checkbox"
     name=""
     value=""
@@ -322,7 +322,7 @@ Input & Textareas
 
 Markup:
 <label class="textfield {{modifier_class}}">
-  <input 
+  <input
     type="text"
     name=""
     value=""
@@ -397,7 +397,7 @@ Hervorhebung durch Warnfarbe bei fehlerhafter Eingabe, meistens instant während
 
 Markup:
 <div>
-  <div class="alert alert--info">
+  <div class="alert alert--warning">
     <i class="fas fa-exclamation-triangle mr1"></i>
     Bitte nur Ziffern eingeben
   </div>
@@ -413,7 +413,7 @@ Markup:
       Kommentar
     </span>
   </label>
-  <div class="alert alert--info">
+  <div class="alert alert--warning">
     <i class="fas fa-exclamation-triangle mr1"></i>
     Bitte noch wählen
   </div>
