@@ -7,7 +7,7 @@ Styleguide 350.0
 **Module:** [Mithril](https://github.com/phoenixreisen/dropdown)
 
 Auf dem Opening liegt eine Transition. Standardmäßig sind `max-height: 10rem` eingestellt, die bei höherem
-Bedarf überschrieben werden müssten.
+Bedarf überschrieben werden müssten, ansonsten wird gescrollt.
 
 Markup:
 <div style="padding: 1rem;">
@@ -30,11 +30,11 @@ Markup:
     <div>
         <h3>Beispiel Content</h3>
         <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
-            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+            ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
         </p>
     </div>
 </div>
@@ -68,6 +68,7 @@ Markup:
 
     .dropdown--open & {
         max-height: 10rem;
+        overflow-y: auto;
         transition: max-height 100ms ease-in;
     }
 }
