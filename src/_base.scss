@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html, 
+html,
 body {
     -webkit-text-size-adjust: none;
     -webkit-text-size-adjust: 100%;
@@ -37,10 +37,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading;
-    line-height: 140%;
     font-weight: 500;
-    color: $gray1;
+    line-height: 140%;
+    color: $primary-dark;
+    font-family: $heading;
 }
 
 h1,
@@ -70,12 +70,12 @@ b,
 strong {
     font-weight: 600;
 }
- 
+
 a {
     display: inline-block;
     text-decoration: none;
     color: $link;
-    
+
     &:visited {
         color: $link;
     }
