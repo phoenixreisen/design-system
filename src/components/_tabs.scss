@@ -29,7 +29,7 @@ Markup:
 */
 
 .tabs {
-    
+
     .tabs__tabs-bar {
         width: 100%;
         overflow-x: auto;
@@ -37,32 +37,32 @@ Markup:
         white-space: nowrap;
         border-bottom: 2px solid $gray6;
     }
-    
+
     .tab {
         display: inline-block;
         padding: 1em 1.5em;
         margin: 0 0.2em;
         vertical-align: bottom;
         border: 1px solid $gray6;
+        color: $primary-dark;
         border-bottom: 0;
-        color: $gray1;
-    
+
         &:first-child {
             margin-left: 1px;
         }
         &:last-child {
             margin-right: 0;
         }
-    
+
         &.is-active-tab {
             background-color: $gray6;
         }
     }
-    
+
     .tab-content {
         margin: 0;
         background-color: $gray6;
-    
+
         &.is-hidden-tab {
             display: none;
         }
