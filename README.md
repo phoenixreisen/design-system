@@ -32,7 +32,7 @@ Die Installation erfolgt via npm.
 npm install @phoenixreisen/design-system
 ```
 
-## Entwicklung 
+## Entwicklung
 
 ```
 npm install     # Abhängigkeiten installieren
@@ -70,9 +70,7 @@ npm publish                     # veröffentlicht auf npm
 
 #### Dokumentation
 
-Deployed wird über & auf [Netlify](https://www.netlify.com). 
-
-Im [Netlify-Backend](https://www.netlify.com) kann ein Deployment über Knopfdruck angestoßen werden.
+Deployed wird über & auf [Netlify](https://www.netlify.com), indem in den `master`-Branch gepusht wird.
 
 Netlify zieht sich dazu selbstständig die Sourcen von [Github](https://github.com/phoenixreisen/design-system) und ruft danach den npm-Befehl `npm run generate` auf - siehe `package.json`.
 
@@ -99,7 +97,7 @@ Für das Projekt sollte ein SCSS-Kontext eingerichtet sein. Möglichst vor den P
 // (kann auch Projektordner sein, nur müssen dann bestimmte Bilder hinterlegt werden)
 $phxDesignSystemImagePath: '~@phoenixreisen/design-system/src/images';
 
-// Alles importieren 
+// Alles importieren
 // (siehe index.scss falls nur Stücke importiert werden sollen)
 @import '@phoenixreisen/design-system/src/index.scss';
 
