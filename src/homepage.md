@@ -45,7 +45,7 @@
 
 <h2>Open Source to the rescue!</h2>
 
-<p>Folgende designprägende 3rd party Styles werden im Design-System via SCSS importiert, erleichtern das Leben und verkürzen die Entwicklungszeit.
+<p>Folgende designprägende 3rd party Styles werden customized via SCSS ins Design-System importiert, erleichtern das Leben und verkürzen die Entwicklungszeit.</p>
 
 <ul>
   <li><a href="https://warpspire.com/kss/" target="_blank">KSS Knyle Style Sheets</a> - CSS Dokumentationsgenerator für in der Haube</li>
