@@ -14,8 +14,8 @@ Grid - zweispaltig
 
 Markup:
 <div class="row row--2er">
-    <div class="ba pa2">Spalte 1</div>
-    <div class="ba pa2">Spalte 2</div>
+    <div class="gray5 pa2">Spalte 1</div>
+    <div class="gray5 pa2">Spalte 2</div>
 </div>
 
 Styleguide 500.1
@@ -28,9 +28,9 @@ Grid - dreispaltig
 
 Markup:
 <div class="row {{modifier_class}}">
-    <div class="ba pa2">Spalte 1</div>
-    <div class="ba pa2">Spalte 2</div>
-    <div class="ba pa2">Spalte 3</div>
+    <div class="gray5 pa2">Spalte 1</div>
+    <div class="gray5 pa2">Spalte 2</div>
+    <div class="gray5 pa2">Spalte 3</div>
 </div>
 
 .row--3er                   - Reponsive schrumpfen alle gleich und erstrecken sich dann über ganze Breite

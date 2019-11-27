@@ -5,11 +5,10 @@ Wrapper
 Standard-Container in verschiedenen Größen zentriert auf der Seite.
 
 Markup:
-<div class="wrapper {{modifier_class}} ba">
+<div class="wrapper {{modifier_class}} gray5">
   <div>Element 1</div>
   <div>Element 2</div>
   <div>Element ...</div>
-  <div class="mt2">Die CSS Klasse "ba" sorgt übrigens nur für den border und kann weg.</div>
 </div>
 
 .wrapper          - Normaler Wrapper
