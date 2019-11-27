@@ -1,6 +1,14 @@
 /*
 
-Alerts
+Alerts | Meldungen
+
+Styleguide 1.0
+
+*/
+
+/*
+
+Status Alerts
 
 Hervorgehobene Boxen, die aufgrund ihrer Farben verschiedene Status (Erfolg, Hinweis, Fehler, etc.) ausdrücken.
 
@@ -12,7 +20,7 @@ Markup:
 .alert--warning         - Warnmeldung
 .alert--danger          - Fehlermeldung
 
-Styleguide 1.0
+Styleguide 1.1
 
 */
 
@@ -29,7 +37,7 @@ Styleguide 1.0
 .alert--danger {
     color: $danger;
     background-color: $light-danger;
-    
+
     a {
         color: $danger;
         &:hover, &:active, &:focus {
@@ -53,7 +61,7 @@ Styleguide 1.0
 .alert--warning {
     color: $warning;
     background-color: $light-warning;
-    
+
     a {
         color: $warning;
         &:hover, &:active, &:focus {
@@ -65,7 +73,7 @@ Styleguide 1.0
 .alert--info {
     color: $info;
     background-color: $light-info;
-    
+
     a {
         color: $info;
         &:hover, &:active, &:focus {
@@ -82,5 +90,66 @@ Styleguide 1.0
         position: absolute;
         left: 1rem; top: 50%;
         transform: translateY(-50%);
+    }
+}
+
+/*
+
+Info-Text Alert
+
+Markup:
+<div class="ma2">
+<article class="text-alert {{modifier_class}}">
+    <div class="big-alert-icon">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <h3 class="pt0">
+        Alert für umfangreichere Texte oder auch ganze "Info-Seiten"
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+</article>
+</div>
+
+.text-alert--bordered - mit Umrandung
+.text-alert--shadowed - mit Schatten
+
+Styleguide 1.2
+
+*/
+
+.text-alert {
+    @extend .alert;
+    line-height: 160%;
+
+    &--bordered {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid $gray4;
+    }
+    &--shadowed {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid $gray6;
+        box-shadow: $box-shadow-1;
+    }
+
+    .big-alert-icon {
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        color: $info;
     }
 }
