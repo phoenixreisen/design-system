@@ -10,7 +10,7 @@ Markup:
 <div class="loader-parent gray6" style="height: 200px">
     <article class="loader {{modifier_class}}">
         <p class="loader__spinner">
-            <i class="fas fa-spinner fa-spin"></i><br />
+            <i class="fab fa-cuttlefish fa-spin"></i><br />
             Daten werden geladen...
         </p>
     </article>
@@ -47,7 +47,12 @@ Markup:
 }
 
 .loader__spinner {
-    font-size: 1rem;
     text-align: center;
     line-height: 1.5rem;
+
+    > i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: $primary-dark;
+    }
 }
