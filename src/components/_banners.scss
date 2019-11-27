@@ -8,24 +8,139 @@ Styleguide 200.0
 
 /*
 
+Überschrift
+
+Markup:
+<div class="headline-banner">
+    <div class="wrapper wrapper--large">
+        <h1>Awesome Überschrift</h1>
+    </div>
+</div>
+
+Styleguide 200.1
+
+*/
+
+%img-headline {
+    background-size: cover;
+    background-color: $gray6;
+    background-repeat: repeat-x;
+    background-position:  center center;
+    background-image: url(#{$phxDesignSystemImagePath}/placeholder.jpg);
+
+    @media all and (min-width: $M) {
+        background-image: url(#{$phxDesignSystemImagePath}/placeholder.jpg);
+    }
+
+    > .wrapper {
+        position: relative;
+        min-height: 15rem;
+
+        @media all and (min-width: $M) {
+            min-height: 20rem;
+        }
+    }
+
+    > .wrapper > h1 {
+        position: absolute;
+        display: inline-block;
+        left: 0; bottom: 1rem;
+        padding: 0 1rem;
+        margin: 0;
+        color: $primary-dark;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        @media all and (min-width: $S) {
+            margin: 0 1rem;
+        }
+    }
+}
+
+.headline-banner {
+    @extend %img-headline;
+}
+
+/*
+
+Text
+
+Markup:
+<div class="ma3">
+<article class="info-text-banner {{modifier_class}}">
+    <div class="info-text-banner__icon">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <h3 class="pt0">
+        Infotext-Banner für große "Info-Boxen" oder ganze "Info-Seiten".
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+</article>
+</div>
+
+.info-text-banner--bordered - mit Umrandung
+.info-text-banner--shadowed - mit Schatten
+
+Styleguide 200.2
+
+*/
+
+.itb,
+.info-text-banner {
+
+    &--bordered {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid $gray4;
+    }
+    &--shadowed {
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid $gray6;
+        box-shadow: $box-shadow-1;
+    }
+
+    .itb__icon,
+    .info-text-banner__icon {
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        color: $info;
+    }
+}
+
+/*
+
 Share
 
 Markup:
-<article class="share-bar">
+<article class="share-banner">
     <div class="wrapper wrapper--large">
         <div class="tc">
             <h3 class="tc pt0">Sagen Sie es Familie & Freunden</h3>
         </div>
         <div class="tc">
-            <a href="https://api.whatsapp.com/send?text=Beste Kreuzfahrten: https://www.phoenixreisen.com" 
+            <a href="https://api.whatsapp.com/send?text=Beste Kreuzfahrten: https://www.phoenixreisen.com"
                 title="App per WhatsApp empfehlen" class="share-whatsapp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="mailto:?subject=Erreichbarkeit auf hoher See&body=Beste Kreuzfahrten: https://www.phoenixreisen.com" 
+            <a href="mailto:?subject=Erreichbarkeit auf hoher See&body=Beste Kreuzfahrten: https://www.phoenixreisen.com"
                 title="App per Email empfehlen" class="share-email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.phoenixreisen.com" 
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.phoenixreisen.com"
                 title="App per Facebook empfehlen" class="share-facebook"
                 rel="noopener noreferrer" target="_blank">
                 <i class="fab fa-facebook-f"></i>
@@ -39,11 +154,12 @@ Markup:
     </div>
 </article>
 
-Styleguide 200.1
+Styleguide 200.3
 
 */
 
-.share-bar {
+.share-bar,
+.share-banner {
     margin: 3rem 0;
     position: relative;
     min-height: 10rem;
@@ -108,7 +224,7 @@ Styleguide 200.1
         background-color: $success;
     }
 
-    i.fas, 
+    i.fas,
     i.fab {
         padding: 1rem;
         position: absolute;
@@ -134,7 +250,7 @@ Markup:
     </div>
 </article>
 
-Styleguide 200.2
+Styleguide 200.4
 
 */
 
@@ -147,7 +263,7 @@ Styleguide 200.2
     background-position:  top center;
     background-repeat: repeat-x;
     background-size: cover;
-    
+
     @media all and (min-width: $M) {
         min-height: 15rem;
         background-image: url(#{$phxDesignSystemImagePath}/phoenix-herzhaende.L.jpg);
