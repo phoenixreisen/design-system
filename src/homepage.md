@@ -5,7 +5,7 @@
   <p>
     Grundlegende Designwerte & -elemente der <a target="_blank" href="https://www.phoenixreisen.com">
     Phoenix Reisen GmbH</a> in Bonn<br />
-    <small>(Dokumentation - mehr als weniger automatisch generiert)</small>
+    <small>Dokumentation (mehr als weniger automatisch generiert)</small>
   </p>
   <p>
     <a target="_blank" href="https://www.phoenixreisen.com">www.phoenixreisen.com</a>
