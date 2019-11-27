@@ -42,13 +42,14 @@ Styleguide 200.1
     }
 
     > .wrapper > h1 {
+        margin: 0;
+        padding: 0 1rem;
         position: absolute;
         display: inline-block;
         left: 0; bottom: 1rem;
-        padding: 0 1rem;
-        margin: 0;
         color: $primary-dark;
         background-color: rgba(255, 255, 255, 0.9);
+        font-family: 'Calistoga', 'Titillium Web', 'Segoe UI', sans-serif;
 
         @media all and (min-width: $S) {
             margin: 0 1rem;
