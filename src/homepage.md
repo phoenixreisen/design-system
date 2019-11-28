@@ -267,7 +267,7 @@
     <div class="kss-color__properties">
       <p>Warnung</p>
       <div><code>$warning</code></div>
-      <div><code>#DF7514</code></div>
+      <div><code>#FF6700</code></div>
     </div>
   </article>
 
