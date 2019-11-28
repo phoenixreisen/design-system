@@ -139,6 +139,7 @@ Markup:
         z-index: 301;
         position: fixed;
         top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
         //--- ANIMATION
         animation-name: modal;
         animation-duration: 0.3s;
