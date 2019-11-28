@@ -10,6 +10,13 @@ Styleguide 200.0
 
 Überschrift
 
+Eine H1-Überschrift mit Hintergrundbild, die zumeist ganz oben im Content-Bereich platziert wird,
+aber auch zwischendurch eingebracht werden kann.
+
+Das Platzhalter-Bild muss im jeweiligen Projekt
+- entweder per CSS durch ein zum Content passendes Bild überschrieben werden
+- oder, falls der DS-Image-Ordner ins Projekt zeigt, im Image-Ordner hinterlegt werden (`headline.jpg` & `headline.xl.jpg`)
+
 Markup:
 <div class="headline-banner">
     <div class="wrapper wrapper--large">
@@ -26,10 +33,10 @@ Styleguide 200.1
     background-color: $gray6;
     background-repeat: repeat-x;
     background-position:  center center;
-    background-image: url(#{$phxDesignSystemImagePath}/placeholder.jpg);
+    background-image: url(#{$phxDesignSystemImagePath}/headline-img.jpg);
 
     @media all and (min-width: $M) {
-        background-image: url(#{$phxDesignSystemImagePath}/placeholder.jpg);
+        background-image: url(#{$phxDesignSystemImagePath}/headline-img.xl.jpg);
     }
 
     > .wrapper {
