@@ -17,7 +17,7 @@ $kss-font-body            : $base-font;
 $kss-font-code            : $monospace-font;
 
 $kss-font-size            : $font-size;
-$kss-vertical-rhythm      : $kss-font-size * 1.5;
+$kss-vertical-rhythm      : $kss-font-size * 1.3;
 
 
 /**
@@ -32,6 +32,12 @@ body#kss-node {
         padding: 0.5rem;
         border: 1px solid $gray5;
         background-color: $whitegray;
+    }
+
+    .kss-style {
+        p {
+            padding: 0;
+        }
     }
 
 
