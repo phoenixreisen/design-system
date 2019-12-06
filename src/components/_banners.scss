@@ -78,7 +78,7 @@ Markup:
         <div class="tc">
             <h3 class="tc pt0">Sagen Sie es Familie & Freunden</h3>
         </div>
-        <div class="tc">
+        <div class="share-icons tc">
             <a href="https://api.whatsapp.com/send?text=Beste Kreuzfahrten: https://www.phoenixreisen.com"
                 title="App per WhatsApp empfehlen" class="share-whatsapp">
                 <i class="fab fa-whatsapp"></i>
@@ -125,6 +125,15 @@ Styleguide 200.2
         background-image: url(#{$phxDesignSystemImagePath}/share.XL.jpg);
     }
 
+    &--bg-less {
+        min-height: auto;
+        background: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
     h3 {
         display: inline-block;
         padding: 0.25rem 1rem;
@@ -135,49 +144,52 @@ Styleguide 200.2
         background-color: rgba(255, 255, 255, 0.7);
     }
 
-    a {
-        top: 0;
-        width: 3rem;
-        height: 3rem;
-        margin: 0 0.5rem;
-        position: relative;
-        display: inline-block;
-        background-color: $gray4;
-        border-radius: 100%;
-        transition: top 250ms ease-in-out;
+    .share-icons {
 
-        &:hover {
-            top: -0.25rem;
+        a {
+            top: 0;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 0.5rem;
+            position: relative;
+            display: inline-block;
+            background-color: $gray4;
+            border-radius: 100%;
+            transition: top 250ms ease-in-out;
+
+            &:hover {
+                top: -0.25rem;
+            }
         }
-    }
-    a.share-whatsapp {
-        color: $white;
-        background-color: #25D366;
-    }
-    a.share-email {
-        color: $white;
-        background-color: $light-blue;
-    }
-    a.share-facebook {
-        color: $white;
-        background-color: #3B5998;
-    }
-    a.share-clipboard {
-        color: $white;
-        background-color: $light-blue;
-    }
-    a.share-clipboard--clipped {
-        color: $white;
-        background-color: $success;
-    }
+        a.share-whatsapp {
+            color: $white;
+            background-color: #25D366;
+        }
+        a.share-email {
+            color: $white;
+            background-color: $light-blue;
+        }
+        a.share-facebook {
+            color: $white;
+            background-color: #3B5998;
+        }
+        a.share-clipboard {
+            color: $white;
+            background-color: $light-blue;
+        }
+        a.share-clipboard--clipped {
+            color: $white;
+            background-color: $success;
+        }
 
-    i.fas,
-    i.fab {
-        padding: 1rem;
-        position: absolute;
-        font-size: 1.5rem;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
+        i.fas,
+        i.fab {
+            padding: 1rem;
+            position: absolute;
+            font-size: 1.5rem;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
