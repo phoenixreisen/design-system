@@ -40,6 +40,45 @@ body#kss-node {
         }
     }
 
+    .kss-doc-title {
+        margin: 1rem 0;
+    }
+
+    .kss-header,
+    .kss-nav {
+        @media screen and (min-width: 769px) {
+            margin-top: 0;
+        }
+    }
+
+
+    // ---
+    // Farbpalette
+    // ---
+
+    .kss-color {
+        padding: 0;
+        margin: 0.5rem;
+        border: 1px solid $gray5;
+
+        .kss-color__properties {
+            padding: 0.3rem;
+            color: $gray1;
+            border-top: 1px solid $gray5;
+        }
+
+        .kss-color__preview {
+            height: 5rem;
+
+            &.primary { background-color: $primary; }
+            &.primary-dark { background-color: $primary-dark; }
+
+            &.link { background-color: $link; }
+            &.link-hover { background-color: $link--hover; }
+            &.link-active { background-color: $link--active; }
+        }
+    }
+
 
     // ---
     // Topbar
@@ -80,6 +119,8 @@ body#kss-node {
     // ---
 
     .kss-sidebar {
+        margin-top: 30px;
+
         @media all and (max-width: 769px) {
             opacity: 0;
             max-height: 0;
@@ -92,6 +133,9 @@ body#kss-node {
             top: 0; left: 0;
             max-height: none;
             padding-top: 60px;
+            border-right: 1px solid #ccc;
+            background: none;
+            box-shadow: none;
         }
     }
     .kss-sidebar--visible {
@@ -117,6 +161,29 @@ body#kss-node {
     // ---
     // Navigation
     // ---
+
+    .kss-nav__menu-item {
+        margin: 0.5rem 0;
+    }
+    .kss-nav__menu-link {
+        color: black;
+
+        &:hover {
+            color: $link--hover;
+        }
+
+        &.is-in-viewport:before {
+            width: 10px;
+            background-color: $primary;
+            transition: background-color .2s, width .6s;
+        }
+    }
+
+    .kss-nav__menu-child {
+        @media screen and (min-width: 769px) {
+            margin-left: 0.8rem;
+        }
+    }
 
     .kss-nav__sub-menu {
         font-size: 0.85rem;
@@ -156,6 +223,9 @@ body#kss-node {
     // ---
 
     .kss-modifier__example {
+        padding: 2px;
+        overflow: hidden;
+
         // Modal static
         // statt fixed darstellen
         .modal {
@@ -170,6 +240,41 @@ body#kss-node {
         .modal__bg {
             z-index: -1;
             position: absolute;
+        }
+    }
+
+    .kss-markup {
+        &[open] summary {
+            margin-bottom: 3px;
+        }
+    }
+
+    .kss-colors {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: 0 -.5em;
+
+        @media screen and (min-width: 570px) {
+            justify-content: flex-start;
+        }
+
+        > * {
+            flex: 0 0 auto;
+            padding: 0;
+            margin-bottom: 1em;
+            width: 100%;
+
+            @media screen and (min-width: 570px) {
+                width: 16em;
+            }
+        }
+
+        .kss-color {
+            height: 100%
         }
     }
 }

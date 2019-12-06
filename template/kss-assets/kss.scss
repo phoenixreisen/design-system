@@ -22,33 +22,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
  * PHX CUSTOM CSS
  **/
 @import './kss.custom.scss';
-
-// ------------------------------------------------------------------------------
-// Color Palette.
-// ------------------------------------------------------------------------------
-
-.kss-color {
-  margin: 0.5rem;
-  border: 1px solid $gray5;
-
-  .kss-color__properties {
-    padding: 0.3rem;
-    color: $gray1;
-    border-top: 1px solid $gray5;
-  }
-
-  .kss-color__preview {
-    height: 5rem;
-
-    &.primary { background-color: $primary; }
-    &.primary-dark { background-color: $primary-dark; }
-    
-    &.link { background-color: $link; }
-    &.link-hover { background-color: $link--hover; }
-    &.link-active { background-color: $link--active; }
-  }
-}
-
 // ------------------------------------------------------------------------------
 // Wrap all of this builder's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
@@ -218,7 +191,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-main {
     width: 100%;
     margin: 0 auto;
-    
+
     @media screen and (min-width: 769px) {
       width: 80%;
       margin-left: 20%;
@@ -227,7 +200,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 
   .kss-sidebar {
-    margin-top: 30px;
     border-bottom:1px solid #ddd;
 
     @media screen and (min-width: 769px) {
@@ -237,7 +209,11 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       overflow: auto;
       padding: 0 10px 0 20px;
       border-bottom: 0;
-      border-right: 1px solid #ccc;
+      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
+      box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.7);
     }
   }
 }
@@ -249,10 +225,17 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 #kss-node { /* stylelint-disable-line */
 
   .kss-doc-title {
-    margin: 1rem 0;
+    margin: 0;
 
     @media screen and (min-width: 769px) {
       font-size: 1.5em;
+    }
+  }
+
+  .kss-header,
+  .kss-nav {
+    @media screen and (min-width: 769px) {
+      margin-top: 2em;
     }
   }
 
@@ -266,8 +249,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-nav__menu-item {
     display: inline-block;
     padding-right: $kss-vertical-rhythm;
-    margin: 0.5rem 0;
-    
+
     @media screen and (min-width: 769px) {
       display: list-item;
       padding-right: 0;
@@ -277,11 +259,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-nav__menu-link {
     position: relative;
     display: inline-block;
-    color: black;
-
-    &:hover {
-      color: $link--hover;
-    }
 
     &:before {
       @media screen and (min-width: 769px) {
@@ -295,9 +272,9 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     }
 
     &.is-in-viewport:before {
-      width: 10px;
-      background-color: $primary;
-      transition: background-color .2s, width .6s;
+      background-color: #000;
+      width: 5px;
+      transition: background-color .4s, width .6s;
     }
   }
 
@@ -308,7 +285,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       display: block;
       list-style-type: none;
       margin: 0;
-      margin-left: 0.8rem;
       padding: 0;
 
       // @TODO: The ul is output even when there are no children. Fix this, so
@@ -603,8 +579,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     position: relative; // Contain the example's absolute positioning.
     z-index: 0; // Establishes a local stacking context.
     margin: -2px -2px ($kss-vertical-rhythm - 2px);
-    padding: 2px;
-    overflow: hidden;
 
     &:last-child {
       margin-bottom: 0;
@@ -683,7 +657,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 
     &[open] summary {
       border-bottom: 1px solid #ccc;
-      margin-bottom: 3px;
     }
 
     summary {
@@ -698,36 +671,13 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-colors {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin: 0 -.5em;
-
-    @media screen and (min-width: 570px) {
-      justify-content: flex-start;
-    }
-
-    > * {
-      flex: 0 0 auto;
-      padding: 0 .5em;
-      margin-bottom: 1em;
-      width: 100%;
-
-      @media screen and (min-width: 570px) {
-        width: 16em;
-      }
-    }
-
-    .kss-color {
-      height: 100%
-    }
+    margin: 0;
   }
 
   .kss-color {
+    padding: 1px;
     background: $kss-colors-background;
     border: 1px solid #ccc;
-    padding: 0;
 
     &-figure {
       height: 3em;
@@ -772,62 +722,9 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     }
   }
 
-  // ------------------------------------------------------------------------------
-  // prettify.js styles
-  // ------------------------------------------------------------------------------
-
-  /* SPAN elements with the classes below are added by prettyprint. */
-  .pln { color: #000 }  /* plain text */
-
-  .str { color: #080 }  /* string content */
-  .kwd { color: #008 }  /* a keyword */
-  .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
-  .lit { color: #066 }  /* a literal value */
-  /* punctuation, lisp open bracket, lisp close bracket */
-  .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #080 }  /* a markup attribute value */
-  .dec, .var { color: #606 }  /* a declaration; a variable name */
-  .fun { color: red }  /* a function name */
-
-  /* Use higher contrast and text-weight for printable form. */
-  @media print, projection {
-    .str { color: #060 }
-    .kwd { color: #006; font-weight: bold }
-    .com { color: #600; font-style: italic }
-    .typ { color: #404; font-weight: bold }
-    .lit { color: #044 }
-    .pun, .opn, .clo { color: #440 }
-    .tag { color: #006; font-weight: bold }
-    .atn { color: #404 }
-    .atv { color: #060 }
+  pre.hljs code {
+    color: inherit;
   }
 
-  /* Specify class=linenums on a pre to get line numbering */
-  ol.linenums {
-    margin: 0;
-    padding: 0 0 3px 0;
-    list-style-type: none;
-
-    li {
-      min-height: $kss-vertical-rhythm;
-      border-bottom: 1px solid #eee;
-      padding: 0 10px;
-      background: #fff;
-
-      &:first-child {
-        padding-top: 3px;
-      }
-    }
-    /* Alternate shading for lines */
-    li.L0,
-    li.L2,
-    li.L4,
-    li.L6,
-    li.L8 {
-      background: #fcfcfc;
-    }
-  }
+  @import '../node_modules/highlight.js/styles/vs2015';
 }
