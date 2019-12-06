@@ -84,7 +84,7 @@ Dieser kompiliert `src` nach `dist` und generiert mittels `kss` die HTML-Dokumen
 npm run build:docs
 ```
 
-## Kurz-Tutorials zum Umgang innerhalb einzelner Services
+## Anwendung
 
 ### Design-System ins Projekt einbinden
 
