@@ -6,7 +6,7 @@
     "Phoenix Reisen <it@phoenixreisen.com>",
     "Fabian Marcus <f.marcus@phoenixreisen.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "description": "Design System & Styleguide der Phoenix Reisen GmbH.",
   "homepage": "https://www.phoenixreisen.com",
   "repository": {
