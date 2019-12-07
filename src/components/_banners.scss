@@ -73,7 +73,7 @@ Styleguide 200.1
 Share
 
 Markup:
-<article class="share-banner">
+<article class="share-banner {{modifier_class}}">
     <div class="wrapper wrapper--large">
         <div class="tc">
             <h3 class="tc pt0">Sagen Sie es Familie & Freunden</h3>
@@ -104,6 +104,8 @@ Markup:
         </div>
     </div>
 </article>
+
+.share-banner--bg-less - Nur die Icons, ohne Hintergrund & Umrandung
 
 Styleguide 200.2
 
