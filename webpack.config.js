@@ -53,6 +53,7 @@ module.exports = {
                     exclude: /fonts/,
                     name: '[name].[ext]',
                     outputPath: 'images/',
+                    esModule: false,
                 },
             },
         ],
@@ -60,8 +61,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new CopyPlugin([
-            { 
-                from: 'node_modules/@phoenixreisen/footer/src/icons/', 
+            {
+                from: 'node_modules/@phoenixreisen/footer/src/icons/',
                 to: 'template/kss-assets/footer-icons/'
             },
         ]),
