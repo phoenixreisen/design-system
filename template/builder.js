@@ -16,6 +16,7 @@
  * @module kss/builder/handlebars
  */
 
+const path = require('path');
 
 // We want to extend kss-node's Handlebars builder so we can add options that
 // are used in our templates.
@@ -24,7 +25,7 @@ let KssBuilderBaseHandlebars;
 try {
   // In order for a builder to be "kss clone"-able, it must use the
   // require('kss/builder/path') syntax.
-  KssBuilderBaseHandlebars = require('node_modules/kss/builder/base/handlebars');
+  KssBuilderBaseHandlebars = require('kss/builder/base/handlebars');
 } catch (e) {
   // The above require() line will always work.
   //
@@ -131,6 +132,13 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
 
       return Promise.resolve(styleGuide);
     });
+  }
+
+  // add builder extend
+  prepareExtend(templateEngine) {
+    this.options.extend.push(path.resolve(__dirname, 'extend'));
+
+    return super.prepareExtend(templateEngine);
   }
 }
 

@@ -3,7 +3,9 @@
 Badges
 
 Markup:
-<span class="badge {{modifier_class}}">obacht!</span>
+<div class="mt3">
+    <span class="badge {{modifier_class}}">obacht!</span>
+</div>
 
 .badge--primary         - "Primary"
 .badge--secondary       - "Secondary" (weniger prominent als Primary)
@@ -14,7 +16,7 @@ Markup:
 .badge--smaller         - etwas kleiner
 .badge--shadow          - mit Schatten
 .badge--uppercased      - alles groß geschrieben
-.badge--superscripted   - etwas hochgestellt (parent muss `overflow: visible;` sein)
+.badge--superscripted   - etwas hochgestellt (parent sollte *overflow: visible* sein)
 
 Styleguide 100.0
 

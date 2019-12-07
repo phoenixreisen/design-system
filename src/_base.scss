@@ -194,10 +194,10 @@ code,
 samp,
 kbd {
     background-color: $gray6;
-    color: $primary-dark;
     font-family: $monospace;
+    color: $primary-dark;
+    line-height: 140%;
     font-size: 1rem;
-    line-height: 1;
 }
 
 code,
