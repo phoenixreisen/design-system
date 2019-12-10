@@ -13,7 +13,9 @@ Status Alerts
 Hervorgehobene Boxen, die aufgrund ihrer Farben verschiedene Status (Erfolg, Hinweis, Fehler, etc.) ausdrücken.
 
 Markup:
-<p class="alert {{modifier_class}}">Ich bin eine Alert-Box und habe etwas zu sagen.</p>
+<p class="alert {{modifier_class}}">
+    Ich bin eine Alert-Box und habe etwas zu sagen. <a href="javascript:">Mit einem Link.</a>
+</p>
 
 .alert--success         - Erfolgsmeldung
 .alert--info            - Infomeldung
