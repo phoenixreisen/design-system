@@ -1,3 +1,10 @@
+/*
+
+Hintergründe
+
+Utilities | Colors
+
+*/
 .primary { background-color: $primary; }
 .primary-dark { background-color: $primary-dark; }
 
@@ -23,3 +30,37 @@
 .warning { background-color: $warning; }
 
 .staging { background-color: $staging; }
+
+
+/*
+
+Textfarben
+
+Utilities | Colors
+
+*/
+.c-primary { color: $primary; }
+.c-primary-dark { color: $primary-dark; }
+
+.c-link { color: $link; }
+.c-link-hover { color: $link--hover; }
+.c-link-active { color: $link--active; }
+
+.c-gray1 { color: $gray1; }
+.c-gray2 { color: $gray2; }
+.c-gray3 { color: $gray3; }
+.c-gray4 { color: $gray4; }
+.c-gray5 { color: $gray5; }
+.c-gray6 { color: $gray6; }
+
+.c-black { color: $black; }
+.c-white { color: $white; }
+.c-whitegray { color: $whitegray; }
+
+.c-info { color: $info; }
+.c-yellow { color: $yellow; }
+.c-danger { color: $danger; }
+.c-success { color: $success; }
+.c-warning { color: $warning; }
+
+.c-staging { color: $staging; }
