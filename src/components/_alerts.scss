@@ -10,7 +10,8 @@ Styleguide 1.0
 
 Status Alerts
 
-Hervorgehobene Boxen, die aufgrund ihrer Farben verschiedene Status (Erfolg, Hinweis, Fehler, etc.) ausdrücken.
+Hervorgehobene Boxen, die aufgrund ihrer Farben verschiedene Stati (Erfolg, Hinweis, Warnung, Fehler, etc.) ausdrücken.
+Sie integrieren sich dabei in den üblichen Elementfluss.
 
 Markup:
 <p class="alert {{modifier_class}}">
@@ -111,7 +112,8 @@ Markup:
     <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
         ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        dolores et ea rebum. Stet clita kasd gubergren, <a href="javascript:" title="Beispiellink">no sea
+        takimata sanctus est</a>.
     </p>
     <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -119,7 +121,7 @@ Markup:
         et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </p>
     <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        <a href="javascript:">Lorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
         et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </p>
@@ -134,8 +136,19 @@ Styleguide 1.2
 */
 
 .text-alert {
-    @extend .alert;
+    color: $gray1;
+    padding: 0.5rem;
     line-height: 160%;
+    margin-bottom: 0.5rem;
+    background-color: $white;
+
+    a {
+        color: $link;
+
+        &:hover, &:active, &:focus {
+            color: $link--hover;
+        }
+    }
 
     &--bordered {
         padding: 1rem;
@@ -146,7 +159,7 @@ Styleguide 1.2
         padding: 1rem;
         border-radius: 5px;
         border: 1px solid $gray6;
-        box-shadow: $box-shadow-1;
+        box-shadow: $box-shadow-2;
     }
 
     .big-alert-icon {
