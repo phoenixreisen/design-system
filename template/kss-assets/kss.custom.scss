@@ -241,6 +241,12 @@ body#kss-node {
             z-index: -1;
             position: absolute;
         }
+
+        .notification {
+            position: static;
+            animation: none;
+            animation-fill-mode: none;
+        }
     }
 
     .kss-markup {
