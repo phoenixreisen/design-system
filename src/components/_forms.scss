@@ -78,7 +78,6 @@ select,
 button,
 textarea {
   display: block;
-  resize: vertical;
   line-height: 150%;
   font-size: $font-size;
   -webkit-appearance: none;
@@ -90,6 +89,9 @@ textarea {
   @media(min-width: $L) {
       font-size: $font-size-xl;
   }
+}
+textarea {
+  resize: vertical;
 }
 
 /* remove yellow from chrome auto-fill background */
