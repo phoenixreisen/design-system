@@ -2,7 +2,7 @@
 
 Notifications
 
-**Module:**
+**Module:** [Mithril](https://github.com/phoenixreisen/notification)
 
 Notifications werden typischerweise als Egebnisanzeige von Benutzerinteraktionen angezeigt. Wenn ein Benutzer beispielsweise Daten
 speichert oder löscht, wird ihm die Tatsache, dass dies erfolgreich oder fehlerhaft verlaufen ist, mittels einer solchen
@@ -52,12 +52,12 @@ Styleguide 750.0
 
     // STYLE
     max-width: 90%;
-    padding: 1.25rem;
+    padding: 0.5rem;
     padding-left: 2.5rem;
     line-height: 135%;
     border-radius: 5px;
     margin-bottom: 0.5rem;
-    box-shadow: $box-shadow-6;
+    box-shadow: $box-shadow-4;
     animation: fadeInUpAndfadeOutDown 5s;
     animation-fill-mode: forwards;
 
@@ -79,7 +79,6 @@ Styleguide 750.0
 
     &--error {
         color: $danger;
-        border: 1px solid $danger;
         background-color: $light-danger;
 
         a { color: $danger; }
@@ -90,7 +89,6 @@ Styleguide 750.0
 
     &--success {
         color: $success;
-        border: 1px solid $success;
         background-color: $light-success;
 
         a { color: $success; }
@@ -101,7 +99,6 @@ Styleguide 750.0
 
     &--info {
         color: $info;
-        border: 1px solid $info;
         background-color: $light-info;
 
         a { color: $info; }
