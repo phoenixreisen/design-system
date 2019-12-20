@@ -52,7 +52,7 @@ Styleguide 750.0
     // STYLE
     max-width: 90%;
     padding: 0.75rem;
-    padding-left: 2.5rem;
+    padding-left: 3rem;
     line-height: 135%;
     border-radius: 5px;
     margin-bottom: 0.5rem;
@@ -73,8 +73,7 @@ Styleguide 750.0
 
     > i.fas {
         position: absolute;
-        left: 1rem; top: 50%;
-        transform: translateY(-50%);
+        left: 1rem; top: 1rem;
     }
 
     a {
