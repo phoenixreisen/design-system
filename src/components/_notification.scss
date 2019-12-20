@@ -20,7 +20,6 @@ Markup:
 .notification--info             - Infomeldung
 .notification--error            - Fehlermeldung
 .notification--success          - Erfolgsmeldung
-.notification--primary-dark     - Allgemein
 
 Styleguide 750.0
 
@@ -61,6 +60,10 @@ Styleguide 750.0
     animation: fadeInUpAndfadeOutDown 5s;
     animation-fill-mode: forwards;
 
+    // STANDARDFARBEN
+    background-color: $dark-blue;
+    color: $white;
+
     @media all and (min-width: $M) {
         max-width: 60%;
     }
@@ -68,13 +71,19 @@ Styleguide 750.0
         max-width: 40%;
     }
 
-    a { text-decoration: underline; }
-    a:hover { text-decoration: none; }
-
     > i.fas {
         position: absolute;
         left: 1rem; top: 50%;
         transform: translateY(-50%);
+    }
+
+    a {
+        text-decoration: underline;
+        color: $white;
+    }
+    a:hover, a:active, a:focus {
+        text-decoration: none;
+        color: $white;
     }
 
     &--error {
@@ -104,17 +113,6 @@ Styleguide 750.0
         a { color: $info; }
         a:hover, a:active, a:focus{
             color: $dark-info;
-        }
-    }
-
-    &--primary-dark {
-        color: $white;
-        background-color: $dark-blue;
-        border: 1px solid $primary-dark;
-
-        a { color: $white; }
-        a:hover, a:active, a:focus{
-            color: $white;
         }
     }
 }
