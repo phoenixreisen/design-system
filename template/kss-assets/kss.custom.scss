@@ -245,7 +245,7 @@ body#kss-node {
         .notification {
             position: static;
             animation: none;
-            animation-fill-mode: none;
+            transform: translate(0, 0);
         }
     }
 
