@@ -88,3 +88,9 @@ $S: 480px;
 $M: 640px;
 $L: 960px;
 $XL: 1400px;
+
+// Tachyons MQ customized to PHX Breakpoints
+
+$breakpoint-not-small: 'screen and (min-width: #{$S})' !default;
+$breakpoint-medium: 'screen and (min-width: #{$M}) and (max-width: #{$L})' !default;
+$breakpoint-large: 'screen and (min-width: #{$L})' !default;
