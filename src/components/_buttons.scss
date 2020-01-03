@@ -3,7 +3,9 @@
 Buttons
 
 Markup:
-<a href="#" class="btn {{modifier_class}}">Button</a>
+<div class="pa2">
+    <button class="btn {{modifier_class}}">Button</button>
+</div>
 
 .btn--primary         - "Primary"
 .btn--secondary       - "Secondary" (weniger prominent als Primary)
@@ -19,21 +21,27 @@ Styleguide 300.0
 */
 
 .btn {
+    /* size */
     width: auto;
-    color: $white;
     margin: 0 auto;
-    max-width: 100%;
     padding: 0.75rem;
+    max-width: 100%;
     line-height: 140%;
+    box-sizing: border-box;
+    /* element flow */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* style */
+    color: $white;
     user-select: none;
     text-align: center;
-    display: inline-block;
     border-radius: 0.2rem;
-    box-sizing: border-box;
     background-color: $primary;
     border: 0 solid transparent;
     cursor: pointer;
-    transition: 
+    /* animation */
+    transition:
         background-color 250ms linear,
         outline 50ms linear;
 
@@ -44,16 +52,39 @@ Styleguide 300.0
     }
     &:focus,
     &:hover {
+        outline: none;
         color: $white;
         background-color: $primary-dark;
-    }
-    &:focus {
-        outline: 0.25rem dotted $gray3;
     }
     &:active {
         border-top-width: 0.1rem;
         border-left-width: 0.1rem;
         background-color: $primary-dark;
+    }
+    &:after {
+        content: "";
+        /* element flow */
+        display: block;
+        position: absolute;
+        /* size */
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        /* style */
+        opacity: 0;
+        pointer-events: none;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        /* animation (ripple effect) */
+        transform: scale(10,10);
+        transition: transform .5s, opacity 1s;
+        background-image: radial-gradient(circle, $whitegray 10%, transparent 10.01%);
+    }
+    &:active:after {
+        /* animation start (ripple effect) */
+        opacity: .5;
+        transition: 0s;
+        transform: scale(0,0);
     }
 }
 
@@ -106,7 +137,7 @@ Styleguide 300.0
     }
 }
 
-/** 
+/**
  * Status Buttons
  */
 
