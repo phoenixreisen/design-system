@@ -4,7 +4,9 @@ Buttons
 
 Markup:
 <div class="pa2">
-    <button class="btn {{modifier_class}}">Button</button>
+    <button type="button class="btn {{modifier_class}}">
+        Button
+    </button>
 </div>
 
 .btn--primary         - "Primary"
@@ -35,12 +37,16 @@ Styleguide 300.0
     vertical-align: middle;
     /* style */
     color: $white;
+    cursor: pointer;
     user-select: none;
     text-align: center;
     border-radius: 0.2rem;
-    background-color: $primary;
     border: 0 solid transparent;
-    cursor: pointer;
+	background: $primary linear-gradient(
+        to bottom right,
+        lighten($primary, 5%) 0%,
+        $primary 100%
+    );
     /* animation */
     transition:
         background-color 250ms linear,
@@ -55,12 +61,12 @@ Styleguide 300.0
     &:hover {
         outline: none;
         color: $white;
-        background-color: $primary-dark;
+        background: $primary-dark;
     }
     &:active {
         border-top-width: 0.1rem;
         border-left-width: 0.1rem;
-        background-color: $primary-dark;
+        background: $primary-dark;
     }
     &:after {
         content: "";
@@ -91,7 +97,9 @@ Styleguide 300.0
 
 .btn--secondary {
     color: $gray1;
-    background-color: $gray6;
+	background: darken($gray6, 8%) linear-gradient(
+        to bottom, $gray6 0%, darken($gray6, 8%) 100%
+    );
 
     &:link,
     &:visited {
@@ -100,11 +108,11 @@ Styleguide 300.0
     &:focus,
     &:hover {
         color: $gray1;
-        background-color: $gray5;
+        background: $gray5;
     }
     &:active {
         color: $gray1;
-        background-color: $gray4;
+        background: $gray5;
         border-left-width: 0.1rem;
         border-top-width: 0.1rem;
     }
@@ -112,7 +120,7 @@ Styleguide 300.0
 
 .btn--link {
     color: $link;
-    background-color: transparent;
+    background: transparent;
 
     &:link,
     &:visited {
@@ -143,11 +151,13 @@ Styleguide 300.0
  */
 
 .btn--success {
-    background-color: $success;
+	background: darken($success, 8%) linear-gradient(
+        to bottom, $success 0%, darken($success, 8%) 100%
+    );
 
     &:focus,
     &:hover {
-        background-color: $dark-success;
+        background: $dark-success;
     }
     &:active {
         border-left-width: 0.1rem;
@@ -156,11 +166,13 @@ Styleguide 300.0
 }
 
 .btn--warning {
-    background-color: $warning;
+    background: darken($warning, 8%) linear-gradient(
+        to bottom, $warning 0%, darken($warning, 8%) 100%
+    );
 
     &:focus,
     &:hover {
-        background-color: $dark-warning;
+        background: $dark-warning;
     }
     &:active {
         border-left-width: 0.1rem;
@@ -169,11 +181,13 @@ Styleguide 300.0
 }
 
 .btn--info {
-    background-color: $info;
+    background: darken($info, 8%) linear-gradient(
+        to bottom, $info 0%, darken($info, 8%) 100%
+    );
 
     &:focus,
     &:hover {
-        background-color: $dark-info;
+        background: $dark-info;
     }
     &:active {
         border-left-width: 0.1rem;
@@ -182,11 +196,13 @@ Styleguide 300.0
 }
 
 .btn--danger {
-    background-color: $danger;
+    background: darken($danger, 8%) linear-gradient(
+        to bottom, $danger 0%, darken($danger, 8%) 100%
+    );
 
     &:hover,
     &:focus {
-        background-color: $dark-danger;
+        background: $dark-danger;
     }
     &:active {
         border-left-width: 0.1rem;
