@@ -136,21 +136,20 @@ button[disabled]{
 .radio,
 .checkbox{
   cursor: pointer;
+  position: relative;
   display: inline-block;
   margin-bottom: 0.5rem;
   padding: 0 1rem 0 1.5rem;
-  position: relative;
 
   &:before{
-    background-color: $white;
-    border: 2px solid $gray4;
     content: '';
-    height: 16px;
-    left: 0;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
     width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0; top: 50%;
+    margin-top: -10px;
+    border: 2px solid $gray4;
+    background-color: $white;
   }
 }
 
@@ -168,14 +167,13 @@ button[disabled]{
 
 .radio__label:after,
 .checkbox__label:after{
-  border: 1px solid transparent;
   content: '';
-  height: 18px;
-  left: 0;
-  margin-top: -10px;
-  position: absolute;
-  top: 50%;
   width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0; top: 50%;
+  margin-top: -10px;
+  border: 1px solid transparent;
 }
 
 .radio input[type=radio]:focus + .radio__label:after,
@@ -192,35 +190,35 @@ button[disabled]{
 
 .textfield,
 .select{
-  background-color: $white;
   display: block;
+  position: relative;
   margin-top: -2px;
   margin-bottom: 1rem;
-  position: relative;
+  background-color: $white;
 }
 
 .textfield__label,
 .select__label{
-  background-color: $white;
-  position: absolute;
+  top: 2px;
   left: 1px;
+  right: 1px;
   line-height: 1;
   padding: 0.3rem;
-  right: 1px;
-  top: 2px;
+  position: absolute;
   font-size: 0.8rem;
+  background-color: $white;
 }
 
 .textfield input,
 .textfield textarea,
 .select select {
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 1.6rem 0.3rem 0.3rem;
   background-color: transparent;
   border: 1px solid $gray4;
-  border-radius: 2px;
   box-sizing: border-box;
-  padding: 1.5rem 1.6rem 0.3rem 0.3rem;
-  position: relative;
-  width: 100%;
+  border-radius: 2px;
 }
 
 .textfield *:focus,
@@ -269,15 +267,14 @@ Styleguide 400.1
 }
 
 .radio input[type=radio]:checked + .radio__label:before{
-  background-color: $primary-dark;
-  border-radius: 20px;
   content: '';
+  width: 10px;
   height: 10px;
-  left: 5px;
   margin-top: -5px;
   position: absolute;
-  top: 50%;
-  width: 10px;
+  top: 50%; left: 5px;
+  border-radius: 20px;
+  background-color: $primary-dark;
 }
 
 /*
@@ -287,13 +284,15 @@ Checkbox
 Markup:
 <label class="checkbox {{modifier_class}}">
   <input
-    type="checkbox"
     name=""
     value=""
     checked=""
     onclick=""
+    type="checkbox"
   />
-  <span class="checkbox__label">Checkbox</span>
+  <span class="checkbox__label">
+    Checkbox
+  </span>
 </label>
 
 .disabled - disabled
@@ -312,11 +311,96 @@ Styleguide 400.2
 }
 
 .checkbox input[type=checkbox]:checked + .checkbox__label:after {
-  color: $primary-dark;
   content: '\2714';
+  color: $primary-dark;
   font-size: $font-size;
   line-height: 18px;
   text-align: center;
+}
+
+/*
+
+Checkbox - Switch
+
+Markup:
+<label class="switch">
+  <span class="switch__input">
+    <input
+      name=""
+      value=""
+      checked=""
+      onclick=""
+      type="checkbox"
+    />
+    <span class="switch__slider"></span>
+  </span>
+  <span class="switch__label">
+    Licht an oder aus, das ist hier die Frage. orem ipsum dolor sit amet, consetetur
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+  </span>
+</label>
+
+Styleguide 400.3
+
+*/
+
+.switch {
+  display: flex;
+}
+
+.switch__input {
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 34px;
+  width: 60px;
+
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.switch__label {
+  display: inline-block;
+  margin-left: 1rem;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.switch__slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  border-radius: 34px;
+  background-color: $gray4;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 4px; bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+}
+input:checked + .switch__slider {
+  background-color: $primary-dark;
+}
+input:focus + .switch__slider {
+  box-shadow: 0 0 1px $primary-dark;
+}
+input:checked + .switch__slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /*
@@ -343,7 +427,7 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.3
+Styleguide 400.4
 
 */
 
@@ -364,7 +448,7 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.4
+Styleguide 400.5
 
 */
 
@@ -433,7 +517,7 @@ Markup:
   </button>
 </div>
 
-Styleguide 400.5
+Styleguide 400.6
 
 */
 
@@ -456,7 +540,7 @@ Markup:
   <button>Senden</button>
 </div>
 
-Styleguide 400.6
+Styleguide 400.7
 
 */
 
