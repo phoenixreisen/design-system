@@ -16,7 +16,13 @@ Sie integrieren sich dabei in den üblichen Elementfluss.
 Markup:
 <p class="alert alert--icon {{modifier_class}}">
     <i class="fas fa-check mr2"></i>
-    <span>Ich bin eine Alert-Box und habe etwas zu sagen.orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a href="javascript:">Mit einem Link.</a></span>
+    <span>
+        Ich bin eine Alert-Box und habe etwas zu sagen.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua. <a href="javascript:">Mit
+        einem Link.</a>
+    </span>
 </p>
 
 .alert--success         - Erfolgsmeldung
