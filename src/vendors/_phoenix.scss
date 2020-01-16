@@ -48,13 +48,13 @@ Styleguide 2000.1
             width: 100%;
         }
     }
-    
+
     .phx-header__version {
         margin: 0;
         margin-top: -5px;
         padding: 0 10px;
         font-size: smaller;
-    }    
+    }
 }
 
 /*
@@ -96,7 +96,7 @@ Markup:
     <div class="social-contact mt2 tc">
         <div><small>Wir sind für Sie da</small></div>
         <div>
-            <strong><a href="tel:+4922892600" title="Telefonnummer aufrufen">+49 (228) 9260-0</a></strong> 
+            <strong><a href="tel:+4922892600" title="Telefonnummer aufrufen">+49 (228) 9260-0</a></strong>
             oder über <strong><a href="https://www.phoenixreisen.com/kontakt.html" title="Kontaktformular" target="_blank" rel="noopener noreferrer">Kontaktformular</a></strong><br>
             <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
         </div>
@@ -226,17 +226,12 @@ Styleguide 2000.2
     text-align: center;
 }
 .phx-footer .social-media__icons {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-
-    @media all and (min-width: $M) {
-        display: block;
-    }
+    white-space: nowrap;
+    display: block;
 
     a {
         display: inline-block;
-        margin: 0.5rem 0.5rem;
+        margin: 0.5rem 0.8rem;
         height: 1.5rem;
 
         @media all and (min-width: $M) {
