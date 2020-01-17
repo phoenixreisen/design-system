@@ -97,9 +97,7 @@ Styleguide 300.0
 
 .btn--secondary {
     color: $gray1;
-	background: darken($gray6, 8%) linear-gradient(
-        to bottom, $gray6 0%, darken($gray6, 8%) 100%
-    );
+	background: $gray6;
 
     &:link,
     &:visited {
@@ -151,9 +149,7 @@ Styleguide 300.0
  */
 
 .btn--success {
-	background: darken($success, 8%) linear-gradient(
-        to bottom, $success 0%, darken($success, 8%) 100%
-    );
+	background: $success;
 
     &:focus,
     &:hover {
@@ -166,9 +162,7 @@ Styleguide 300.0
 }
 
 .btn--warning {
-    background: darken($warning, 8%) linear-gradient(
-        to bottom, $warning 0%, darken($warning, 8%) 100%
-    );
+    background: $warning;
 
     &:focus,
     &:hover {
@@ -181,9 +175,7 @@ Styleguide 300.0
 }
 
 .btn--info {
-    background: darken($info, 8%) linear-gradient(
-        to bottom, $info 0%, darken($info, 8%) 100%
-    );
+    background: $info;
 
     &:focus,
     &:hover {
@@ -196,9 +188,7 @@ Styleguide 300.0
 }
 
 .btn--danger {
-    background: darken($danger, 8%) linear-gradient(
-        to bottom, $danger 0%, darken($danger, 8%) 100%
-    );
+    background: $danger;
 
     &:hover,
     &:focus {
