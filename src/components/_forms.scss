@@ -375,7 +375,7 @@ Styleguide 400.3
   position: absolute;
   top: 0; left: 0;
   right: 0; bottom: 0;
-  border-radius: 34px;
+  border-radius: 0.2rem;
   background-color: $gray4;
   -webkit-transition: .4s;
   transition: .4s;
@@ -387,7 +387,7 @@ Styleguide 400.3
     position: absolute;
     left: 4px; bottom: 4px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 0.2rem;
     transition: .4s;
   }
 }
