@@ -29,11 +29,11 @@ module.exports = {
             {
                 test: /\.(scss|css)/,
                 use: [
-                    { loader: 'css-hot-loader' },
+                    {loader: 'css-hot-loader'},
                     MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader' },
-                    { loader: 'postcss-loader' },
-                    { loader: 'sass-loader' },
+                    {loader: 'css-loader'},
+                    {loader: 'postcss-loader'},
+                    {loader: 'sass-loader'},
                 ],
             }, {
                 test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)/,
@@ -60,23 +60,21 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new CopyPlugin([
-            {
-                from: 'node_modules/@phoenixreisen/footer/src/icons/',
-                to: 'template/kss-assets/footer-icons/'
-            },
-        ]),
+        new CopyPlugin({'patterns': [{
+            from: 'node_modules/@phoenixreisen/footer/src/icons/',
+            to: 'template/kss-assets/footer-icons/'
+        }]}),
         new MiniCssExtractPlugin({
             filename: `${filename}.css`,
             chunkFilename: `${filename}.[id].css`,
         }),
         new KssWebpackPlugin({
-            "title": "Phoenix Reisen Styleguide",
             "source": "./src",
             "destination": "./dist",
             "builder": "./template/",
             "js": [`./${filename}.js`],
             "css": [`./${filename}.css`],
+            "title": "Phoenix Reisen Styleguide",
         }),
         new StyleLintPlugin({
             failOnError: false,
