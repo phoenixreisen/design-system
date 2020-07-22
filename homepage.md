@@ -88,6 +88,10 @@
     <a href="/section-700.html" title="Vorschau">Phoenix Modal</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/modal" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
+  <li>
+    <a href="/section-200.html" title="Vorschau">Phoenix Banners</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/banners" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
 </ul>
 
 <hr />
