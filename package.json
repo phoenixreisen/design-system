@@ -29,7 +29,7 @@
     "last 10 versions"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@phoenixreisen/footer": "^1.0.0",
     "@phoenixreisen/header": "^1.0.0",
