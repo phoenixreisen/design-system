@@ -28,24 +28,28 @@ Styleguide 2000.1
 
 */
 
+header.header {
+    border-bottom: 5px solid $primary;
+}
+
 .phx-header {
     position: relative;
 
     .phx-header__logo {
-        display: inline-block;
-        line-height: 1;
-        width: 200px;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        width: 200px;
+        line-height: 1;
+        display: inline-block;
 
         @media all and (min-width: $M) {
             width: 250px;
         }
 
         > img {
-            display: inline-block;
-            max-width: 100%;
             width: 100%;
+            max-width: 100%;
+            display: inline-block;
         }
     }
 
@@ -55,7 +59,296 @@ Styleguide 2000.1
         padding: 0 10px;
         font-size: smaller;
     }
+
+    .phx-header__nav-btn {
+        top: 0.25rem;
+        right: 0.75rem;
+        position: absolute;
+        display: inline-block;
+
+        @media all and (min-width: $S) {
+            right: 0.25rem;
+        }
+        @media all and (min-width: $M) {
+            right: 1.25rem;
+        }
+    }
 }
+
+/*
+
+Buttons
+
+Markup:
+<article>
+    <span style="display:inline-block; vertical-align: middle; margin-right: 1rem"> <!-- span kann weg -->
+        <a href="#" class="avatar-cta" title="Buchungsdaten anzeigen">
+            <i class="fas fa-user avatar__symbol"></i>
+        </a>
+    </span>
+    <span style="display:inline-block; vertical-align: middle; margin-left: 1rem"> <!-- span kann weg -->
+        <a href="#" class="nav-btn noprint" title="Navigation ein-/ausblenden">
+            <i class="fas fa-bars"></i>
+        </a>
+    </span>
+</article>
+
+Styleguide 2000.2
+
+*/
+
+.nav-btn,
+.phx-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: none;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 200%;
+    padding-top: 0.75rem;
+    background-color: $gray6;
+
+    &:hover {
+        color: $white;
+        background-color: $light-blue;
+        transition:
+            color 150ms linear,
+            background-color 150ms linear;
+    }
+}
+
+.avatar-cta,
+.phx-avatar-cta {
+    // Bei Bedarf zu ueberschreiben
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    box-shadow: $box-shadow-3;
+    border: 2px solid $primary;
+    // Sollte nicht überschrieben werden.
+    color: $black;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: white;
+
+    &:visited {
+        color: $black
+    }
+    &:active,
+    &:hover {
+        color: $primary;
+        transition: color ease 150ms;
+    }
+
+    > i.fas {
+        position: absolute;
+        top: 50%; left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*
+
+Sticky Topbar
+
+**Module:** Kommt...
+
+Die Leiste ist hier aus Anpassungsgründen durch Inline-Styles `static` positioniert (die vor Benutzung natürlich
+zu entfernen sind). Ansonsten liegt sie `fixed` am oberen Browserrand und erstreckt sich über die ganze Breite.
+
+Markup:
+<article class="top-bar noprint top-bar--visible" style="position:static">
+    <div class="wrapper wrapper--large">
+        <div class="top-bar__left">
+            <a href="https://phoenixreisen.com" title="zurück" class="top-bar__back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="https://phoenixreisen.com" title="zur Startseite">
+                <img src="https://phoenixreisen.com/favicon.png" class="top-bar__icon" alt="" />
+                <span class="ml1">Phoenix Reisen App</span>
+            </a>
+        </div>
+        <article class="top-bar__avatar">
+            <a href="#" class="avatar-cta avatar-cta--topbar" title="Buchungsdaten anzeigen">
+                <i class="fas fa-user avatar__symbol"></i>
+            </a>
+        </article>
+        <a href="#" class="nav-btn top-bar__nav-btn noprint" title="Navigation ein-/ausblenden">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
+</article>
+
+Styleguide 2000.3
+
+*/
+
+.top-bar {
+    $delay: 150ms;
+    $duration: 150ms;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 400;
+    box-shadow: $box-shadow-3;
+    background-color: $light-blue;
+
+    > .wrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+
+        @media all and (max-width: $S) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .top-bar__left {
+        opacity: 0;
+        max-height: 0;
+        color: $white;
+        display: block;
+        overflow: hidden;
+        transition:
+            max-height $duration linear,
+            opacity $duration linear,
+            padding $duration linear;
+
+        a {
+            color: $white;
+            &:visited { color: $white; }
+            &:active { color: $white; }
+            &:hover { color: $white; }
+        }
+
+        .top-bar__icon {
+            display: inline-block;
+            vertical-align: text-bottom;
+        }
+
+        a.top-bar__back-btn {
+            color: $white;
+            padding: 0.3rem;
+            line-height: 1rem;
+            margin-right: 1rem;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: transparent;
+
+            &:hover {
+                color: $light-blue;
+                background-color: $white;
+                transition:
+                    color $duration linear,
+                    background-color $duration linear;
+            }
+        }
+    }
+
+    .top-bar__avatar {
+        right: 1rem;
+        bottom: -1.5rem;
+        position: absolute;
+        transition: bottom $duration linear;
+
+        @media all and (min-width: $M) {
+            right: 2rem;
+        }
+    }
+
+    .top-bar__nav-btn {
+        bottom: 0;
+        padding: 0;
+        right: 1rem;
+        max-width: 0;
+        max-height: 0;
+        color: $white;
+        position: absolute;
+        background-color: transparent;
+
+        @media all and (min-width: $M) {
+            right: 1rem;
+        }
+
+        &:hover,
+        &:active {
+            color: $light-blue;
+            background-color: $white;
+        }
+    }
+
+    .top-bar__avatar ~ .top-bar__nav-btn {
+        right: 4rem;
+
+        @media all and (min-width: $M) {
+            right: 5rem;
+        }
+    }
+
+    // Sichtbare Top Bar
+    // ab bestimmtem Scroll Offset
+    &--visible {
+        top: 0;
+        position: fixed;
+        padding: 0.5rem 0;
+
+        .top-bar__left {
+            opacity: 1;
+            max-height: 2.5rem;
+        }
+
+        .top-bar__avatar {
+            bottom: 50%;
+            transform: translateY(50%);
+            transition: bottom $duration linear;
+        }
+
+        // Für die Navigation etwas verkleinern.
+        .avatar-cta--topbar {
+            width: 2rem;
+            height: 2rem;
+            border: none;
+            font-size: 1rem;
+            box-shadow: none;
+            transition:
+                width $duration linear $delay,
+                height $duration linear $delay,
+                font-size $duration linear $delay;
+
+            &:hover {
+                color: $primary;
+                transition: color $duration linear;
+            }
+        }
+
+        .top-bar__nav-btn {
+            bottom: 50%;
+            max-width: 2rem;
+            max-height: 2rem;
+            padding: 0.5rem 0;
+            transform: translateY(50%);
+            transition:
+                padding $duration linear $delay,
+                max-width $duration linear $delay,
+                max-height $duration linear $delay;
+
+            &:hover {
+                transition:
+                    color $duration linear,
+                    background-color $duration linear;
+            }
+        }
+    }
+}
+
 
 /*
 
@@ -145,7 +438,7 @@ Markup:
     </div>
 </footer>
 
-Styleguide 2000.2
+Styleguide 2000.4
 
 */
 
@@ -170,23 +463,23 @@ Styleguide 2000.2
 
 .phx-footer__menu,
 .phx-footer__logos {
-    padding: 0.3rem 0;
     margin: 0;
+    padding: 0.3rem 0;
 }
 
 .phx-footer__menu {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     list-style-type: none;
+    justify-content: space-around;
 }
 
 .phx-footer__menu-item {
-    display: inline-block;
+    width: 48%;
     margin: 0 1%;
     font-size: 90%;
-    width: 48%;
+    display: inline-block;
 
     @media all and (min-width: $M) {
         width: 31.3%;
