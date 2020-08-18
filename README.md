@@ -97,8 +97,12 @@ Für das Projekt sollte ein SCSS-Kontext eingerichtet sein. Möglichst vor den P
 // (kann auch Projektordner sein, nur müssen dann bestimmte Bilder hinterlegt werden)
 $phxDesignSystemImagePath: '~@phoenixreisen/design-system/src/images';
 
+// Basis-Styles importieren
+// enthält nur eine Auswahl der am häufigsten gebrauchten Styles
+@import 'phoenixreisen/design-system/src/index.basic.scss';
+
 // Alles importieren
-// (siehe index.scss falls nur Stücke importiert werden sollen)
+// siehe index.scss falls nur Stücke importiert werden sollen
 @import '@phoenixreisen/design-system/src/index.scss';
 
 // custom styles...
