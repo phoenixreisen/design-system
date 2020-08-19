@@ -63,6 +63,9 @@ module.exports = {
         new CopyPlugin({'patterns': [{
             from: 'node_modules/@phoenixreisen/footer/src/icons/',
             to: 'template/kss-assets/footer-icons/'
+        }, {
+            from: './headers',
+            to: './dist/_headers'
         }]}),
         new MiniCssExtractPlugin({
             filename: `${filename}.css`,
