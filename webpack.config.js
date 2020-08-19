@@ -64,7 +64,7 @@ module.exports = {
             from: 'node_modules/@phoenixreisen/footer/src/icons/',
             to: 'template/kss-assets/footer-icons/'
         }, {
-            from: './headers',
+            from: './_headers',
             to: './dist/_headers'
         }]}),
         new MiniCssExtractPlugin({
