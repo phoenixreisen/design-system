@@ -32,7 +32,7 @@
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@phoenixreisen/footer": "^1.0.0",
-    "@phoenixreisen/header": "^1.0.0",
+    "@phoenixreisen/header": "^2.0.1",
     "@phoenixreisen/tabs": "^2.0.4",
     "animate.css": "^4.1.0",
     "pikaday": "^1.8.0",
