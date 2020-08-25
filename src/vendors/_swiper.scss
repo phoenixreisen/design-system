@@ -1,0 +1,106 @@
+/*
+
+Slider
+
+Styleguide 2100.0
+
+*/
+
+/*
+
+"Swiper"
+
+**Module:** [Mithril](https://github.com/phoenixreisen/swiper) mit [Demo](https://phoenixreisen.github.io/swiper/)
+
+Phoenix Standard-Styles für den Slider "Swiper". Hierfür gibt es auch bereits einen Mithril-Wrapper (siehe Demo) als
+npm Komponente, dem letztendlich nur noch eine Reihe von Mithril-Komponenten zu übergeben sind. Die Styles kommen hier
+aus dem Design-System.
+
+Markup:
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <!-- Custom Content. Kann weg bzw. ist zu ersetzen. -->
+            <div style="font-weight:bold; text-align:center; padding: 5rem 0.5rem; background-color: #eeeef4">
+                Slide 1 mit hellem Hintergrund
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <!-- Custom Content. Kann weg bzw. ist zu ersetzen. -->
+            <div style="font-weight:bold; text-align:center; padding: 5rem 0.5rem; background-color: #fff">
+                Slide 2 mit weißem Hintegrund
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <!-- Custom Content. Kann weg bzw. ist zu ersetzen. -->
+            <div style="font-weight:bold; text-align:center; padding: 5rem 0.5rem; background-color: #cdcdce">
+                Slide 3 mit grauem Hintergrund
+            </div>
+        </div>
+    </div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"><i class="fas fa-arrow-circle-left"></i></div>
+    <div class="swiper-button-next"><i class="fas fa-arrow-circle-right"></i></div>
+</div>
+
+Styleguide 2100.1
+
+*/
+
+.swiper-slide {
+    fieldset {
+        padding: 0;
+    }
+}
+
+//
+// "bullet"-Navigation
+//
+.swiper-pagination-bullet {
+    opacity: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+.swiper-pagination-bullet-active {
+    color: $white;
+    background: $dark-blue;
+}
+
+//
+// Vor- und Zurück-Pfeile
+//
+.swiper-button-prev,
+.swiper-button-next {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    background: none;
+    color: $light-blue;
+
+    i.fas {
+        display: block;
+    }
+}
+.swiper-button-prev {
+    left: 0.2rem;
+    transform: translateY(-50%);
+
+    &:after {
+        display: none;
+    }
+}
+.swiper-button-next {
+    right: 0.3rem;
+    transform: translateY(-50%);
+
+    &:after {
+        display: none;
+    }
+}
