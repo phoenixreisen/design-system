@@ -50,6 +50,10 @@ Styleguide 1.1
 
     a {
         color: $danger;
+
+        &:visited {
+            color: $danger;
+        }
         &:hover, &:active, &:focus {
             color: $dark-danger;
         }
@@ -62,6 +66,10 @@ Styleguide 1.1
 
     a {
         color: $success;
+
+        &:visited {
+            color: $success;
+        }
         &:hover, &:active, &:focus {
             color: $dark-success;
         }
@@ -74,6 +82,10 @@ Styleguide 1.1
 
     a {
         color: $warning;
+
+        &:visited {
+            color: $warning;
+        }
         &:hover, &:active, &:focus {
             color: $dark-warning;
         }
@@ -86,6 +98,10 @@ Styleguide 1.1
 
     a {
         color: $info;
+
+        &:visited {
+            color: $info;
+        }
         &:hover, &:active, &:focus {
             color: $dark-info;
         }
