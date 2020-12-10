@@ -55,6 +55,10 @@ table tr {
     margin: 0;
 }
 
+table tr:hover {
+    background-color: $gray6;
+}
+
 table.table--horizontal-bordered th,
 table.table--horizontal-bordered td {
     border-bottom: 1px solid $gray5;
@@ -123,7 +127,7 @@ table .table__row--error td {
 table th,
 table td {
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.3rem;
 }
 
 table th {
