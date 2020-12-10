@@ -1,10 +1,11 @@
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const KssWebpackPlugin = require('kss-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 /* filename of generated files */
 const filename = 'phx-design-system';
@@ -22,7 +23,9 @@ module.exports = {
         ],
     },
     output: {
-        filename: `${filename}.js`
+        filename: `${filename}.js`,
+        path: path.resolve(__dirname, 'dist/'),
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -80,8 +83,9 @@ module.exports = {
             "title": "Phoenix Reisen Styleguide",
         }),
         new StyleLintPlugin({
-            failOnError: false,
             quiet: false,
+            failOnError: false,
+            context: './src',
         }),
     ],
 
@@ -89,11 +93,6 @@ module.exports = {
      * Dev Mode Stuff
      */
     devServer: {
-        watchContentBase: true,
-        contentBase: './dist',
-        port: 3027,
-        hot: true,
-        compress: true,
         watchOptions: {
             poll: true
         },
@@ -101,7 +100,12 @@ module.exports = {
             "Access-Control-Allow-Origin": "*",
             // "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
             // "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-        }
+        },
+        hot: true,
+        port: 3027,
+        compress: true,
+        contentBase: './dist',
+        watchContentBase: true,
     },
     devtool: 'hidden-source-map'
 };
