@@ -55,7 +55,7 @@ table tr {
     margin: 0;
 }
 
-table tr:hover {
+table.table--hoverable tr:hover {
     background-color: $gray6;
 }
 
