@@ -3,8 +3,7 @@
     <img class="kss-doc-title" src="./kss-assets/phx.logo.svg" />
   </div>
   <p>
-    Grundlegende Designwerte & -elemente der <a target="_blank" href="https://www.phoenixreisen.com">
-    Phoenix Reisen GmbH</a> in Bonn<br />
+    Grundlegende Designwerte & -elemente der <a target="_blank" href="https://www.phoenixreisen.com">Phoenix Reisen GmbH</a> in Bonn<br />
     <small>Dokumentation (mehr als weniger automatisch generiert)</small>
   </p>
   <p>
@@ -18,11 +17,7 @@
 <ul>
   <li>mobile first</li>
   <li><a href="#osw">Open Source Welcome</a></li>
-  <li>
-    <a href="./kss-assets/weniger-ist-mehr.png" title="Weniger ist mehr" target="_blank">
-      weniger ist mehr, außer es ist zu wenig
-    </a>
-  </li>
+  <li>weniger ist mehr, außer es ist zu wenig</li>
   <li>wie sieht das in Türkis aus?</li>
 </ul>
 
