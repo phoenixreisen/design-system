@@ -2,9 +2,11 @@
 
 Akkordeon
 
-Das Öffnen einer Sektion ist durch einen Scrolleffekt animiert. Bei Klick fährt sie raus und rein.
+**Module:** [Mithril](https://github.com/phoenixreisen/accordion) mit [Demo](https://phoenixreisen.github.io/accordion/)
 
-Die Höhe eines jeweiligen Content Containers wurde durch `max-height` auf 1000px festgelegt (wichtig für die Animation).
+Das Öffnen einer Sektion ist durch einen Scrolleffekt animiert.
+
+Die Höhe eines jeweiligen Content Containers wurde durch `max-height` auf `1000px` festgelegt (wichtig für die Animation).
 Ist das zu viel oder zu wenig, muss dieser Wert explizit in den Projekt-Styles oder via Javascript als Style-Attribut auf dem Element überschrieben werden.
 
 Styleguide 10.0
