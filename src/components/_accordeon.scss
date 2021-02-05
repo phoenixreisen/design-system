@@ -1,10 +1,11 @@
 /*
 
-Akkordion
+Akkordeon
 
-Durch das Setzen der Klasse `.acc-animated` auf `.acc-section`
-kann das Öffnen und Schließen einer Sektion (s.u.) animiert werden. 
-Sie fährt dann raus und rein.
+Das Öffnen einer Sektion ist durch einen Scrolleffekt animiert. Bei Klick fährt sie raus und rein.
+
+Die Höhe eines jeweiligen Content Containers wurde durch `max-height` auf 1000px festgelegt (wichtig für die Animation).
+Ist das zu viel oder zu wenig, muss dieser Wert explizit in den Projekt-Styles oder via Javascript als Style-Attribut auf dem Element überschrieben werden.
 
 Styleguide 10.0
 
@@ -65,12 +66,12 @@ Markup:
 */
 
 @keyframes slideIn {
-    from { margin-top: -150%; }
-    to { margin-top: 0.5rem; }
+    from { max-height: 0; }
+    to { max-height: 1000px; }
 }
 @keyframes slideOut {
-    from { margin-top: 0.5rem; }
-    to { margin-top: -150%; }
+    from { max-height: 1000px; }
+    to { max-height: 0; }
 }
 
 a.acc-opener {
@@ -78,8 +79,8 @@ a.acc-opener {
     padding: 0.5rem;
     color: $white;
     align-items: center;
-    justify-content: space-between;
     background-color: $light-blue;
+    justify-content: space-between;
     transition: padding-left 200ms ease-in-out;
 
     &:hover,
@@ -105,28 +106,23 @@ a.acc-opener {
 }
 
 .acc-section {
-    position: relative;
     overflow: hidden;
+    position: relative;
+    animation: slideOut;
+    animation-duration: 450ms;
+    animation-fill-mode: both;
     background-color: $whitegray;
 
-    .acc-inner {
-        padding: 0 0.5rem;
-        margin: -150% 0.5rem 0.5rem 0.5rem;
-        animation: slideOut;
-        background-color: $white;
-        border: 1px solid $gray6;
-    }
     &--open {
-        .acc-inner {
-            margin: 0.5rem;
-            padding: 0.5rem;
-            animation: slideIn;
-        }
+        max-height: none;
+        animation: slideIn;
+        animation-duration: 650ms;
     }
-    &.acc-animated {
-        .acc-inner {
-            animation-duration: 750ms;
-            animation-fill-mode: both;
-        }
+
+    .acc-inner {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid $gray6;
+        background-color: $white;
     }
 }
