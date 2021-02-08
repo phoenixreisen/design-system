@@ -93,6 +93,11 @@ a.acc-opener {
         padding-left: 0.75rem;
     }
 
+    &:hover .fa-chevron-up {
+        transform: rotate(-90deg);
+        transition: transform 100ms ease;
+    }
+
     &--grayed {
         color: $gray2;
         background-color: $gray5;
