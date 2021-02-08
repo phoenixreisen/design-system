@@ -6,8 +6,11 @@ Akkordeon
 
 Das Öffnen einer Sektion ist durch einen Scrolleffekt animiert.
 
-Die Höhe eines jeweiligen Content Containers wurde durch `max-height` auf `1000px` festgelegt (wichtig für die Animation).
-Ist das zu viel oder zu wenig, muss dieser Wert explizit in den Projekt-Styles oder via Javascript als Style-Attribut auf dem Element überschrieben werden.
+Die Höhe eines jeweiligen Content Containers ist grundsätzlich durch `max-height` auf `1000px` festgelegt - wichtig für die Animation.
+Ist das zu viel oder zu wenig, muss der Wert explizit überschrieben werden.
+
+**Entweder** durch Überschreiben der `max-height` in `.acc-section--open` **oder** durch Setzen des `style`-Attributes mittels JS auf das jew. Element.
+**Via SCSS** kann alternativ auch die Variable `$acc-max-height: 1000px` überschrieben werden.
 
 Styleguide 10.0
 
@@ -67,19 +70,13 @@ Markup:
 
 */
 
-@keyframes slideIn {
-    from { max-height: 0; }
-    to { max-height: 1000px; }
-}
-@keyframes slideOut {
-    from { max-height: 1000px; }
-    to { max-height: 0; }
-}
+$acc-max-height: 1000px;
+$acc-animation-duration: 500ms;
 
 a.acc-opener {
     display: flex;
-    padding: 0.5rem;
     color: $white;
+    padding: 0.5rem;
     align-items: center;
     background-color: $light-blue;
     justify-content: space-between;
@@ -113,17 +110,16 @@ a.acc-opener {
 }
 
 .acc-section {
+    height: auto;
+    max-height: 0;
     overflow: hidden;
     position: relative;
-    animation: slideOut;
-    animation-duration: 450ms;
-    animation-fill-mode: both;
     background-color: $whitegray;
+    transition: max-height 500ms ease;
 
     &--open {
-        max-height: none;
-        animation: slideIn;
-        animation-duration: 650ms;
+        max-height: $acc-max-height;
+        transition: max-height 500ms ease;
     }
 
     .acc-inner {
