@@ -6,9 +6,19 @@ Styleguide 700.0
 
 **Module:** [Mithril](https://github.com/phoenixreisen/modal) mit [Demo](https://phoenixreisen.github.io/modal/)
 
-**Das Modal ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert.** Normalerweise würde es sich mit einem
-seichten Hintergrund `fixed` über die Website legen (siehe Demo). Auf dem Öffnen des Modals bzw. auf `.modal--visible` liegt eine `pulse`-Animation,
-die hier nur deaktiviert wurde.
+**Das Modal ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert;** normalerweise würde es sich mit einem
+seichten Hintergrund `fixed` über die Website legen (siehe Demo). Zudem liegt auf dem Öffnen des Modals bzw. auf `.modal--visible`
+eine `pulse`-Animation, die hier nur deaktiviert wurde.
+
+Wenn keine Größe angegeben ist, passt sich das Modal bis zu seiner max-width und max-height an seinen Content an.
+Folgende fixe **Größen für Tablets** und Desktops können aber auch festgelegt werden:
+
+- s7590 - 75% breit, 90% hoch
+- s9090 - 90% breit, 90% hoch
+- s5050 - 50% breit, 50% hoch
+- s5075 - 50% breit, 75% hoch
+
+**Auf Smartphones nimmt das Modal immer 90% der Breite ein und wird bis zu 90% hoch.**
 
 Markup:
 <div class="flex">
