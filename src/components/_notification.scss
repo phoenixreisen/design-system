@@ -2,24 +2,14 @@
 
 Notifications
 
-**Module:** [Mithril](https://github.com/phoenixreisen/notification)
+**Module:** [Mithril](https://github.com/phoenixreisen/notification) mit [Demo](https://phoenixreisen.github.io/notification/)
 
 Notifications werden typischerweise als Egebnisanzeige von Benutzerinteraktionen angezeigt. Wenn ein Benutzer beispielsweise Daten
 speichert oder löscht, wird ihm die Tatsache, dass dies erfolgreich oder fehlerhaft verlaufen ist, mittels einer solchen
 Box mitgeteilt.
 
 **Die Notification ist hier zum Zweck der beispielhaften Veranschaulichung `static` positioniert und ohne Animation dargestellt**.
-Normalerweise würde sie `fixed` unten links im Browserfenster einfaden und nach 5 Sekunden automatisch wieder ausfaden.
-
-<article class="notification">
-    <i class="fas fa-info"></i>
-    <span>
-        Ich bin ein Beispiel. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore.
-    </span>
-    <a href="javascript:" class="fas fa-times"></a>
-</article>
+Normalerweise würde sie `fixed` unten links im Browserfenster einfaden und nach 5 Sekunden automatisch wieder ausfaden (siehe Demo).
 
 Markup:
 <article class="notification {{modifier_class}}">
