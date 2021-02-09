@@ -9,64 +9,76 @@ Das Öffnen einer Sektion ist durch einen Scrolleffekt animiert.
 Die Höhe eines jeweiligen Content Containers ist grundsätzlich durch `max-height` auf `1000px` festgelegt - wichtig für die Animation.
 Ist das zu viel oder zu wenig, muss der Wert explizit überschrieben werden.
 
-**Entweder** durch Überschreiben der `max-height` in `.acc-section--open` **oder** durch Setzen des `style`-Attributes mittels JS auf das jew. Element.
+**Entweder** durch Überschreiben der `max-height` in `.acc-open-item` **oder** durch Setzen des `style`-Attributes mittels JS auf das jew. Element.
 **Via SCSS** kann alternativ auch die Variable `$acc-max-height: 1000px` überschrieben werden.
 
 Styleguide 10.0
 
 Markup:
 <div>
-    <a href="javascript:" class="acc-opener">
-        <span><i class="fas fa-ship mr1"></i> Hafen 1</span>
-        <i class="fas fa-chevron-up ml1"></i>
-    </a>
-    <a href="javascript:" class="acc-opener acc-opener--grayed">
-        <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
-        <i class="fas fa-chevron-down ml1"></i>
-    </a>
-    <section class="acc-section {{modifier_class}}">
-        <div class="acc-inner">
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
+    <article id="acc-item-0" class="acc-item acc-primary">
+        <a href="javascript:" class="acc-opener">
+            <span><i class="fas fa-ship mr1"></i> Hafen 1</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+    </article>
+    <article id="acc-item-1" class="acc-item {{modifier_class}} acc-secondary">
+        <a href="javascript:" class="acc-opener acc-opener--grayed">
+            <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+        <div class="acc-section">
+            <div class="acc-inner">
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+            </div>
         </div>
-    </section>
-    <a href="javascript:" class="acc-opener acc-opener--grayed">
-        <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
-        <i class="fas fa-chevron-up ml1"></i>
-    </a>
-    <section class="acc-section">
-        <div class="acc-inner">
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
+    </article>
+    <article id="acc-item-2" class="acc-item acc-secondary">
+        <a href="javascript:" class="acc-opener acc-opener--grayed">
+            <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+        <section class="acc-section">
+            <div class="acc-inner">
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+            </div>
+        </section>
+    </article>
+    <article id="acc-item-3" class="acc-item {{modifier_class}} acc-primary">
+        <a href="javascript:" class="acc-opener">
+            <span><i class="fas fa-ship mr1"></i> Hafen 2</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+        <div class="acc-section">
+            <div class="acc-inner">
+                <p>Content</p>
+                <p>Content</p>
+            </div>
         </div>
-    </section>
-    <a href="javascript:" class="acc-opener">
-        <span><i class="fas fa-ship mr1"></i> Hafen 2</span>
-        <i class="fas fa-chevron-up ml1"></i>
-    </a>
-    <section class="acc-section {{modifier_class}}">
-        <div class="acc-inner">
-            <p>Content</p>
-            <p>Content</p>
-        </div>
-    </section>
-    <a href="javascript:" class="acc-opener acc-opener--grayed">
-        <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
-        <i class="fas fa-chevron-up ml1"></i>
-    </a>
-    <a href="javascript:" class="acc-opener acc-opener--grayed">
-        <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
-        <i class="fas fa-chevron-up ml1"></i>
-    </a>
+    </article>
+    <article id="acc-item-4" class="acc-item {{modifier_class}} acc-secondary">
+        <a href="javascript:" class="acc-opener acc-opener--grayed">
+            <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+    </article>
+    <article id="acc-item-5" class="acc-item {{modifier_class}} acc-secondary">
+        <a href="javascript:" class="acc-opener acc-opener--grayed">
+            <span><i class="fas fa-leaf mr1"></i> Ausflug in die Natur</span>
+            <i class="fas fa-chevron-up ml1"></i>
+        </a>
+    </article>
 </div>
 
-.acc-section--open - wenn gesetzt, dann offen, sonst geschlossen.
+.acc-open-item - wenn gesetzt, dann offen, sonst geschlossen.
 
 */
 
@@ -89,7 +101,6 @@ a.acc-opener {
         color: $white;
         padding-left: 0.75rem;
     }
-
     &:hover .fa-chevron-up {
         transform: rotate(-90deg);
         transition: transform 100ms ease;
@@ -117,15 +128,19 @@ a.acc-opener {
     background-color: $whitegray;
     transition: max-height 500ms ease;
 
-    &--open {
-        max-height: $acc-max-height;
-        transition: max-height 500ms ease;
-    }
-
     .acc-inner {
         margin: 0.5rem;
         padding: 0.5rem;
         border: 1px solid $gray6;
         background-color: $white;
     }
+}
+
+.acc-open-item .acc-opener .fa-chevron-up {
+    transform: rotate(-180deg);
+    transition: transform 100ms ease;
+}
+.acc-open-item .acc-section {
+    max-height: $acc-max-height;
+    transition: max-height 500ms ease;
 }
