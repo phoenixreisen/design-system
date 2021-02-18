@@ -2,6 +2,16 @@
 
 Buttons
 
+Diverse Arten von Buttons.
+
+Styleguide 300.0
+
+*/
+
+/*
+
+CTA & Status Buttons
+
 Markup:
 <div class="pa2">
     <button type="button" class="btn {{modifier_class}}">
@@ -18,7 +28,7 @@ Markup:
 .btn--warning         - Fehler / Warnung
 .btn--danger          - Fehler / Gefahr
 
-Styleguide 300.0
+Styleguide 300.10
 
 */
 
@@ -209,4 +219,95 @@ Styleguide 300.0
 [type=submit],
 button {
     @extend .btn;
+}
+
+/*
+
+Mobile Nav Toggler
+
+Markup:
+<article>
+    <span style="display:inline-block; vertical-align: middle"> <!-- span kann weg -->
+        <a href="#" class="nav-btn noprint" title="Navigation ein-/ausblenden">
+            <i class="fas fa-bars"></i>
+        </a>
+    </span>
+</article>
+
+Styleguide 300.20
+
+*/
+
+.nav-btn,
+.phx-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: none;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 200%;
+    padding-top: 0.75rem;
+    background-color: $gray6;
+
+    &:hover {
+        color: $white;
+        background-color: $light-blue;
+        transition:
+            color 150ms linear,
+            background-color 150ms linear;
+    }
+}
+
+
+/*
+
+Avatar Nav Toggler
+
+Markup:
+<article>
+    <span style="display:inline-block; vertical-align: middle"> <!-- span kann weg -->
+        <a href="#" class="avatar-cta" title="Buchungsdaten anzeigen">
+            <i class="fas fa-user avatar__symbol"></i>
+        </a>
+    </span>
+</article>
+
+Styleguide 300.30
+
+*/
+
+.avatar-cta,
+.phx-avatar-cta {
+    // Bei Bedarf zu ueberschreiben
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    box-shadow: $box-shadow-3;
+    border: 2px solid $primary;
+    // Sollte nicht überschrieben werden.
+    color: $black;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: white;
+
+    &:visited {
+        color: $black
+    }
+    &:active,
+    &:hover {
+        color: $primary;
+        transition: color ease 150ms;
+    }
+
+    > i.fas {
+        position: absolute;
+        top: 50%; left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
