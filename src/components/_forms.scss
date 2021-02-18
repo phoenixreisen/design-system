@@ -37,14 +37,18 @@ Markup:
   </label>
   <br/>
   <div class="mt3">
-    <input class="btn btn--primary" type="submit" value="Abschicken" />
-    <button class="btn btn--primary" disabled="disabled">
+    <button type="button" class="btn btn--primary">
+      Abschicken
+    </button>
+    <button type="button" class="btn btn--primary" disabled="disabled">
       <i class="fas fa-spinner fa-spin mr1"></i> Abschicken
     </button>
-    <button class="btn btn--success" disabled="disabled">
+    <button type="button" class="btn btn--success" disabled="disabled">
       <i class="fas fa-check mr1"></i> Gekauft
     </button>
-    <button class="btn btn--secondary">Abbrechen</button>
+    <button type="button" class="btn btn--secondary">
+      Abbrechen
+    </button>
   </div>
   <div class="mt3">
     <button class="btn btn--warning">Löschen</button>
@@ -418,7 +422,13 @@ Markup:
   <span class="textfield__label">Input</span>
 </label>
 <label class="textfield {{modifier_class}}">
-  <textarea name="" oninput="" value="" placeholder="..." maxlength=""></textarea>
+  <textarea
+    name=""
+    value=""
+    oninput=""
+    maxlength=""
+    placeholder="...">
+  </textarea>
   <span class="textfield__label">Textarea</span>
 </label>
 
