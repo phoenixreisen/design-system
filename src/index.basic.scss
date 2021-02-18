@@ -4,6 +4,7 @@
 // Phx components
 @import "components/forms";
 @import "components/table";
+@import "components/layout";
 @import "components/badges";
 @import "components/alerts";
 @import "components/loader";
@@ -19,7 +20,6 @@
 // Used 3rd party vendor libs
 @import "vendors/animate";
 @import "vendors/tachyons";
-@import "vendors/phoenix";
 
 // Phx standards
 @import "base";

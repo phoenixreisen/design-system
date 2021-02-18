@@ -1,8 +1,8 @@
 /*
 
-PHX Layout
+Layout
 
-Styleguide 3000.0
+Styleguide 650.0
 
 */
 
@@ -10,21 +10,25 @@ Styleguide 3000.0
 
 Header
 
-**Module:** [Mithril](https://github.com/phoenixreisen/header)
+**Module:** [Mithril](https://github.com/phoenixreisen/header)  mit [Demo](https://phoenixreisen.github.io/header/)
 
 Markup:
-<article class="phx-header">
+<article class="header">
     <a href="/cdn/mein-phoenix/uebersicht/">
-        <picture class="phx-header__logo">
+        <picture class="header__logo">
             <img src="./kss-assets/phx.logo.svg" />
         </picture>
     </a>
-    <div class="phx-header__version">
+    <div class="header__version">
         Phoenix Reisen - Standard Header
     </div>
+    <a href="javascript:" title="Navigation ein-/ausblenden"
+        class="nav-btn header__nav-btn noprint">
+        <i class="fas fa-bars"></i>
+    </a>
 </article>
 
-Styleguide 3000.1
+Styleguide 650.1
 
 */
 
@@ -32,10 +36,10 @@ header.header {
     border-bottom: 5px solid $primary;
 }
 
-.phx-header {
+.header {
     position: relative;
 
-    .phx-header__logo {
+    .header__logo {
         margin: 0;
         padding: 0;
         width: 200px;
@@ -53,14 +57,14 @@ header.header {
         }
     }
 
-    .phx-header__version {
+    .header__version {
         margin: 0;
         margin-top: -5px;
         padding: 0 10px;
         font-size: smaller;
     }
 
-    .phx-header__nav-btn {
+    .header__nav-btn {
         top: 0.25rem;
         right: 0.75rem;
         position: absolute;
@@ -75,92 +79,15 @@ header.header {
     }
 }
 
-/*
-
-Buttons
-
-Markup:
-<article>
-    <span style="display:inline-block; vertical-align: middle; margin-right: 1rem"> <!-- span kann weg -->
-        <a href="#" class="avatar-cta" title="Buchungsdaten anzeigen">
-            <i class="fas fa-user avatar__symbol"></i>
-        </a>
-    </span>
-    <span style="display:inline-block; vertical-align: middle; margin-left: 1rem"> <!-- span kann weg -->
-        <a href="#" class="nav-btn noprint" title="Navigation ein-/ausblenden">
-            <i class="fas fa-bars"></i>
-        </a>
-    </span>
-</article>
-
-Styleguide 3000.2
-
-*/
-
-.nav-btn,
-.phx-nav-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    overflow: hidden;
-    transition: none;
-    line-height: 1rem;
-    text-align: center;
-    border-radius: 200%;
-    padding-top: 0.75rem;
-    background-color: $gray6;
-
-    &:hover {
-        color: $white;
-        background-color: $light-blue;
-        transition:
-            color 150ms linear,
-            background-color 150ms linear;
-    }
-}
-
-.avatar-cta,
-.phx-avatar-cta {
-    // Bei Bedarf zu ueberschreiben
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.5rem;
-    box-shadow: $box-shadow-3;
-    border: 2px solid $primary;
-    // Sollte nicht überschrieben werden.
-    color: $black;
-    display: block;
-    position: relative;
-    border-radius: 50%;
-    text-decoration: none;
-    background-color: white;
-
-    &:visited {
-        color: $black
-    }
-    &:active,
-    &:hover {
-        color: $primary;
-        transition: color ease 150ms;
-    }
-
-    > i.fas {
-        position: absolute;
-        top: 50%; left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-}
 
 /*
 
-Sticky Topbar
+Header Topbar
 
 **Module:** [Mithril](https://github.com/phoenixreisen/header) mit [Demo](https://phoenixreisen.github.io/header/)
 
 Die Leiste ist hier aus Anpassungsgründen durch Inline-Styles `static` positioniert (die vor Benutzung natürlich
-zu entfernen sind). Ansonsten liegt sie `fixed` am oberen Browserrand und erstreckt sich über die ganze Breite.
+zu entfernen sind). Ansonsten liegt sie `fixed` am oberen Browserrand (sticky) und erstreckt sich über die ganze Breite.
 
 Markup:
 <article class="top-bar noprint top-bar--visible" style="position:static">
@@ -185,7 +112,7 @@ Markup:
     </div>
 </article>
 
-Styleguide 3000.3
+Styleguide 650.2
 
 */
 
@@ -357,7 +284,7 @@ Footer
 **Module:** [Mithril](https://github.com/phoenixreisen/footer)
 
 Markup:
-<footer class="phx-footer">
+<footer class="footer">
     <div class="social-media">
         <div class="mb1">
             <strong>Sie finden uns auch auf</strong>
@@ -394,55 +321,55 @@ Markup:
             <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
         </div>
     </div>
-    <div class="wrapper wrapper--large phx-footer__wrapper">
-        <ul class="phx-footer__menu noprint">
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich" class="phx-footer__menu-link">
+    <div class="wrapper wrapper--large footer__wrapper">
+        <ul class="footer__menu noprint">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i> Reisebüro-/Profibereich
                 </a>
             </li>
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB" class="phx-footer__menu-link">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i> AGB
                 </a>
             </li>
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung" class="phx-footer__menu-link">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i>Datenschutzerklärung
                 </a>
             </li>
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite" class="phx-footer__menu-link">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i> Kontakt
                 </a>
             </li>
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen" class="phx-footer__menu-link">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i> Nutzungsbedingungen
                 </a>
             </li>
-            <li class="phx-footer__menu-item">
-                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum" class="phx-footer__menu-link">
+            <li class="footer__menu-item">
+                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum" class="footer__menu-link">
                     <i class="fa fa-angle-right"></i> Impressum
                 </a>
             </li>
         </ul>
-        <div class="phx-footer__logos">
-            <span class="phx-footer__logo">
+        <div class="footer__logos">
+            <span class="footer__logo">
                 <img src="template/kss-assets/footer-icons/DRV-Logo.png">
             </span>
-            <span class="phx-footer__logo">
+            <span class="footer__logo">
                 <img src="template/kss-assets/footer-icons/QG-Logo.svg">
             </span>
         </div>
     </div>
 </footer>
 
-Styleguide 3000.4
+Styleguide 650.3
 
 */
 
-.phx-footer {
+.footer {
     $footerborder: 5px solid $primary;
 
     margin: 2rem 0 0 0;
@@ -456,18 +383,18 @@ Styleguide 3000.4
     }
 }
 
-.phx-footer__wrapper {
+.footer__wrapper {
     padding: 1rem;
     text-align: center;
 }
 
-.phx-footer__menu,
-.phx-footer__logos {
+.footer__menu,
+.footer__logos {
     margin: 0;
     padding: 0.3rem 0;
 }
 
-.phx-footer__menu {
+.footer__menu {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -475,7 +402,7 @@ Styleguide 3000.4
     justify-content: space-around;
 }
 
-.phx-footer__menu-item {
+.footer__menu-item {
     width: 48%;
     margin: 0 1%;
     font-size: 90%;
@@ -486,7 +413,7 @@ Styleguide 3000.4
     }
 }
 
-.phx-footer__menu-link {
+.footer__menu-link {
     position: relative;
     padding-left: 15px;
 
@@ -503,7 +430,7 @@ Styleguide 3000.4
     }
 }
 
-.phx-footer__logo {
+.footer__logo {
     display: inline-block;
     vertical-align: middle;
     margin: 1rem 5%;
@@ -514,11 +441,11 @@ Styleguide 3000.4
     }
 }
 
-.phx-footer .social-media {
+.footer .social-media {
     margin-top: 0.5rem;
     text-align: center;
 }
-.phx-footer .social-media__icons {
+.footer .social-media__icons {
     white-space: nowrap;
     display: block;
 
