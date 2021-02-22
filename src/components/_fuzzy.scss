@@ -6,7 +6,7 @@ Styleguide 450.0
 
 **Module:** [Mithril](https://github.com/phoenixreisen/fuzzy-input/) mit [Demo](https://phoenixreisen.github.io/fuzzy-input/)
 
-**Ein Suchfeld, das während des Tippens bereits Suchergebnisse anzeigt. Auch Autocomplete genannt.**
+**Ein Suchfeld, das während des Tippens bereits Suchergebnisse anzeigt - auch Autocomplete genannt.**
 
 Wird innerhalb von `.fuzzy-overlay` ein `<div class="fuzzy-bg-layer"></div>` gesetzt, wird ein unsichtbares `div`
 über den `body` aufgezogen, welches für ein `onclick` genutzt werden kann, um das Ergebnis-Overlay bei einem Klick
