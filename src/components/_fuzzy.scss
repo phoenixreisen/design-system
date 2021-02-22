@@ -4,6 +4,8 @@ Fuzzy-Suche
 
 Styleguide 450.0
 
+**Module:** [Mithril](https://github.com/phoenixreisen/fuzzy-input/) mit [Demo](https://phoenixreisen.github.io/fuzzy-input/)
+
 **Ein Suchfeld, das während des Tippens bereits Suchergebnisse anzeigt. Auch Autocomplete genannt.**
 
 Wird innerhalb von `.fuzzy-overlay` ein `<div class="fuzzy-bg-layer"></div>` gesetzt, wird ein unsichtbares `div`
@@ -11,8 +13,6 @@ Wird innerhalb von `.fuzzy-overlay` ein `<div class="fuzzy-bg-layer"></div>` ges
 irgendwo ins Fenster wieder zu schließen.
 
 Möchte man bestehendes Aussehen des Overlays ändern, überschreibt man am Besten `.fuzzy-style`.
-
-**Module:** [Mithril](https://github.com/phoenixreisen/fuzzy-input/) mit [Demo](https://phoenixreisen.github.io/fuzzy-input/)
 
 Markup:
 <div class="container" style="height: 250px"> <!-- Nur zu Demozwecken. Kann weg. -->
