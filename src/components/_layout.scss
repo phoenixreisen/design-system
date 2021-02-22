@@ -124,7 +124,6 @@ Styleguide 650.2
     padding: 0;
     width: 100%;
     z-index: 400;
-    box-shadow: $box-shadow-3;
     background-color: $light-blue;
 
     > .wrapper {
@@ -226,6 +225,7 @@ Styleguide 650.2
         top: 0;
         position: fixed;
         padding: 0.5rem 0;
+        box-shadow: $box-shadow-3;
 
         .top-bar__left {
             opacity: 1;
