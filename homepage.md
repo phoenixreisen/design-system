@@ -96,7 +96,7 @@
     <span class="ml1"><a href="https://github.com/phoenixreisen/notification" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-450.html" title="Vorschau">Phoenix Fuzzy-Suche | Autocomplete</a> |
+    <a href="/section-450.html" title="Vorschau">Phoenix Fuzzy-Suche</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/fuzzy-input/" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
 </ul>
