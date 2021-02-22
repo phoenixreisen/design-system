@@ -1,0 +1,123 @@
+/*
+
+Fuzzy-Suche
+
+Styleguide 450.0
+
+**Ein Suchfeld, das während des Tippens bereits Suchergebnisse anzeigt. Auch Autocomplete genannt.**
+
+Wird innerhalb von `.fuzzy-overlay` ein `<div class="fuzzy-bg-layer"></div>` gesetzt, wird ein unsichtbares `div`
+über den `body` aufgezogen, welches für ein `onclick` genutzt werden kann, um das Ergebnis-Overlay bei einem Klick
+irgendwo ins Fenster wieder zu schließen.
+
+Möchte man bestehendes Aussehen des Overlays ändern, überschreibt man am Besten `.fuzzy-style`.
+
+**Module:** [Mithril](https://github.com/phoenixreisen/fuzzy-input/) mit [Demo](https://phoenixreisen.github.io/fuzzy-input/)
+
+Markup:
+<div class="container" style="height: 250px"> <!-- Nur zu Demozwecken. Kann weg. -->
+    <article class="fuzzy-search {{modifier_class}}">
+        <label class="textfield fuzzy-input">
+            <input
+                value="und"
+                type="text"
+                name="fuzzy"
+                maxlength="100"
+                readonly="false"
+                id="fuzzy-input"
+                placeholder="..."
+                autocomplete="autocomplete"
+                oninput="(e) => console.log('fuzzied')"
+            />
+            <span class="textfield__label">
+                Suche
+            </span>
+        </label>
+        <div class="fuzzy-overlay fuzzy-result fuzzy-style">
+            <div class="fadeIn animated faster">
+                <a id="fuzzy-item-0" href="javascript:"
+                    onclick="alert('Hund')">
+                    Hund
+                </a>
+                <a id="fuzzy-item-1" href="javascript:"
+                    onclick="alert('Kunde')">
+                    Kunde
+                </a>
+                <a id="fuzzy-item-2" href="javascript:"
+                    onclick="alert('Schlund')">
+                    Schlund
+                </a>
+                <a id="fuzzy-item-3" href="javascript:"
+                    onclick="alert('Wunde')">
+                    Wunde
+                </a>
+            </div>
+        </div>
+        <!-- zu Demozwecken auskommentiert
+        <div class="fuzzy-bg-layer" onclick="alert('close')"></div>
+        -->
+    </article>
+</div>
+
+.fuzzy-show-result - wenn gesetzt, wird das Ergebnis-Overlay angezeigt, ansonsten nicht.
+
+*/
+
+$fuzzy-z-index: 500 !default;
+$fuzzy-white: $white !default;
+$fuzzy-gray: $gray4 !default;
+$fuzzy-gray-light: $gray6 !default;
+
+.fuzzy-search {
+    position: relative;
+}
+
+.fuzzy-overlay {
+    left: 0;
+    top: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: $fuzzy-z-index;
+
+    .fuzzy-show-result & {
+        display: block;
+    }
+}
+
+.fuzzy-style {
+    box-shadow: $box-shadow-4;
+    border: 1px solid $fuzzy-gray;
+    background-color: $fuzzy-white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 0;
+}
+
+.fuzzy-style a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &:hover, &:active, &:focus {
+        background-color: $fuzzy-gray-light;
+    }
+}
+
+.fuzzy-bg-layer {
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    z-index: ($fuzzy-z-index - 1);
+    background-color: transparent;
+
+    .fuzzy-show-result & {
+        display: block;
+    }
+}

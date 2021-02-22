@@ -56,40 +56,48 @@
 
 <ul>
   <li>
-    <a href="/section-3000.html#kssref-3000-1" title="Vorschau">Phoenix Header</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Mithril</a></span>
-  </li>
-  <li>
-    <a href="/section-3000.html#kssref-3000-2" title="Vorschau">Phoenix Footer</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Mithril</a></span>
-  </li>
-  <li>
-    <a href="/section-800.html#kssref-800" title="Vorschau">Phoenix Web Tabs</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Mithril</a></span>
-  </li>
-  <li>
-    <a href="/section-600.html" title="Vorschau">Phoenix Loader</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Mithril</a></span>
-  </li>
-  <li>
-    <a href="/section-350.html#kssref-350" title="Vorschau">Phoenix Dropdown</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/dropdown" target="_blank" title="zum Repo">Mithril</a></span>
-  </li>
-  <li>
-    <a href="/section-750.html" title="Vorschau">Phoenix Notifications</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/notification" target="_blank" title="zum Repo">Mithril</a></span>
+    <a href="/section-2100.html" title="Vorschau">Phoenix Slider</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/swiper" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
     <a href="/section-700.html" title="Vorschau">Phoenix Modal</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/modal" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
+    <a href="/section-600.html" title="Vorschau">Phoenix Loader</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-3000.html#kssref-3000-2" title="Vorschau">Phoenix Footer</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-3000.html#kssref-3000-1" title="Vorschau">Phoenix Header</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
     <a href="/section-200.html" title="Vorschau">Phoenix Banners</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/banners" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-2100.html" title="Vorschau">Phoenix Slider</a> |
-    <span class="ml1"><a href="https://github.com/phoenixreisen/swiper" target="_blank" title="zum Repo">Mithril</a></span>
+    <a href="/section-800.html#kssref-800" title="Vorschau">Phoenix Web Tabs</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/tabs" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-350.html#kssref-350" title="Vorschau">Phoenix Dropdown</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/dropdown" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-10.html#kssref-10" title="Vorschau">Phoenix Akkordeon</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/accordion" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-750.html" title="Vorschau">Phoenix Notifications</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/notification" target="_blank" title="zum Repo">Mithril</a></span>
+  </li>
+  <li>
+    <a href="/section-450.html" title="Vorschau">Phoenix Fuzzy-Suche | Autocomplete</a> |
+    <span class="ml1"><a href="https://github.com/phoenixreisen/fuzzy-input/" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
 </ul>
 
