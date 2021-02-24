@@ -68,11 +68,11 @@
     <span class="ml1"><a href="https://github.com/phoenixreisen/loader" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-3000.html#kssref-3000-2" title="Vorschau">Phoenix Footer</a> |
+    <a href="/section-650.html#kssref-650-3" title="Vorschau">Phoenix Footer</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/footer" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
-    <a href="/section-3000.html#kssref-3000-1" title="Vorschau">Phoenix Header</a> |
+    <a href="/section-650.html#kssref-650-1" title="Vorschau">Phoenix Header</a> |
     <span class="ml1"><a href="https://github.com/phoenixreisen/header" target="_blank" title="zum Repo">Mithril</a></span>
   </li>
   <li>
