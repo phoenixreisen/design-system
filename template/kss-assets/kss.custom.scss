@@ -51,6 +51,13 @@ body#kss-node {
         }
     }
 
+    .kss-toolbar {
+        display: none;
+    }
+    .kss-title__ref {
+        display: none;
+    }
+
 
     // ---
     // Farbpalette
@@ -242,6 +249,8 @@ body#kss-node {
             position: absolute;
         }
 
+        // Notifications static
+        // statt fixed darstellen
         .notification {
             position: static;
             animation: none;
