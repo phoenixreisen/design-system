@@ -285,35 +285,35 @@ Footer
 
 Markup:
 <footer class="footer">
-    <div class="social-media">
+    <div class="footer__media-links">
         <div class="mb1">
             <strong>Sie finden uns auch auf</strong>
         </div>
-        <div class="social-media__icons">
-            <a href="https://www.phoenixreisen.com" title="Phoenix Reisen" target="_blank" rel="noopener noreferrer" class="social-media__icon desktop-only">
+        <div class="footer__media-icons">
+            <a href="https://www.phoenixreisen.com" title="Phoenix Reisen" target="_blank" rel="noopener noreferrer" class="desktop-only">
                 <img src="template/kss-assets/footer-icons/phoenixreisen.jpg" alt="Phoenix Reisen Website">
             </a>
-            <a href="https://de-de.facebook.com/PHXTV/" title="Phoenix Reisen TV auf Facebook" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://de-de.facebook.com/PHXTV/" title="Phoenix Reisen TV auf Facebook" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/facebook.png" alt="Phoenix Reisen TV auf Facebook">
             </a>
-            <a href="https://www.youtube.com/PhoenixreisenTV" title="Phoenix Reisen TV auf YouTube" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://www.youtube.com/PhoenixreisenTV" title="Phoenix Reisen TV auf YouTube" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/youtube.png" alt="Phoenix Reisen TV auf YouTube">
             </a>
-            <a href="https://www.phoenixreisen.tv/" title="Phoenix TV" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://www.phoenixreisen.tv/" title="Phoenix TV" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/tv.png" alt="Phoenix TV">
             </a>
-            <a href="https://www.instagram.com/phoenixreisen" title="Phoenix Reisen auf Instagram" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://www.instagram.com/phoenixreisen" title="Phoenix Reisen auf Instagram" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/instagram.png" alt="Phoenix Reisen auf Instagram">
             </a>
-            <a href="https://www.instagram.com/explore/tags/phoenixreisen" title="Impressionen unserer Gäste" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://www.instagram.com/explore/tags/phoenixreisen" title="Impressionen unserer Gäste" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/insta-hashtag.png" alt="Impressionen unserer Gäste - #phoenixreisen">
             </a>
-            <a href="https://twitter.com/phoenixreisen" title="Phoenix Reisen auf Twitter" target="_blank" rel="noopener noreferrer" class="social-media__icon">
+            <a href="https://twitter.com/phoenixreisen" title="Phoenix Reisen auf Twitter" target="_blank" rel="noopener noreferrer">
                 <img src="template/kss-assets/footer-icons/twitter.png" alt="Phoenix Reisen auf Twitter">
             </a>
         </div>
     </div>
-    <div class="social-contact mt2 tc">
+    <div class="mt2 tc footer__text">
         <div><small>Wir sind für Sie da</small></div>
         <div>
             <strong><a href="tel:+4922892600" title="Telefonnummer aufrufen">+49 (228) 9260-0</a></strong>
@@ -321,44 +321,44 @@ Markup:
             <small>montags bis freitags von 09:00 bis 18:00 Uhr</small>
         </div>
     </div>
-    <div class="wrapper wrapper--large footer__wrapper">
-        <ul class="footer__menu noprint">
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich" class="footer__menu-link">
+    <div class="wrapper wrapper--large footer__links-wrapper">
+        <ul class="footer__links noprint">
+            <li>
+                <a href="https://www.phoenixreisen.com/profibereich.html" title="zum Reisebüro-/Profibereich">
                     <i class="fa fa-angle-right"></i> Reisebüro-/Profibereich
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB" class="footer__menu-link">
+            <li>
+                <a href="https://www.phoenixreisen.com/reise-und-geschaeftsbedingungen.html" title="zu unseren AGB">
                     <i class="fa fa-angle-right"></i> AGB
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung" class="footer__menu-link">
+            <li>
+                <a href="https://www.phoenixreisen.com/datenschutzerklaerung.html" title="zu unserer Datenschutzerklärung">
                     <i class="fa fa-angle-right"></i>Datenschutzerklärung
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite" class="footer__menu-link">
+            <li>
+                <a href="https://www.phoenixreisen.com/kontakt.html" title="zu unserer Kontaktseite">
                     <i class="fa fa-angle-right"></i> Kontakt
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen" class="footer__menu-link">
+            <li>
+                <a href="https://www.phoenixreisen.com/nutzungsbedingungen.html" title="zu unseren Nutzungsbedingungen">
                     <i class="fa fa-angle-right"></i> Nutzungsbedingungen
                 </a>
             </li>
-            <li class="footer__menu-item">
-                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum" class="footer__menu-link">
+            <li>
+                <a href="https://www.phoenixreisen.com/impressum.html" title="zu unserem Impressum">
                     <i class="fa fa-angle-right"></i> Impressum
                 </a>
             </li>
         </ul>
         <div class="footer__logos">
-            <span class="footer__logo">
+            <span>
                 <img src="template/kss-assets/footer-icons/DRV-Logo.png">
             </span>
-            <span class="footer__logo">
+            <span>
                 <img src="template/kss-assets/footer-icons/QG-Logo.svg">
             </span>
         </div>
@@ -381,92 +381,90 @@ Styleguide 650.3
         border-top-color: $yellow;
         border-bottom-color: $yellow;
     }
-}
 
-.footer__wrapper {
-    padding: 1rem;
-    text-align: center;
-}
-
-.footer__menu,
-.footer__logos {
-    margin: 0;
-    padding: 0.3rem 0;
-}
-
-.footer__menu {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    justify-content: space-around;
-}
-
-.footer__menu-item {
-    width: 48%;
-    margin: 0 1%;
-    font-size: 90%;
-    display: inline-block;
-
-    @media all and (min-width: $M) {
-        width: 31.3%;
-    }
-}
-
-.footer__menu-link {
-    position: relative;
-    padding-left: 15px;
-
-    > i {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        transition: all 0.2s ease;
+    .footer__media-links {
+        margin-top: 0.5rem;
+        text-align: center;
     }
 
-    &:hover > i {
-        left: 4px;
-    }
-}
-
-.footer__logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 1rem 5%;
-
-    > img {
+    .footer__media-icons {
+        white-space: nowrap;
         display: block;
-        height: 45px;
-    }
-}
 
-.footer .social-media {
-    margin-top: 0.5rem;
-    text-align: center;
-}
-.footer .social-media__icons {
-    white-space: nowrap;
-    display: block;
+        a {
+            display: inline-block;
+            margin: 0.5rem 0.8rem;
+            height: 1.5rem;
 
-    a {
-        display: inline-block;
-        margin: 0.5rem 0.8rem;
-        height: 1.5rem;
+            @media all and (min-width: $M) {
+                margin: 0.5rem 0.75rem;
+            }
 
-        @media all and (min-width: $M) {
-            margin: 0.5rem 0.75rem;
+            &:hover img,
+            &:active img {
+                transform: scale(1.2);
+                transition: transform 100ms ease-in;
+            }
         }
 
-        &:hover img,
-        &:active img {
-            transform: scale(1.2);
-            transition: transform 100ms ease-in;
+        img {
+            display: block;
+            max-height: 100%;
+            border-radius: 5px;
         }
     }
-    img {
-        display: block;
-        max-height: 100%;
-        border-radius: 5px;
+
+    .footer__links-wrapper {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .footer__links {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.3rem 0;
+        list-style-type: none;
+        justify-content: space-around;
+
+        > li {
+            width: 48%;
+            margin: 0 1%;
+            font-size: 90%;
+            display: inline-block;
+
+            @media all and (min-width: $M) {
+                width: 31.3%;
+            }
+        }
+        > li > a {
+            position: relative;
+            padding-left: 15px;
+        }
+        > li > a > i {
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            transition: all 0.2s ease;
+        }
+        > li > a:hover > i {
+            left: 4px;
+        }
+    }
+
+    .footer__logos {
+        margin: 0;
+        padding: 0.3rem 0;
+
+        > span {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 1rem 5%;
+        }
+        > span > img {
+            display: block;
+            height: 45px;
+        }
     }
 }
