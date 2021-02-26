@@ -14,25 +14,96 @@ irgendwo ins Fenster wieder zu schließen.
 
 Möchte man bestehendes Aussehen des Overlays ändern, überschreibt man am Besten `.fuzzy-style`.
 
+*/
+
+/*
+
+Reines Textfeld ohne Button
+
+Styleguide 450.1
+
 Markup:
 <div class="container" style="height: 250px"> <!-- Nur zu Demozwecken. Kann weg. -->
     <article class="fuzzy-search {{modifier_class}}">
-        <label class="textfield fuzzy-input">
-            <input
-                value="und"
-                type="text"
-                name="fuzzy"
-                maxlength="100"
-                readonly="false"
-                id="fuzzy-input"
-                placeholder="..."
-                autocomplete="autocomplete"
-                oninput="(e) => console.log('fuzzied')"
-            />
-            <span class="textfield__label">
-                Suche
-            </span>
-        </label>
+        <div class="fuzzy-with-button">
+            <label class="textfield fuzzy-input">
+                <input
+                    value="und"
+                    type="text"
+                    name="fuzzy"
+                    maxlength="100"
+                    readonly="false"
+                    id="fuzzy-input"
+                    placeholder="..."
+                    autocomplete="autocomplete"
+                    oninput="(e) => console.log('fuzzied')"
+                />
+                <span class="textfield__label">
+                    Suche
+                </span>
+            </label>
+        </div>
+        <div class="fuzzy-overlay fuzzy-result fuzzy-style">
+            <div class="fadeIn animated faster">
+                <a id="fuzzy-item-0" href="javascript:"
+                    onclick="alert('Hund')">
+                    Hund
+                </a>
+                <a id="fuzzy-item-1" href="javascript:"
+                    onclick="alert('Kunde')">
+                    Kunde
+                </a>
+                <a id="fuzzy-item-2" href="javascript:"
+                    onclick="alert('Schlund')">
+                    Schlund
+                </a>
+                <a id="fuzzy-item-3" href="javascript:"
+                    onclick="alert('Wunde')">
+                    Wunde
+                </a>
+            </div>
+        </div>
+        <!-- zu Demozwecken auskommentiert
+        <div class="fuzzy-bg-layer" onclick="alert('close')"></div>
+        -->
+    </article>
+</div>
+
+.fuzzy-show-result - wenn gesetzt, wird das Ergebnis-Overlay angezeigt, ansonsten nicht.
+
+*/
+
+/*
+
+Textfeld mit Button
+
+Styleguide 450.2
+
+Markup:
+<div class="container" style="height: 250px"> <!-- Nur zu Demozwecken. Kann weg. -->
+    <article class="fuzzy-search {{modifier_class}}">
+        <div class="fuzzy-with-button">
+            <label class="textfield fuzzy-input">
+                <input
+                    value="Toller Hund, der &#123;&#123;und"
+                    type="text"
+                    name="fuzzy"
+                    maxlength="100"
+                    readonly="false"
+                    id="fuzzy-input"
+                    placeholder="..."
+                    autocomplete="autocomplete"
+                    oninput="(e) => console.log('fuzzied')"
+                />
+                <span class="textfield__label">
+                    Suche
+                </span>
+            </label>
+            <button type="button" class="btn btn--secondary"
+                onclick="alert('clicked')">
+                <i class="fas fa-list"></i>
+            </button>
+        </div>
         <div class="fuzzy-overlay fuzzy-result fuzzy-style">
             <div class="fadeIn animated faster">
                 <a id="fuzzy-item-0" href="javascript:"
@@ -72,13 +143,38 @@ $fuzzy-gray-light: $gray6 !default;
     position: relative;
 }
 
+.fuzzy-with-button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+
+    > label {
+        flex-grow: 2;
+        margin-bottom: 0;
+    }
+    > button {
+        margin-top: -2px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border: 1px solid #cecece;
+        border-left-width: 0;
+    }
+}
+
 .fuzzy-overlay {
     left: 0;
     top: 100%;
     width: 100%;
     display: none;
+    max-height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
     position: absolute;
     z-index: $fuzzy-z-index;
+
+    @media all and (min-width: $M) {
+        max-height: 30vh;
+    }
 
     .fuzzy-show-result & {
         display: block;
