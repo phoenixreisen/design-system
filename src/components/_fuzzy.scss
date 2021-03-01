@@ -147,6 +147,7 @@ $fuzzy-gray-light: $gray6 !default;
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    margin-bottom: 1rem;
 
     > label {
         flex-grow: 2;
