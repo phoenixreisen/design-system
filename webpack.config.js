@@ -40,23 +40,19 @@ module.exports = {
                 ],
             }, {
                 test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)/,
+                dependency: { not: ['url'] },
                 loader: 'url-loader',
             }, {
                 test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-                loader: 'file-loader',
-                options: {
-                    exclude: /images/,
-                    name: '[name].[ext]',
-                    outputPath: 'fonts/',
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name].[ext]',
                 },
             }, {
                 test: /\.(svg|png|jpg|gif)$/,
-                loader: 'file-loader',
-                options: {
-                    exclude: /fonts/,
-                    name: '[name].[ext]',
-                    outputPath: 'images/',
-                    esModule: false,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'imgs/[name].[ext]',
                 },
             },
         ],
@@ -93,19 +89,25 @@ module.exports = {
      * Dev Mode Stuff
      */
     devServer: {
-        watchOptions: {
-            poll: true
-        },
         headers: {
             "Access-Control-Allow-Origin": "*",
             // "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
             // "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
         },
+        watchFiles: {
+            paths: [
+                'src/**/*.js',
+                'src/**/*.scss',
+                'template/**/*',
+            ],
+            options: {
+              usePolling: true,
+            },
+        },
         hot: true,
         port: 3027,
         compress: true,
-        contentBase: './dist',
-        watchContentBase: true,
+        static: './dist',
     },
     devtool: 'hidden-source-map'
 };
