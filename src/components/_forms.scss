@@ -115,9 +115,9 @@ select:-webkit-autofill {
 }
 
 .radio [disabled],
-.checkbox [disabled],
 .select [disabled],
-.textfield [disabled]{
+.checkbox [disabled],
+.textfield [disabled] {
   @extend .disabled;
 
   & + * {
@@ -127,7 +127,8 @@ select:-webkit-autofill {
 
 [type=button][disabled],
 [type=submit][disabled],
-button[disabled]{
+fieldset[disabled] input,
+button[disabled] {
   @extend .disabled;
 }
 
