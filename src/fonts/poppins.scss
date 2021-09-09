@@ -1,0 +1,69 @@
+/* poppins - regular */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+        url('./poppins/Poppins-Regular.woff') format('woff2'),
+        url('./poppins/Poppins-Regular.woff') format('woff');
+}
+
+/* poppins - black */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Poppins Black'), local('Poppins-Black'),
+        url('./poppins/Poppins-Black.woff') format('woff2'),
+        url('./poppins/Poppins-Black.woff') format('woff');
+}
+
+/* poppins - bold */
+@font-face {
+    font-family: 'Poppins Bold';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+        url('./poppins/Poppins-Bold.woff') format('woff2'),
+        url('./poppins/Poppins-Bold.woff') format('woff');
+}
+
+/* poppins - italic */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Italic'), local('Poppins-Italic'),
+        url('./poppins/Poppins-Italic.woff') format('woff2'),
+        url('./poppins/Poppins-Italic.woff') format('woff');
+}
+
+/* poppins - medium */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Poppins Medium'), local('Poppins-Medium'),
+        url('./poppins/Poppins-Medium.woff') format('woff2'),
+        url('./poppins/Poppins-Medium.woff') format('woff');
+}
+
+/* poppins - semi bold */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+        url('./poppins/Poppins-SemiBold.woff') format('woff2'),
+        url('./poppins/Poppins-SemiBold.woff') format('woff');
+}
+
+/* poppins - thin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Poppins Thin'), local('Poppins-Thin'),
+        url('./poppins/Poppins-Thin.woff') format('woff2'),
+        url('./poppins/Poppins-Thin.woff') format('woff');
+}
