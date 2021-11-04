@@ -107,7 +107,7 @@
 
 <p>
   Grundschriftart ist <code>Titillium Web</code> <small><a href="https://fonts.google.com/specimen/Titillium+Web" target="_blank">(Website)</a></small><br />
-  mit einer Basisgröße von <code>16px</code> (<code>20px</code> ab großen Auflösungen).
+  mit einer Basisgröße von <code>16px</code> (<code>18px</code> ab großen Auflösungen).
 </p>
 <p>
   Für Icons aller Art kommt <code>Fort Awesome</code> <small><a href="https://fortawesome.com/" target="_blank">(Website)</a></small> zum Einsatz.<br />
