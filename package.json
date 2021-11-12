@@ -15,7 +15,7 @@
   },
   "scripts": {
     "generate:lint": "npm run lint:scss",
-    "generate:install": "npm install && npm audit fix",
+    "generate:install": "npm install --legacy-peer-deps",
     "generate:build": "npm run build && npm run build:docs",
     "generate": "npm run generate:install && npm run generate:lint && npm run generate:build",
     "build:docs": "cd ./template/ && npm run sass && cd ..",
