@@ -76,12 +76,16 @@ Markup:
 }
 
 .dropdown-item {
-    display: block;
-    padding: 0.75rem 1rem;
     margin: 0;
+    padding: 0;
+    display: block;
     text-align: left;
 
     &:hover {
         background-color: $gray6;
+    }
+
+    > * {
+        padding: 0.75rem 1rem;
     }
 }
