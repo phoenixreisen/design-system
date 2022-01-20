@@ -29,99 +29,114 @@ Styleguide 750.0
 */
 
 @keyframes fadeInUpAndfadeOutDown {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    3%, 97% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  3%,
+  97% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
 }
 
-
 .notification {
+  // POSITION
+  left: 5%;
+  bottom: 5%;
+  z-index: 200;
+  position: fixed;
 
-    // POSITION
-    left: 5%;
-    bottom: 5%;
-    z-index: 200;
-    position: fixed;
+  // STYLE
+  max-width: 90%;
+  line-height: 135%;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 2.5rem 0.75rem 3rem;
+  box-shadow: $box-shadow-4;
+  animation: fadeInUpAndfadeOutDown 10s;
+  animation-fill-mode: forwards;
+  border-radius: 5px;
 
-    // STYLE
-    max-width: 90%;
+  // STANDARDFARBEN
+  background-color: $dark-blue;
+  color: $white;
+
+  @media all and (min-width: $M) {
+    max-width: 60%;
+  }
+
+  @media all and (min-width: $L) {
+    max-width: 40%;
+  }
+
+  > i.fas,
+  > a.fas {
+    position: absolute;
     line-height: 135%;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem 2.5rem 0.75rem 3rem;
-    box-shadow: $box-shadow-4;
-    animation: fadeInUpAndfadeOutDown 10s;
-    animation-fill-mode: forwards;
-    border-radius: 5px;
+    top: 0.75rem;
+    left: 1rem;
+    right: auto;
+  }
 
-    // STANDARDFARBEN
-    background-color: $dark-blue;
+  > a.fas.fa-times {
+    right: 1rem;
+    left: auto;
+  }
+
+  a {
+    text-decoration: underline;
     color: $white;
+  }
 
-    @media all and (min-width: $M) {
-        max-width: 60%;
-    }
-    @media all and (min-width: $L) {
-        max-width: 40%;
-    }
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+    color: $white;
+  }
 
-    > i.fas,
-    > a.fas {
-        position: absolute;
-        line-height: 135%;
-        top: 0.75rem;
-        left: 1rem;
-        right: auto;
-    }
-    > a.fas.fa-times {
-        right: 1rem;
-        left: auto;
-    }
+  &--error {
+    color: $danger;
+    background-color: $light-danger;
 
-    a {
-        text-decoration: underline;
-        color: $white;
+    a { color: $danger; }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $dark-danger;
     }
-    a:hover, a:active, a:focus {
-        text-decoration: none;
-        color: $white;
+  }
+
+  &--success {
+    color: $success;
+    background-color: $light-success;
+
+    a { color: $success; }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $dark-success;
     }
+  }
 
-    &--error {
-        color: $danger;
-        background-color: $light-danger;
+  &--info {
+    color: $info;
+    background-color: $light-info;
 
-        a { color: $danger; }
-        a:hover, a:active, a:focus{
-            color: $dark-danger;
-        }
+    a { color: $info; }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $dark-info;
     }
-
-    &--success {
-        color: $success;
-        background-color: $light-success;
-
-        a { color: $success; }
-        a:hover, a:active, a:focus{
-            color: $dark-success;
-        }
-    }
-
-    &--info {
-        color: $info;
-        background-color: $light-info;
-
-        a { color: $info; }
-        a:hover, a:active, a:focus{
-            color: $dark-info;
-        }
-    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "stylelint-config-recommended",
+  "extends": "stylelint-config-recommended-scss",
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
@@ -10,5 +10,9 @@
       ]
     }],
     "no-descending-specificity": null,
+    
+    "scss/comment-no-empty": null,
+    "scss/no-global-function-names": null,
+    "scss/at-extend-no-missing-placeholder": null
   }
 }

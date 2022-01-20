@@ -46,46 +46,47 @@ Markup:
 */
 
 .dropdown {
-    display: inline-block;
-    position: relative;
-    overflow: visible;
-    border-bottom: 1px solid $gray5;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  border-bottom: 1px solid $gray5;
 }
 
 .dropdown-items {
-    width: auto;
-    max-height: 0;
-    display: block;
-    min-width: 100%;
-    position: absolute;
-    left: 50%; top: 125%;
-    transform: translateX(-50%);
-    transition: max-height 100ms ease-out;
-    box-shadow: $box-shadow-4;
-    background-color: $white;
-    white-space: nowrap;
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 100;
+  width: auto;
+  max-height: 0;
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 125%;
+  transform: translateX(-50%);
+  transition: max-height 100ms ease-out;
+  box-shadow: $box-shadow-4;
+  background-color: $white;
+  white-space: nowrap;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 100;
 
-    .dropdown--open & {
-        max-height: 10rem;
-        overflow-y: auto;
-        transition: max-height 100ms ease-in;
-    }
+  .dropdown--open & {
+    max-height: 10rem;
+    overflow-y: auto;
+    transition: max-height 100ms ease-in;
+  }
 }
 
 .dropdown-item {
-    margin: 0;
-    padding: 0;
-    display: block;
-    text-align: left;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: left;
 
-    &:hover {
-        background-color: $gray6;
-    }
+  &:hover {
+    background-color: $gray6;
+  }
 
-    > * {
-        padding: 0.75rem 1rem;
-    }
+  > * {
+    padding: 0.75rem 1rem;
+  }
 }

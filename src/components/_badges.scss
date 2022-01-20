@@ -23,46 +23,53 @@ Styleguide 100.0
 */
 
 .badge {
-    color: $white;
-    font-size: 0.85rem;
-    line-height: 0.85rem;
-    border-radius: 5px;
-    margin: 0 0.3rem;
-    overflow: visible;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0.25rem 0.5rem;
-    background-color: $primary;
+  color: $white;
+  font-size: 0.85rem;
+  line-height: 0.85rem;
+  border-radius: 5px;
+  margin: 0 0.3rem;
+  overflow: visible;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.25rem 0.5rem;
+  background-color: $primary;
 
-    &.badge--smaller {
-        font-size: 0.7rem;
-        line-height: 0.7rem;
-    }
-    &.badge--shadow {
-        box-shadow: $box-shadow-1;
-    }
-    &.badge--superscripted {
-        top: -20px;
-    }
-    &.badge--uppercased {
-        text-transform: uppercase;
-    }
+  &.badge--smaller {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+  }
 
-    &.badge--secondary {
-        color: $gray1;
-        background-color: $gray6;
-    }
-    &.badge--success {
-        @extend .alert--success;
-    }
-    &.badge--danger {
-        @extend .alert--danger;
-    }
-    &.badge--warning {
-        @extend .alert--warning;
-    }
-    &.badge--info {
-        @extend .alert--info;
-    }
+  &.badge--shadow {
+    box-shadow: $box-shadow-1;
+  }
+
+  &.badge--superscripted {
+    top: -20px;
+  }
+
+  &.badge--uppercased {
+    text-transform: uppercase;
+  }
+
+  &.badge--secondary {
+    color: $gray1;
+    background-color: $gray6;
+  }
+
+  &.badge--success {
+    @extend .alert--success;
+  }
+
+  &.badge--danger {
+    @extend .alert--danger;
+  }
+
+  &.badge--warning {
+    @extend .alert--warning;
+  }
+
+  &.badge--info {
+    @extend .alert--info;
+  }
 }

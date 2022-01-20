@@ -41,68 +41,75 @@ Styleguide 500.2
 
 */
 .row {
-    display: block;
+  display: block;
 
+  > * {
+    margin-top: 0.5rem;
+  }
+
+  @media all and (min-width: $S) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+
+  &--2er {
     > * {
-        margin-top: 0.5rem;
+      @media all and (min-width: $S) {
+        width: 49%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--3er {
+    > * {
+      @media all and (min-width: $M) {
+        width: 33%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--3er-first-stretched {
+    @media all and (min-width: $S) and (max-width: $M - 1) {
+      > * {
+        width: 49%;
+      }
+
+      > *:first-child {
+        width: 100%;
+        margin-bottom: 0;
+      }
     }
 
-    @media all and (min-width: $S) {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: space-between;
+    @media all and (min-width: $M) {
+      > * {
+        width: 33%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &--3er-last-stretched {
+    @media all and (min-width: $S) and (max-width: $M - 1) {
+      > * {
+        width: 49%;
+        margin-bottom: 0;
+      }
+
+      > *:last-child {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
 
-    &--2er {
-        > * {
-            @media all and (min-width: $S) {
-                width: 49%;
-                margin-top: 0;
-            }
-        }
+    @media all and (min-width: $M) {
+      > * {
+        width: 33%;
+        margin-top: 0;
+      }
     }
-    &--3er {
-        > * {
-            @media all and (min-width: $M) {
-                width: 33%;
-                margin-top: 0;
-            }
-        }
-    }
-    &--3er-first-stretched {
-        @media all and (min-width: $S) and (max-width: $M - 1) {
-            > * {
-                width: 49%;
-            }
-            > *:first-child {
-                width: 100%;
-                margin-bottom: 0;
-            }
-        }
-        @media all and (min-width: $M) {
-            > * {
-                width: 33%;
-                margin-top: 0;
-            }
-        }
-    }
-    &--3er-last-stretched {
-        @media all and (min-width: $S) and (max-width: $M - 1) {
-            > * {
-                width: 49%;
-                margin-bottom: 0;
-            }
-            > *:last-child {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-        }
-        @media all and (min-width: $M) {
-            > * {
-                width: 33%;
-                margin-top: 0;
-            }
-        }
-    }
+  }
 }

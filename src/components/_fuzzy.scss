@@ -140,81 +140,86 @@ $fuzzy-gray: $gray4 !default;
 $fuzzy-gray-light: $gray6 !default;
 
 .fuzzy-search {
-    position: relative;
+  position: relative;
 }
 
 .fuzzy-with-button {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin-bottom: 1rem;
 
-    > label {
-        flex-grow: 2;
-        margin-bottom: 0;
-    }
-    > button {
-        margin-top: -2px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border: 1px solid #cecece;
-        border-left-width: 0;
-    }
+  > label {
+    flex-grow: 2;
+    margin-bottom: 0;
+  }
+
+  > button {
+    margin-top: -2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid #cecece;
+    border-left-width: 0;
+  }
 }
 
 .fuzzy-overlay {
-    left: 0;
-    top: 100%;
-    width: 100%;
-    display: none;
-    max-height: 50vh;
-    overflow: hidden;
-    overflow-y: auto;
-    position: absolute;
-    z-index: $fuzzy-z-index;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  display: none;
+  max-height: 50vh;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  z-index: $fuzzy-z-index;
 
-    @media all and (min-width: $M) {
-        max-height: 30vh;
-    }
+  @media all and (min-width: $M) {
+    max-height: 30vh;
+  }
 
-    .fuzzy-show-result & {
-        display: block;
-    }
+  .fuzzy-show-result & {
+    display: block;
+  }
 }
 
 .fuzzy-style {
-    box-shadow: $box-shadow-4;
-    border: 1px solid $fuzzy-gray;
-    background-color: $fuzzy-white;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top: 0;
+  box-shadow: $box-shadow-4;
+  border: 1px solid $fuzzy-gray;
+  background-color: $fuzzy-white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 0;
 }
 
 .fuzzy-style a {
-    display: block;
-    padding: 0.5rem;
-    font-size: 1rem;
-    line-height: 1rem;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
 
-    &:hover, &:active, &:focus {
-        background-color: $fuzzy-gray-light;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $fuzzy-gray-light;
+  }
 }
 
 .fuzzy-bg-layer {
-    width: 100%;
-    width: 100vw;
-    height: 100%;
-    height: 100vh;
-    display: none;
-    position: fixed;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    z-index: ($fuzzy-z-index - 1);
-    background-color: transparent;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: ($fuzzy-z-index - 1);
+  background-color: transparent;
 
-    .fuzzy-show-result & {
-        display: block;
-    }
+  .fuzzy-show-result & {
+    display: block;
+  }
 }

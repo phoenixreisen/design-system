@@ -8,49 +8,44 @@
 // Nur das, was wir brauchen.
 @import "~animate.css/source/_vars.css";
 @import "~animate.css/source/_base.css";
-
 @import "~animate.css/source/specials/jackInTheBox.css";
 @import "~animate.css/source/attention_seekers/tada.css";
 @import "~animate.css/source/attention_seekers/pulse.css";
 @import "~animate.css/source/attention_seekers/jello.css";
 @import "~animate.css/source/attention_seekers/shake.css";
 @import "~animate.css/source/attention_seekers/heartBeat.css";
-
 @import "~animate.css/source/bouncing_entrances/bounceIn.css";
 @import "~animate.css/source/bouncing_entrances/bounceInRight.css";
 @import "~animate.css/source/bouncing_exits/bounceOut.css";
 @import "~animate.css/source/bouncing_exits/bounceOutDown.css";
 @import "~animate.css/source/bouncing_exits/bounceOutLeft.css";
-
 @import "~animate.css/source/fading_entrances/fadeIn.css";
 @import "~animate.css/source/fading_entrances/fadeInUp.css";
 @import "~animate.css/source/fading_entrances/fadeInDown.css";
-
 @import "~animate.css/source/sliding_entrances/slideInUp.css";
 @import "~animate.css/source/sliding_entrances/slideInDown.css";
 @import "~animate.css/source/sliding_entrances/slideInLeft.css";
 @import "~animate.css/source/sliding_exits/slideOutDown.css";
 @import "~animate.css/source/sliding_exits/slideOutLeft.css";
-
 @import "~animate.css/source/zooming_entrances/zoomIn.css";
 @import "~animate.css/source/zooming_exits/zoomOut.css";
-
 
 /**
  * DEPRECATED!
  * Nur wegen Abwärtskompatiblität noch drin.
  **/
 .fade-in {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 500ms ease;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 500ms ease;
 }
+
 .fade-out {
-    position: absolute;
-    top: -1000em;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 100ms linear;
+  position: absolute;
+  top: -1000em;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms linear;
 }

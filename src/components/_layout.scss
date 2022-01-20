@@ -35,52 +35,52 @@ Styleguide 650.1
 */
 
 header.header {
-    border-bottom: 5px solid $primary;
+  border-bottom: 5px solid $primary;
 }
 
 .header {
-    position: relative;
+  position: relative;
 
-    .header__logo {
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        line-height: 1;
-        display: inline-block;
+  .header__logo {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    line-height: 1;
+    display: inline-block;
 
-        @media all and (min-width: $M) {
-            width: 250px;
-        }
-
-        > img {
-            width: 100%;
-            max-width: 100%;
-            display: inline-block;
-        }
+    @media all and (min-width: $M) {
+      width: 250px;
     }
 
-    .header__version {
-        margin: 0;
-        margin-top: -5px;
-        padding: 0 10px;
-        font-size: smaller;
+    > img {
+      width: 100%;
+      max-width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .header__version {
+    margin: 0;
+    margin-top: -5px;
+    padding: 0 10px;
+    font-size: smaller;
+  }
+
+  .header__nav-btn {
+    top: 0.25rem;
+    right: 0.75rem;
+    position: absolute;
+    display: inline-block;
+
+    @media all and (min-width: $S) {
+      right: 0.25rem;
     }
 
-    .header__nav-btn {
-        top: 0.25rem;
-        right: 0.75rem;
-        position: absolute;
-        display: inline-block;
-
-        @media all and (min-width: $S) {
-            right: 0.25rem;
-        }
-        @media all and (min-width: $M) {
-            right: 1.25rem;
-        }
+    @media all and (min-width: $M) {
+      right: 1.25rem;
     }
+  }
 }
-
 
 /*
 
@@ -121,165 +121,164 @@ Styleguide 650.2
 */
 
 .top-bar {
-    $delay: 150ms;
-    $duration: 150ms;
+  $delay: 150ms;
+  $duration: 150ms;
 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    z-index: 400;
-    background-color: $light-blue;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 400;
+  background-color: $light-blue;
 
-    > .wrapper {
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
+  > .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
 
-        @media all and (max-width: $S) {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+    @media all and (max-width: $S) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .top-bar__left {
+    opacity: 0;
+    max-height: 0;
+    color: $white;
+    display: block;
+    overflow: hidden;
+    transition:
+      max-height $duration linear,
+      opacity $duration linear,
+      padding $duration linear;
+
+    a {
+      color: $white;
+      &:visited { color: $white; }
+      &:active { color: $white; }
+      &:hover { color: $white; }
     }
 
-    .top-bar__left {
-        opacity: 0;
-        max-height: 0;
-        color: $white;
-        display: block;
-        overflow: hidden;
+    .top-bar__icon {
+      display: inline-block;
+      vertical-align: text-bottom;
+    }
+
+    a.top-bar__back-btn {
+      color: $white;
+      padding: 0.3rem;
+      line-height: 1rem;
+      margin-right: 1rem;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: transparent;
+
+      &:hover {
+        color: $light-blue;
+        background-color: $white;
         transition:
-            max-height $duration linear,
-            opacity $duration linear,
-            padding $duration linear;
+          color $duration linear,
+          background-color $duration linear;
+      }
+    }
+  }
 
-        a {
-            color: $white;
-            &:visited { color: $white; }
-            &:active { color: $white; }
-            &:hover { color: $white; }
-        }
+  .top-bar__avatar {
+    right: 1rem;
+    bottom: -1.5rem;
+    position: absolute;
+    transition: bottom $duration linear;
 
-        .top-bar__icon {
-            display: inline-block;
-            vertical-align: text-bottom;
-        }
+    @media all and (min-width: $M) {
+      right: 2rem;
+    }
+  }
 
-        a.top-bar__back-btn {
-            color: $white;
-            padding: 0.3rem;
-            line-height: 1rem;
-            margin-right: 1rem;
-            border-radius: 100%;
-            display: inline-block;
-            background-color: transparent;
+  .top-bar__nav-btn {
+    bottom: 0;
+    padding: 0;
+    right: 1rem;
+    max-width: 0;
+    max-height: 0;
+    color: $white;
+    position: absolute;
+    background-color: transparent;
 
-            &:hover {
-                color: $light-blue;
-                background-color: $white;
-                transition:
-                    color $duration linear,
-                    background-color $duration linear;
-            }
-        }
+    @media all and (min-width: $M) {
+      right: 1rem;
+    }
+
+    &:hover,
+    &:active {
+      color: $light-blue;
+      background-color: $white;
+    }
+  }
+
+  .top-bar__avatar ~ .top-bar__nav-btn {
+    right: 4rem;
+
+    @media all and (min-width: $M) {
+      right: 5rem;
+    }
+  }
+
+  // Sichtbare Top Bar
+  // ab bestimmtem Scroll Offset
+  &--visible {
+    top: 0;
+    position: fixed;
+    padding: 0.5rem 0;
+    box-shadow: $box-shadow-3;
+
+    .top-bar__left {
+      opacity: 1;
+      max-height: 2.5rem;
     }
 
     .top-bar__avatar {
-        right: 1rem;
-        bottom: -1.5rem;
-        position: absolute;
-        transition: bottom $duration linear;
+      bottom: 50%;
+      transform: translateY(50%);
+      transition: bottom $duration linear;
+    }
 
-        @media all and (min-width: $M) {
-            right: 2rem;
-        }
+    // Für die Navigation etwas verkleinern.
+    .avatar-cta--topbar {
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      font-size: 1rem;
+      box-shadow: none;
+      transition:
+        width $duration linear $delay,
+        height $duration linear $delay,
+        font-size $duration linear $delay;
+
+      &:hover {
+        color: $primary;
+        transition: color $duration linear;
+      }
     }
 
     .top-bar__nav-btn {
-        bottom: 0;
-        padding: 0;
-        right: 1rem;
-        max-width: 0;
-        max-height: 0;
-        color: $white;
-        position: absolute;
-        background-color: transparent;
+      bottom: 50%;
+      max-width: 2rem;
+      max-height: 2rem;
+      padding: 0.5rem 0;
+      transform: translateY(50%);
+      transition:
+        padding $duration linear $delay,
+        max-width $duration linear $delay,
+        max-height $duration linear $delay;
 
-        @media all and (min-width: $M) {
-            right: 1rem;
-        }
-
-        &:hover,
-        &:active {
-            color: $light-blue;
-            background-color: $white;
-        }
+      &:hover {
+        transition:
+          color $duration linear,
+          background-color $duration linear;
+      }
     }
-
-    .top-bar__avatar ~ .top-bar__nav-btn {
-        right: 4rem;
-
-        @media all and (min-width: $M) {
-            right: 5rem;
-        }
-    }
-
-    // Sichtbare Top Bar
-    // ab bestimmtem Scroll Offset
-    &--visible {
-        top: 0;
-        position: fixed;
-        padding: 0.5rem 0;
-        box-shadow: $box-shadow-3;
-
-        .top-bar__left {
-            opacity: 1;
-            max-height: 2.5rem;
-        }
-
-        .top-bar__avatar {
-            bottom: 50%;
-            transform: translateY(50%);
-            transition: bottom $duration linear;
-        }
-
-        // Für die Navigation etwas verkleinern.
-        .avatar-cta--topbar {
-            width: 2rem;
-            height: 2rem;
-            border: none;
-            font-size: 1rem;
-            box-shadow: none;
-            transition:
-                width $duration linear $delay,
-                height $duration linear $delay,
-                font-size $duration linear $delay;
-
-            &:hover {
-                color: $primary;
-                transition: color $duration linear;
-            }
-        }
-
-        .top-bar__nav-btn {
-            bottom: 50%;
-            max-width: 2rem;
-            max-height: 2rem;
-            padding: 0.5rem 0;
-            transform: translateY(50%);
-            transition:
-                padding $duration linear $delay,
-                max-width $duration linear $delay,
-                max-height $duration linear $delay;
-
-            &:hover {
-                transition:
-                    color $duration linear,
-                    background-color $duration linear;
-            }
-        }
-    }
+  }
 }
-
 
 /*
 
@@ -376,101 +375,105 @@ Styleguide 650.3
 */
 
 .footer {
-    $footerborder: 5px solid $primary;
+  $footerborder: 5px solid $primary;
 
-    margin: 2rem 0 0 0;
-    background-color: $whitegray;
-    border-bottom: $footerborder;
-    border-top: $footerborder;
+  margin: 2rem 0 0;
+  background-color: $whitegray;
+  border-bottom: $footerborder;
+  border-top: $footerborder;
 
-    &.staging {
-        border-top-color: $yellow;
-        border-bottom-color: $yellow;
+  &.staging {
+    border-top-color: $yellow;
+    border-bottom-color: $yellow;
+  }
+
+  .footer__media-links {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .footer__media-icons {
+    white-space: nowrap;
+    display: block;
+
+    a {
+      display: inline-block;
+      margin: 0.5rem 0.8rem;
+      height: 1.5rem;
+
+      @media all and (min-width: $M) {
+        margin: 0.5rem 0.75rem;
+      }
+
+      &:hover img,
+      &:active img {
+        transform: scale(1.2);
+        transition: transform 100ms ease-in;
+      }
     }
 
-    .footer__media-links {
-        margin-top: 0.5rem;
-        text-align: center;
+    img {
+      display: block;
+      max-height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  .footer__links-wrapper {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .footer__links {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem 0;
+    list-style-type: none;
+    justify-content: space-around;
+
+    > li {
+      width: 48%;
+      margin: 0 1%;
+      font-size: 90%;
+      display: inline-block;
+
+      @media all and (min-width: $M) {
+        width: 31.3%;
+      }
     }
 
-    .footer__media-icons {
-        white-space: nowrap;
-        display: block;
-
-        a {
-            display: inline-block;
-            margin: 0.5rem 0.8rem;
-            height: 1.5rem;
-
-            @media all and (min-width: $M) {
-                margin: 0.5rem 0.75rem;
-            }
-
-            &:hover img,
-            &:active img {
-                transform: scale(1.2);
-                transition: transform 100ms ease-in;
-            }
-        }
-
-        img {
-            display: block;
-            max-height: 100%;
-            border-radius: 5px;
-        }
+    > li > a {
+      position: relative;
+      padding-left: 15px;
     }
 
-    .footer__links-wrapper {
-        padding: 1rem;
-        text-align: center;
+    > li > a > i {
+      left: 0;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+      transition: all 0.2s ease;
     }
 
-    .footer__links {
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0.3rem 0;
-        list-style-type: none;
-        justify-content: space-around;
+    > li > a:hover > i {
+      left: 4px;
+    }
+  }
 
-        > li {
-            width: 48%;
-            margin: 0 1%;
-            font-size: 90%;
-            display: inline-block;
+  .footer__logos {
+    margin: 0;
+    padding: 0.3rem 0;
 
-            @media all and (min-width: $M) {
-                width: 31.3%;
-            }
-        }
-        > li > a {
-            position: relative;
-            padding-left: 15px;
-        }
-        > li > a > i {
-            left: 0;
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%);
-            transition: all 0.2s ease;
-        }
-        > li > a:hover > i {
-            left: 4px;
-        }
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 1rem 5%;
     }
 
-    .footer__logos {
-        margin: 0;
-        padding: 0.3rem 0;
-
-        > span {
-            display: inline-block;
-            vertical-align: middle;
-            margin: 1rem 5%;
-        }
-        > span > img {
-            display: block;
-            height: 45px;
-        }
+    > span > img {
+      display: block;
+      height: 45px;
     }
+  }
 }

@@ -41,26 +41,27 @@ Styleguide 2100.0
 */
 
 .swiper-slide {
-    fieldset {
-        padding: 0;
-    }
+  fieldset {
+    padding: 0;
+  }
 }
 
 //
 // "bullet"-Navigation
 //
 .swiper-pagination-bullet {
-    opacity: 1;
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 0.75rem;
-    line-height: 1.5rem;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
 }
+
 .swiper-pagination-bullet-active {
-    color: $white;
-    background: $dark-blue;
+  color: $white;
+  background: $dark-blue;
 }
 
 //
@@ -68,31 +69,33 @@ Styleguide 2100.0
 //
 .swiper-button-prev,
 .swiper-button-next {
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    font-size: 2rem;
-    background: none;
-    color: $light-blue;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  background: none;
+  color: $light-blue;
 
-    i.fas {
-        display: block;
-    }
+  i.fas {
+    display: block;
+  }
 }
+
 .swiper-button-prev {
-    left: 0.2rem;
-    transform: translateY(-50%);
+  left: 0.2rem;
+  transform: translateY(-50%);
 
-    &:after {
-        display: none;
-    }
+  &::after {
+    display: none;
+  }
 }
-.swiper-button-next {
-    right: 0.3rem;
-    transform: translateY(-50%);
 
-    &:after {
-        display: none;
-    }
+.swiper-button-next {
+  right: 0.3rem;
+  transform: translateY(-50%);
+
+  &::after {
+    display: none;
+  }
 }

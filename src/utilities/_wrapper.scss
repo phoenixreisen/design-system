@@ -19,7 +19,7 @@ Styleguide 1000.0
 
 */
 
-.wrapper{
+.wrapper {
   margin: 0 auto;
   max-width: 960px;
   padding: 1rem 0.5rem;
@@ -29,11 +29,11 @@ Styleguide 1000.0
   }
 }
 
-.wrapper--large{
+.wrapper--large {
   max-width: 1200px;
 }
 
-.wrapper--small{
+.wrapper--small {
   max-width: 640px;
 }
 
@@ -42,32 +42,33 @@ Styleguide 1000.0
 /* Folgende Klassen koennen verwendet werden, um Elemente abhaengig von der
    Azeigegroesse nicht sichtbar zu machen. Das kann bei Elementen hilfreich
    sein, die nur schwer oder gar nicht responsive implementiert werden koennen,
-   wie zum Beispiel `table`. */
+   wie zum Beispiel `table`.
+*/
 
 /* Das Element ist nicht sichtbar soglange die Anzeige klein ist. */
 @media (max-width: 599px){
-  .visible--medium{
+  .visible--medium {
     display: none;
   }
 }
 
 /* Das Element ist nicht sichtbar soglange die Anzeige medium oder gross ist. */
-@media (min-width: 600px){
-  .invisible--medium{
+@media (min-width: 600px) {
+  .invisible--medium {
     display: none;
   }
 }
 
 /* Das Element ist nicht sichtbar soglange die Anzeige klein oder medium ist. */
-@media (max-width: 959px){
-  .visible--large{
+@media (max-width: 959px) {
+  .visible--large {
     display: none;
   }
 }
 
 /* Das Element ist nicht sichtbar soglange die Anzeige gross ist. */
-@media (min-width: 960px){
-  .invisible--large{
+@media (min-width: 960px) {
+  .invisible--large {
     display: none;
   }
 }

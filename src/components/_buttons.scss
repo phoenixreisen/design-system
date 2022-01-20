@@ -33,125 +33,142 @@ Styleguide 300.10
 */
 
 .btn {
-    /* size */
-    width: auto;
-    margin: 0 auto;
-    padding: 0.5rem 0.75rem;
-    max-width: 100%;
-    line-height: 140%;
-    box-sizing: border-box;
-    /* element flow */
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    vertical-align: middle;
-    /* style */
-    color: $white;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    border-radius: 0.2rem;
-    border: 0 solid transparent;
-	background: $primary linear-gradient(
-        to bottom right,
-        lighten($primary, 5%) 0%,
-        $primary 100%
-    );
-    /* animation */
-    transition:
-        background-color 250ms linear,
-        outline 50ms linear;
+  /* size */
+  width: auto;
+  margin: 0 auto;
+  padding: 0.5rem 0.75rem;
+  max-width: 100%;
+  line-height: 140%;
+  box-sizing: border-box;
 
-    &:link,
-    &:visited {
-        color: $white;
-        text-decoration: none;
-    }
-    &:focus,
-    &:hover {
-        outline: none;
-        color: $white;
-        background: $primary-dark;
-    }
-    &:active {
-        border-top-width: 0.1rem;
-        border-left-width: 0.1rem;
-        background: $primary-dark;
-    }
-    &:after {
-        content: "";
-        /* element flow */
-        display: block;
-        position: absolute;
-        /* size */
-        width: 100%;
-        height: 100%;
-        top: 0; left: 0;
-        /* style */
-        opacity: 0;
-        pointer-events: none;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        /* animation (ripple effect) */
-        transform: scale(10,10);
-        transition: transform .5s, opacity 1s;
-        background-image: radial-gradient(circle, $whitegray 10%, transparent 10.01%);
-    }
-    &:active:after {
-        /* animation start (ripple effect) */
-        opacity: .5;
-        transition: 0s;
-        transform: scale(0,0);
-    }
+  /* element flow */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+
+  /* style */
+  color: $white;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 0.2rem;
+  border: 0 solid transparent;
+  background:
+    $primary linear-gradient(
+      to bottom right,
+      lighten($primary, 5%) 0%,
+      $primary 100%
+    );
+
+  /* animation */
+  transition:
+    background-color 250ms linear,
+    outline 50ms linear;
+
+  &:link,
+  &:visited {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    color: $white;
+    background: $primary-dark;
+  }
+
+  &:active {
+    border-top-width: 0.1rem;
+    border-left-width: 0.1rem;
+    background: $primary-dark;
+  }
+
+  &::after {
+    content: "";
+
+    /* element flow */
+    display: block;
+    position: absolute;
+
+    /* size */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    /* style */
+    opacity: 0;
+    pointer-events: none;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    /* animation (ripple effect) */
+    transform: scale(10, 10);
+    transition: transform 0.5s, opacity 1s;
+    background-image: radial-gradient(circle, $whitegray 10%, transparent 10.01%);
+  }
+
+  &:active::after {
+    /* animation start (ripple effect) */
+    opacity: 0.5;
+    transition: 0s;
+    transform: scale(0, 0);
+  }
 }
 
 .btn--secondary {
-    color: $gray1;
-	background: $gray6;
+  color: $gray1;
+  background: $gray6;
 
-    &:link,
-    &:visited {
-        color: $gray1;
-    }
-    &:focus,
-    &:hover {
-        color: $gray1;
-        background: $gray5;
-    }
-    &:active {
-        color: $gray1;
-        background: $gray5;
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:link,
+  &:visited {
+    color: $gray1;
+  }
+
+  &:focus,
+  &:hover {
+    color: $gray1;
+    background: $gray5;
+  }
+
+  &:active {
+    color: $gray1;
+    background: $gray5;
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
 
 .btn--link {
-    color: $link;
-    background: transparent;
+  color: $link;
+  background: transparent;
 
-    &:link,
-    &:visited {
-        color: $link;
-    }
-    &:focus,
-    &:hover {
-        color: $link--hover;
-        background-color: $gray6;
-    }
-    &:active {
-        color: $link--active;
-        background-color: $gray5;
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:link,
+  &:visited {
+    color: $link;
+  }
+
+  &:focus,
+  &:hover {
+    color: $link--hover;
+    background-color: $gray6;
+  }
+
+  &:active {
+    color: $link--active;
+    background-color: $gray5;
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
 
 .btn--stretched {
-    @media all and (min-width: $M) {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
+  @media all and (min-width: $M) {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
 }
 
 /**
@@ -159,66 +176,69 @@ Styleguide 300.10
  */
 
 .btn--success {
-	background: $success;
+  background: $success;
 
-    &:focus,
-    &:hover {
-        background: $dark-success;
-    }
-    &:active {
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:focus,
+  &:hover {
+    background: $dark-success;
+  }
+
+  &:active {
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
 
 .btn--warning {
-    background: $warning;
+  background: $warning;
 
-    &:focus,
-    &:hover {
-        background: $dark-warning;
-    }
-    &:active {
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:focus,
+  &:hover {
+    background: $dark-warning;
+  }
+
+  &:active {
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
 
 .btn--info {
-    background: $info;
+  background: $info;
 
-    &:focus,
-    &:hover {
-        background: $dark-info;
-    }
-    &:active {
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:focus,
+  &:hover {
+    background: $dark-info;
+  }
+
+  &:active {
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
 
 .btn--danger {
-    background: $danger;
+  background: $danger;
 
-    &:hover,
-    &:focus {
-        background: $dark-danger;
-    }
-    &:active {
-        border-left-width: 0.1rem;
-        border-top-width: 0.1rem;
-    }
+  &:hover,
+  &:focus {
+    background: $dark-danger;
+  }
+
+  &:active {
+    border-left-width: 0.1rem;
+    border-top-width: 0.1rem;
+  }
 }
-
 
 /**
  * Styles automatisch auf Buttons setzen
  */
 
-[type=button],
-[type=submit],
+[type="button"],
+[type="submit"],
 button {
-    @extend .btn;
+  @extend .btn;
 }
 
 /*
@@ -239,26 +259,25 @@ Styleguide 300.20
 */
 
 .nav-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    overflow: hidden;
-    transition: none;
-    line-height: 1rem;
-    text-align: center;
-    border-radius: 200%;
-    padding-top: 0.75rem;
-    background-color: $gray6;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: none;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: 200%;
+  padding-top: 0.75rem;
+  background-color: $gray6;
 
-    &:hover {
-        color: $white;
-        background-color: $light-blue;
-        transition:
-            color 150ms linear,
-            background-color 150ms linear;
-    }
+  &:hover {
+    color: $white;
+    background-color: $light-blue;
+    transition:
+      color 150ms linear,
+      background-color 150ms linear;
+  }
 }
-
 
 /*
 
@@ -278,34 +297,37 @@ Styleguide 300.30
 */
 
 .avatar-cta {
-    // Bei Bedarf zu ueberschreiben
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.5rem;
-    box-shadow: $box-shadow-3;
-    border: 2px solid $primary;
-    // Sollte nicht überschrieben werden.
+  // Bei Bedarf zu ueberschreiben
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  box-shadow: $box-shadow-3;
+  border: 2px solid $primary;
+
+  // Sollte nicht überschrieben werden.
+  color: $black;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: white;
+
+  &:visited {
     color: $black;
-    display: block;
-    position: relative;
-    border-radius: 50%;
-    text-decoration: none;
-    background-color: white;
+  }
 
-    &:visited {
-        color: $black
-    }
-    &:active,
-    &:hover {
-        color: $primary;
-        transition: color ease 150ms;
-    }
+  &:active,
+  &:hover {
+    color: $primary;
+    transition: color ease 150ms;
+  }
 
-    > i.fas {
-        position: absolute;
-        top: 50%; left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
+  > i.fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }

@@ -3,81 +3,74 @@
 // Styleguide
 
 // Pfade
-$phxDesignSystemImagePath: './images' !default;
+$phxDesignSystemImagePath: "./images" !default;
 
 // Primärfarben
-$primary:       #009EB4 !default;
-$primary-dark:  #00377A !default;
-$light-blue:    $primary !default;
-$dark-blue:     $primary-dark !default;
-
-$link:          $primary !default;
-$link--hover:   darken($link, 5%) !default;
-$link--active:  darken($link, 15%) !default;
+$primary: #009eb4 !default;
+$primary-dark: #00377a !default;
+$light-blue: $primary !default;
+$dark-blue: $primary-dark !default;
+$link: $primary !default;
+$link--hover: darken($link, 5%) !default;
+$link--active: darken($link, 15%) !default;
 
 // Dunkle Grautöne
-$gray1:         #333333 !default;
-$gray2:         #666666 !default;
-$gray3:         #7d7d7e !default;
+$gray1: #333 !default;
+$gray2: #666 !default;
+$gray3: #7d7d7e !default;
 
 // Helle Grautöne
-$gray4:         #cdcdce !default;
-$gray5:         #DCE0E7 !default;
-$gray6:         #EEEEF4 !default;
+$gray4: #cdcdce !default;
+$gray5: #dce0e7 !default;
+$gray6: #eeeef4 !default;
 
 // Diverse Farben
-$black:         #000000 !default;
-$white:         #ffffff !default;
-$whitegray:     #fafafa !default;
-$yellow:        #face49 !default;
+$black: #000 !default;
+$white: #fff !default;
+$whitegray: #fafafa !default;
+$yellow: #face49 !default;
 
 // Statusfarben (fuer Alerts, etc.)
-$info:      #1F8DD6;    // Blau
-$danger:    #CA3C3C;    // Rot
-$success:   #1CB841;    // Gruen
-$warning:   #ff6700;    // Orange
-$staging:   #FFD700;    // Gelb
+$info: #1f8dd6;    // Blau
+$danger: #ca3c3c;    // Rot
+$success: #1cb841;    // Gruen
+$warning: #ff6700;    // Orange
+$staging: #ffd700;    // Gelb
 
 // Transformationen von existierenden Farben (shading)
 $lighten-grade: 45%;
 $darken-grade: 15%;
-
-$dark-info:     darken($info, $darken-grade);
-$dark-danger:   darken($danger, $darken-grade);
-$dark-success:  darken($success, $darken-grade);
-$dark-warning:  darken($warning, $darken-grade);
-
-$light-info:    lighten($info, $lighten-grade);
-$light-danger:  lighten($danger, $lighten-grade);
+$dark-info: darken($info, $darken-grade);
+$dark-danger: darken($danger, $darken-grade);
+$dark-success: darken($success, $darken-grade);
+$dark-warning: darken($warning, $darken-grade);
+$light-info: lighten($info, $lighten-grade);
+$light-danger: lighten($danger, $lighten-grade);
 $light-success: lighten($success, $lighten-grade);
 $light-warning: lighten($warning, $lighten-grade);
-
 
 // Typografie
 //
 // Styleguide
 
-$font-size:       16px !default;
-$font-size-xl:    $font-size + 2;
-$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace !default;
-$base-font:       'Titillium Web', 'Segoe UI', 'Verdana', sans-serif !default;
-
-$body:            $base-font !default;
-$heading:         $base-font !default;
-$monospace:       $monospace-font !default;
-
+$font-size: 16px !default;
+$font-size-xl: $font-size + 2;
+$monospace-font: "Consolas", "Monaco", "Courier New", monospace !default;
+$base-font: "Titillium Web", "Segoe UI", "Verdana", sans-serif !default;
+$body: $base-font !default;
+$heading: $base-font !default;
+$monospace: $monospace-font !default;
 
 // Box Shadow
 //
 // Styleguide
 
-$box-shadow-1: 0px 0px 4px 2px rgba( 0, 0, 0, 0.2 ) !default;
-$box-shadow-2: 0px 0px 8px 2px rgba( 0, 0, 0, 0.2 ) !default;
-$box-shadow-3: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ) !default;
-$box-shadow-4: 2px 2px 8px 0px rgba( 0, 0, 0, 0.2 ) !default;
-$box-shadow-5: 4px 4px 8px 0px rgba( 0, 0, 0, 0.2 ) !default;
+$box-shadow-1: 0 0 4px 2px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-2: 0 0 8px 2px rgba(0, 0, 0 ,0.2) !default;
+$box-shadow-3: 2px 2px 4px 2px rgba(0, 0, 0, 0.2) !default;
+$box-shadow-4: 2px 2px 8px 0 rgba(0, 0, 0, 0.2) !default;
+$box-shadow-5: 4px 4px 8px 0 rgba(0, 0, 0, 0.2) !default;
 $box-shadow-6: 0 20px 20px -20px black !default; // horizontal only
-
 
 // Breakpoints
 //
@@ -91,6 +84,6 @@ $XL: 1400px;
 
 // Tachyons MQ customized to PHX Breakpoints
 
-$breakpoint-not-small: 'screen and (min-width: #{$S})' !default;
-$breakpoint-medium: 'screen and (min-width: #{$M}) and (max-width: #{$L})' !default;
-$breakpoint-large: 'screen and (min-width: #{$L})' !default;
+$breakpoint-not-small: "screen and (min-width: #{$S})" !default;
+$breakpoint-medium: "screen and (min-width: #{$M}) and (max-width: #{$L})" !default;
+$breakpoint-large: "screen and (min-width: #{$L})" !default;

@@ -23,37 +23,40 @@ Markup:
 */
 
 .loader-parent {
-    position: relative;
+  position: relative;
 }
 
 .loader {
-    padding: 2rem 0;
-    text-align: center;
+  padding: 2rem 0;
+  text-align: center;
 }
 
 .loader--overlay {
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    z-index: 300;
-    padding: 0;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
 
-    > .loader__spinner {
-        display: inline-block;
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  > .loader__spinner {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .loader__spinner {
-    text-align: center;
-    line-height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
 
-    > i {
-        font-size: 2rem;
-        color: $primary-dark;
-    }
+  > i {
+    font-size: 2rem;
+    color: $primary-dark;
+  }
 }

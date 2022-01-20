@@ -88,61 +88,63 @@ $acc-max-height: 1000px;
 $acc-animation-duration: 500ms;
 
 a.acc-opener {
-    display: flex;
+  display: flex;
+  color: $white;
+  padding: 0.5rem;
+  align-items: center;
+  background-color: $light-blue;
+  justify-content: space-between;
+  transition: padding-left 200ms ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
     color: $white;
-    padding: 0.5rem;
-    align-items: center;
-    background-color: $light-blue;
-    justify-content: space-between;
-    transition: padding-left 200ms ease-in-out;
+    padding-left: 0.75rem;
+  }
+
+  &:hover .fa-chevron-up {
+    transform: rotate(-90deg);
+    transition: transform 100ms ease;
+  }
+
+  &--grayed {
+    color: $gray2;
+    background-color: $gray5;
+    border: 1px solid $whitegray;
 
     &:hover,
     &:focus,
     &:active,
     &:visited {
-        color: $white;
-        padding-left: 0.75rem;
+      color: $gray1;
     }
-    &:hover .fa-chevron-up {
-        transform: rotate(-90deg);
-        transition: transform 100ms ease;
-    }
-
-    &--grayed {
-        color: $gray2;
-        background-color: $gray5;
-        border: 1px solid $whitegray;
-
-        &:hover,
-        &:focus,
-        &:active,
-        &:visited {
-            color: $gray1;
-        }
-    }
+  }
 }
 
 .acc-section {
-    height: auto;
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    background-color: $whitegray;
-    transition: max-height 500ms ease;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: $whitegray;
+  transition: max-height 500ms ease;
 
-    .acc-inner {
-        margin: 0.5rem;
-        padding: 0.5rem;
-        border: 1px solid $gray6;
-        background-color: $white;
-    }
+  .acc-inner {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid $gray6;
+    background-color: $white;
+  }
 }
 
 .acc-open-item .acc-opener .fa-chevron-up {
-    transform: rotate(-180deg);
-    transition: transform 100ms ease;
+  transform: rotate(-180deg);
+  transition: transform 100ms ease;
 }
+
 .acc-open-item .acc-section {
-    max-height: $acc-max-height;
-    transition: max-height 500ms ease;
+  max-height: $acc-max-height;
+  transition: max-height 500ms ease;
 }

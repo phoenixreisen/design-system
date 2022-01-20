@@ -35,88 +35,101 @@ Styleguide 1.1
 */
 
 .alert {
-    padding: 0.3rem;
-    line-height: 135%;
-    margin-bottom: 0.5rem;
-    border: 1px solid transparent;
+  padding: 0.3rem;
+  line-height: 135%;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
 
-    a { text-decoration: underline; }
-    a:hover { text-decoration: none; }
+  a { text-decoration: underline; }
+  a:hover { text-decoration: none; }
 }
 
 .alert--danger {
+  color: $danger;
+  background-color: $light-danger;
+
+  a {
     color: $danger;
-    background-color: $light-danger;
 
-    a {
-        color: $danger;
-
-        &:visited {
-            color: $danger;
-        }
-        &:hover, &:active, &:focus {
-            color: $dark-danger;
-        }
+    &:visited {
+      color: $danger;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $dark-danger;
+    }
+  }
 }
 
 .alert--success {
+  color: $success;
+  background-color: $light-success;
+
+  a {
     color: $success;
-    background-color: $light-success;
 
-    a {
-        color: $success;
-
-        &:visited {
-            color: $success;
-        }
-        &:hover, &:active, &:focus {
-            color: $dark-success;
-        }
+    &:visited {
+      color: $success;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $dark-success;
+    }
+  }
 }
 
 .alert--warning {
+  color: $warning;
+  background-color: $light-warning;
+
+  a {
     color: $warning;
-    background-color: $light-warning;
 
-    a {
-        color: $warning;
-
-        &:visited {
-            color: $warning;
-        }
-        &:hover, &:active, &:focus {
-            color: $dark-warning;
-        }
+    &:visited {
+      color: $warning;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $dark-warning;
+    }
+  }
 }
 
 .alert--info {
+  color: $info;
+  background-color: $light-info;
+
+  a {
     color: $info;
-    background-color: $light-info;
 
-    a {
-        color: $info;
-
-        &:visited {
-            color: $info;
-        }
-        &:hover, &:active, &:focus {
-            color: $dark-info;
-        }
+    &:visited {
+      color: $info;
     }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $dark-info;
+    }
+  }
 }
 
 .alert--icon {
-    position: relative;
-    padding-left: 3rem;
+  position: relative;
+  padding-left: 3rem;
 
-    > i.fas {
-        position: absolute;
-        left: 1rem; top: 0.3rem;
-        line-height: 135%;
-    }
+  > i.fas {
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    line-height: 135%;
+  }
 }
 
 /*
@@ -159,35 +172,38 @@ Styleguide 1.2
 */
 
 .text-alert {
-    color: $gray1;
-    padding: 0.5rem;
-    line-height: 160%;
-    margin-bottom: 0.5rem;
-    background-color: $white;
+  color: $gray1;
+  padding: 0.5rem;
+  line-height: 160%;
+  margin-bottom: 0.5rem;
+  background-color: $white;
 
-    a {
-        color: $link;
+  a {
+    color: $link;
 
-        &:hover, &:active, &:focus {
-            color: $link--hover;
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link--hover;
     }
+  }
 
-    &--bordered {
-        padding: 1rem;
-        border-radius: 5px;
-        border: 1px solid $gray4;
-    }
-    &--shadowed {
-        padding: 1rem;
-        border-radius: 5px;
-        border: 1px solid $gray6;
-        box-shadow: $box-shadow-2;
-    }
+  &--bordered {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $gray4;
+  }
 
-    .big-alert-icon {
-        margin-bottom: 1rem;
-        font-size: 3.5rem;
-        color: $info;
-    }
+  &--shadowed {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $gray6;
+    box-shadow: $box-shadow-2;
+  }
+
+  .big-alert-icon {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: $info;
+  }
 }
