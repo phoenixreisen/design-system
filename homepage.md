@@ -265,6 +265,15 @@
       <div><code>#fafafa</code></div>
     </div>
   </article>
+
+  <article class="kss-color">
+    <div class="kss-color__preview graywhite"></div>
+    <div class="kss-color__properties">
+      <p>Grau-Weiß</p>
+      <div><code>$graywhite</code></div>
+      <div><code>#edf1f5</code></div>
+    </div>
+  </article>
 </section>
 
 <h3>Status-Farben</h3>
