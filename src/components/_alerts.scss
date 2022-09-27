@@ -36,7 +36,8 @@ Styleguide 1.1
 
 .alert {
   padding: 0.3rem;
-  line-height: 135%;
+  font-size: 0.9rem;
+  line-height: 125%;
   margin-bottom: 0.5rem;
   border: 1px solid transparent;
 
@@ -122,13 +123,13 @@ Styleguide 1.1
 
 .alert--icon {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 2rem;
 
   > i.fas {
-    position: absolute;
-    left: 1rem;
     top: 0.3rem;
+    left: 0.5rem;
     line-height: 135%;
+    position: absolute;
   }
 }
 
@@ -174,7 +175,8 @@ Styleguide 1.2
 .text-alert {
   color: $gray1;
   padding: 0.5rem;
-  line-height: 160%;
+  font-size: 0.9rem;
+  line-height: 125%;
   margin-bottom: 0.5rem;
   background-color: $white;
 
