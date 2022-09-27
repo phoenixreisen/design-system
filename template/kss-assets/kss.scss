@@ -94,7 +94,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   samp {
     font-family: $kss-font-code;
     color: mix($kss-colors-foreground, $kss-colors-heading, 50%);
-    font-size: 1em;
+    font-size: 0.85rem;
   }
 
   pre {
