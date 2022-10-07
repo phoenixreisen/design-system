@@ -201,17 +201,17 @@ kbd {
   background-color: $gray6;
   font-family: $monospace;
   color: $primary-dark;
+  font-size: 0.85rem;
   line-height: 140%;
-  font-size: 1rem;
 }
 
 code,
 samp,
 kbd {
-  border-radius: 2px;
-  overflow-y: hidden;
   overflow-x: auto;
-  padding: 0.4rem 0.4rem 0.2rem;
+  overflow-y: hidden;
+  border-radius: 5px;
+  padding: 0.15rem 0.25rem;
 }
 
 pre {
