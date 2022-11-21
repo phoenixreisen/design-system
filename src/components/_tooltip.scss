@@ -1,0 +1,176 @@
+/*
+
+Tooltip
+
+**Module:**
+[React](https://github.com/phoenixreisen/reacts/tree/main/src/tooltip)
+
+Tooltip, der entweder bei Mouseover oder durch Klick angezeigt wird.
+
+Styleguide 950.0
+
+*/
+
+/*
+
+Farben 
+
+Markup:
+<div class="mv2">
+    <article class="tooltip">
+        Ich wurde gehovered!
+        <span class="tip tip--right tip--visible">
+            <span class="tip--colored {{modifier_class}}">
+                Ich bin der Tooltip!
+            </span>
+        </span>
+    </article>
+</div>
+
+.info - blau-weiß
+.danger - rot-weiß
+.success - gruen-weiß
+.warning - orange-weiß
+
+Styleguide 950.1
+
+*/
+
+/*
+
+Ausrichtung 
+
+Markup:
+<div class="tc mv4">
+    <article class="tooltip">
+        Ich wurde gehovered!
+        <span class="tip {{modifier_class}} tip--visible">
+            <span class="tip--colored info">
+                Ich bin der Tooltip!
+            </span>
+        </span>
+    </article>
+</div>
+
+.tip--left - links
+.tip--right - rechts
+.tip--above - drüber
+.tip--below - drunter
+
+Styleguide 950.2
+
+*/
+
+/*
+
+Komponente 
+
+Markup:
+<div class="tc" style="height: 300px;">
+    <article class="tooltip">
+        Ich wurde geklickt!
+        <span class="tip {{modifier_class}} tip--below tip--visible">
+            <!-- Individulles HTML -->
+            <div class="whitegray pa3">
+                <strong>HTML Box</strong>
+                <p>Ich beinhalte etwas mehr als nur einen kurzen Infotext.</p>
+                <p>Für mein Aussehen muss ich selbst sorgen.</p>
+                <p>Sogar einen Button:</p>
+                <button type="button">
+                    Ich mache nichts
+                </button>
+            </div>
+            <!-- /Individulles HTML -->
+        </span>
+    </article>
+</div>
+
+.tip--component - rendert eine Box für HTML Content
+
+Styleguide 950.3
+
+*/
+
+.tooltip {
+    font-size: 1em;
+    line-height: 1.3;
+    overflow: visible;
+    position: relative;
+    display: inline-block;
+
+    &--click {
+        cursor: pointer;
+    }
+
+    .tip {
+        font-size: 0.85em;
+        position: absolute;
+        white-space: nowrap;
+
+        opacity: 0;
+        top: -99999px;
+        left: -99999px;
+    }
+
+    .tip.tip--component {
+        padding: 0.1em 0.5em;
+        white-space: normal;
+        text-align: left;
+
+        > * {
+            min-width: 15em;
+            border-radius: 5px;
+            background-color: $whitegray;
+            box-shadow: $box-shadow-2;
+        }
+    }
+
+    .tip.tip--visible {
+        opacity: 1;
+        z-index: 100;
+        transition: opacity 300ms ease;
+    }
+    
+    .tip--visible {
+        left: auto;
+        top: auto;
+
+        &.tip.tip--above,
+        &.tip.tip--below {
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+        &.tip.tip--component.tip--above,
+        &.tip.tip--component.tip--below {
+            text-align: left;
+        }
+        &.tip.tip--below {
+            top: 130%;
+        }
+        &.tip.tip--above {
+            bottom: 130%;
+        }
+    
+        &.tip.tip--left,
+        &.tip.tip--right {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &.tip.tip--left {
+            right: 105%;
+            text-align: right;
+        }
+        &.tip.tip--right {
+            left: 105%;
+            text-align: left;
+        }
+    }
+
+    .tip > .tip--colored {
+        color: #fff;
+        display: inline-block;
+        padding: 0.1em 0.5em;
+        border-radius: 5px;
+    }
+}
