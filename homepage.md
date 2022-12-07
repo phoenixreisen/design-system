@@ -46,7 +46,7 @@
   <li><a href="https://warpspire.com/kss/" target="_blank">KSS Knyle Style Sheets</a> - CSS Dokumentationsgenerator für in der Haube</li>
   <li><a href="https://tachyons.io/docs/" target="_blank">Tachyons</a> - funktionales CSS Framework für unter der Haube</li>
   <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> - Animationssammlung für auf der Haube</li>
-  <li><a href="https://fortawesome.com/sets/font-awesome-4" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
+  <li><a href="https://fontawesome.com/v5/search?o=r&m=free" target="_blank">Fort Awesome</a> - hippe Icon Schriftart</li>
   <li><a href="https://github.com/kamranahmedse/driver.js" target="_blank">Driver</a> - smoothe Page Tour</li>
   <li><a href="https://pikaday.com/" target="_blank">Pikaday</a> - cooler Datepicker</li>
   <li><a href="https://idangero.us/swiper/" target="_blank">Swiper</a> - fancy touch Slider</li>
@@ -120,7 +120,7 @@
   mit einer Basisgröße von <code>16px</code> (<code>18px</code> ab großen Auflösungen).
 </p>
 <p>
-  Für Icons aller Art kommt <code>Fort Awesome</code> <small><a href="https://fortawesome.com/" target="_blank">(Website)</a></small> zum Einsatz.<br />
+  Für Icons aller Art kommt <code>Fort Awesome</code> <small><a href="https://fontawesome.com/v5/search?o=r&m=free" target="_blank">(Website)</a></small> zum Einsatz.<br />
   SVG-Icons nur, wenn sie nicht durch Fort Awesome abgedeckt sind.
 </p>
 
