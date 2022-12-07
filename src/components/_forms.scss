@@ -53,7 +53,7 @@ Markup:
   <div class="mt3">
     <button class="btn btn--warning">Löschen</button>
     <button class="btn btn--danger">Alles löschen</button>
-    <button class="btn btn--link"><i class="fas fa-home mr1"></i> Zurück</button>
+    <button class="btn btn--link"><i class="fas fa-home mr1"></i> Home</button>
   </div>
 </form>
 
@@ -258,7 +258,7 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.1
+Styleguide 400.10
 
 */
 
@@ -298,7 +298,7 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.2
+Styleguide 400.20
 
 */
 
@@ -340,7 +340,7 @@ Markup:
   </span>
 </label>
 
-Styleguide 400.3
+Styleguide 400.30
 
 */
 
@@ -439,9 +439,63 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.4
+Styleguide 400.40
 
 */
+
+/*
+
+Input mit Button
+
+Markup:
+<div class="textfield-with-button">
+  <label class="textfield {{modifier_class}}">
+    <input
+      type="text"
+      name=""
+      value=""
+      oninput=""
+      maxlength=""
+      autocomplete=""
+      placeholder="..."
+    />
+    <span class="textfield__label">Input</span>
+  </label>
+  <button class="btn btn--primary"
+      <i class="fas fa-check mr2"></i>
+      <span>Speichern</span>
+  </button>
+</div>
+
+Styleguide 400.50
+
+*/
+
+.textfield-with-button {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+
+  > label {
+    flex-grow: 2;
+    margin-bottom: 0;
+  }
+
+  > label>input {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > button {
+    height: none;
+    line-height: 1;
+    margin-top: -2px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
 
 /*
 
@@ -460,7 +514,7 @@ Markup:
 
 .disabled - disabled
 
-Styleguide 400.5
+Styleguide 400.60
 
 */
 
@@ -529,7 +583,7 @@ Markup:
   </button>
 </div>
 
-Styleguide 400.6
+Styleguide 400.70
 
 */
 
@@ -552,7 +606,7 @@ Markup:
   <button>Senden</button>
 </div>
 
-Styleguide 400.7
+Styleguide 400.80
 
 */
 
