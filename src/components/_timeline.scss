@@ -1,0 +1,292 @@
+/*
+
+Timeline
+
+**Module:**
+[Mithril](https://phoenixreisen.github.io/mithrils/timeline/)
+
+Ansicht einer vertikalen Zeitleiste, die sowohl vorne als auch mittig positioniert werden kann.
+
+Klassen, die Einfluss nehmen:
+
+- .timeline--animated - die Ausgabe der Linie wird animiert
+- .timeline--static - die Ausgabe der Linie wird nicht animiert
+- .timeline--left - die Linie wird links ausgegeben
+- .timeline--center - die Linie wird zentriert ausgegeben 
+
+Wenn ```<span class="timeline-axis"></span>``` direkt unter ```.timeline``` positioniert wird, zieht sich die Linie
+ununterbrochen durch den ganzen Bereich.
+
+Wenn ```<span class="timeline-axis"></span>``` innerhalb der jeweiligen Box positioniert wird, gilt sie nur für diese Box.
+Das hat den Vorteil, dass Styles pro Box auch für die Linie gesetzt werden können - z.B. die Farbe. Dann muss bei einer
+Animation aber darauf geachtet werden, dass das Rendering für eine Box erst startet, wenn die vorherige Box fertig ist.
+
+Styleguide 1000.0
+
+*/
+
+/*
+
+Vorne ausgerichtet, konstante Linie
+
+Markup:
+<section class="timeline timeline--animated timeline--left">
+    <span class="timeline-axis"></span>
+    <article class="timeline-box">
+        <div class="timeline-left-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content">
+                <!-- Content -->
+                <div class="pa3 pt0">
+                    <div><strong>Tab I</strong></div>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr.</p>
+                </div>
+                <!-- /Content -->
+            </div>
+        </div>
+    </article>
+    <article class="timeline-box">
+        <div class="timeline-left-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content">
+                <!-- Content -->
+                <div class="pa3 pt0">
+                    <div><strong>Tab II</strong></div>
+                    <p>Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+                <!-- /Content -->
+            </div>
+        </div>
+    </article>
+    <article class="timeline-box">
+        <div class="timeline-left-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content">
+                <!-- Content -->
+                <div class="pa3 pt0">
+                    <div><strong>Tab IIII</strong></div>
+                    <p>Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet,
+                        consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                        gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+                <!-- /Content -->
+            </div>
+        </div>
+    </article>
+</section>
+
+Styleguide 1000.1
+
+*/
+
+/*
+
+Zentriert ausgerichtet, Linie pro Box
+
+Markup:
+<section class="timeline timeline--animated timeline--center">
+    <article class="timeline-box">
+        <span class="timeline-axis"></span>
+        <div class="timeline-center-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content timeline-content--left">
+                <div class="pa3 pt0">
+                    <div><strong>Tab I</strong></div>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet.</p>
+                </div>
+            </div>
+            <div class="timeline-content timeline-content--right"></div>
+        </div>
+    </article>
+    <article class="timeline-box">
+        <span class="timeline-axis"></span>
+        <div class="timeline-center-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content timeline-content--left"></div>
+            <div class="timeline-content timeline-content--right">
+                <div class="pa3 pt0">
+                    <div><strong>Tab II</strong></div>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="timeline-box">
+        <span class="timeline-axis"></span>
+        <div class="timeline-center-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content timeline-content--left"></div>
+            <div class="timeline-content timeline-content--right">
+                <div class="pa3 pt0">
+                    <div><strong>Tab III</strong></div>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="timeline-box">
+        <span class="timeline-axis"></span>
+        <div class="timeline-center-box">
+            <i class="timeline-circle"></i>
+            <div class="timeline-content timeline-content--left">
+                <div class="pa3 pt0">
+                    <div><strong>Tab III</strong></div>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet.</p>
+                </div>
+            </div>
+            <div class="timeline-content timeline-content--right"></div>
+        </div>
+    </article>
+</section>
+
+Styleguide 1000.2
+
+*/
+
+$content-min-height: 0;
+
+$axis-width: 0.2rem;
+$axis-position-top: 0rem;
+$axis-position-left: 0.5rem;
+
+$circle-width: 1rem;
+$circle-height: 1rem;
+$circle-weight: 0.2rem;
+$circle-position-top: 0.3rem;
+$circle-position-left: 0.6rem;
+
+/**
+ * Generelle Styles
+ */
+
+.timeline {
+    position: relative;
+    
+    .timeline-axis {
+        height: 0;
+        width: $axis-width;
+        position: absolute;
+        display: inline-block;
+        top: $axis-position-top; 
+        left: $axis-position-left;
+        background-color: $primary;
+    }
+}
+.timeline.timeline--static .timeline-axis {
+    height: 100%;
+}
+.timeline.timeline--animated .timeline-axis {
+    height: 100%;
+    transition: height 800ms linear;
+}
+
+
+.timeline .timeline-box {
+    position: relative;
+
+    .timeline-circle {
+        z-index: 100;
+        border-radius: 50%;
+        position: absolute;
+        width: $circle-width;
+        height: $circle-height;
+        background-color: $primary;
+        transform: translateX(-50%);
+        border: $circle-weight solid $primary;
+        left: $circle-position-left;
+        top: $circle-position-top;
+    }
+}
+
+.timeline .timeline-box .timeline-content {
+    min-height: $content-min-height;
+    padding-left: $axis-position-left + 0.5;
+}
+
+.timeline .timeline-box:first-child .timeline-axis {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.timeline .timeline-box:last-child .timeline-axis {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/**
+ * Zentriert ausgerichtet
+ */
+
+@media all and (max-width: ($M - 1)) {
+    
+    .timeline-content--right:empty,
+    .timeline-content--left:empty {
+        display: none;
+    }
+}
+@media all and (min-width: $M) {
+
+    .timeline-center-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .timeline-center-box .timeline-content--left {
+        max-width: 49%;
+        text-align: right;
+    }
+    .timeline-center-box .timeline-content--right {
+        max-width: 49%;
+        text-align: left;
+    }
+    
+    .timeline .timeline-center-box .timeline-circle {
+        left: 50%;
+        top: 0.2rem;
+        transform: translateX(-50%);
+    }
+    
+    .timeline--center .timeline-axis {
+        top: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
