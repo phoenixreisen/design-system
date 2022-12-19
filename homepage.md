@@ -115,6 +115,7 @@
   </li>
   <li>
     <a href="/section-950.html" title="Vorschau">Phoenix Tooltip</a> |
+    <a href="https://github.com/phoenixreisen/mithrils/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">Mithril</a> |
     <a href="https://github.com/phoenixreisen/reacts/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">React</a>
   </li>
 </ul>
