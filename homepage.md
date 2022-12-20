@@ -106,17 +106,17 @@
     <a href="https://github.com/phoenixreisen/reacts/tree/main/src/notification" class="ml1" target="_blank" title="zum Repo">React</a>
   </li>
   <li>
+    <a href="/section-950.html" title="Vorschau">Phoenix Tooltip</a> |
+    <a href="https://github.com/phoenixreisen/mithrils/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">Mithril</a> |
+    <a href="https://github.com/phoenixreisen/reacts/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">React</a>
+  </li>
+  <li>
     <a href="/section-450.html" title="Vorschau">Phoenix Fuzzy-Suche</a> |
     <a href="https://github.com/phoenixreisen/mithrils/tree/main/src/fuzzy-input/" class="ml1" target="_blank" title="zum Repo">Mithril</a>
   </li>
   <li>
     <a href="/section-1000.html" title="Vorschau">Phoenix Timeline</a> |
     <a href="https://github.com/phoenixreisen/mithrils/tree/main/src/timeline/" class="ml1" target="_blank" title="zum Repo">Mithril</a>
-  </li>
-  <li>
-    <a href="/section-950.html" title="Vorschau">Phoenix Tooltip</a> |
-    <a href="https://github.com/phoenixreisen/mithrils/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">Mithril</a> |
-    <a href="https://github.com/phoenixreisen/reacts/tree/main/src/tooltip/" class="ml1" target="_blank" title="zum Repo">React</a>
   </li>
 </ul>
 
