@@ -24,11 +24,6 @@
  */
 (function() {
     if(document.querySelector('.swiper-container')) {
-        // Swiper CSS nachträglich in DOM hinzufügen
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://unpkg.com/swiper/swiper-bundle.min.css';
-        document.head.prepend(link);
 
         // Swiper JS nachträglich in DOM hinzufügen
         var script = document.createElement('script');

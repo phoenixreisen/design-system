@@ -35,6 +35,7 @@
     "@phoenixreisen/tabs": "^2.0.4",
     "animate.css": "^4.1.1",
     "pikaday": "^1.8.2",
+    "swiper": "^8.4.5",
     "tachyons-sass": "^4.9.5",
     "url": "^0.11.0"
   },
