@@ -1,0 +1,176 @@
+/*
+
+Navigation
+
+Standard-Seitennavigation (Sidenav) für Phoenix Applikationen auf Grundlage dieses Design Systems. Sie fährt 
+(normalerweise) bei Klick auf einen Toggle von links oder rechts rein.
+
+Möchte man die Navigation von links hineinfahren lassen, muss zusätzlich der Modifier `.side-nav--lefted` gesetzt werden.
+
+Die Seitenleiste wurde zu Demozwecken `static` statt `fixed` positioniert. Der äußere Container ist
+ebenfalls nur zu Demozwecken und kann gelöscht werden - siehe Markup.
+
+Markup:
+<div class="relative" style="height: 700px; width: 100%"> <!-- Demostyles. Löschen. -->
+    <aside class="side-nav {{modifier_class}}" style="position: absolute"> <!-- Inline Style nur zu Demozwecken -->
+        <div class="side-nav-header">
+            <button type="button" class="btn--link">
+                schließen <i class="fas fa-times ml2"></i>
+            </button>
+            </div>
+        <h3>Linkliste</h3>
+        <ul>
+            <li>
+                <a href="https://www.phoenixreisen.com" target="_blank">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Homepage
+                </a>
+            </li>
+            <li>
+                <a href="https://meinereise.phoenixreisen.com/cdn/mein-phoenix/login/" target="_blank">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Mein Phoenix
+                </a>
+            </li>
+            <li>
+                <a href="https://magazin.phoenixreisen.com/" target="_blank">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Phoenix Magazin
+                </a>
+            </li>
+            <li>
+                <a href="https://www.phoenixreisen.com/kataloge-online-lesen.html" target="_blank">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Phoenix Kataloge
+                </a>
+            </li>
+            <li>
+                <a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog-verwaltung/" target="_blank">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Phoenix Abonnements
+                </a>
+            </li>
+        </ul>
+        <h3>Weitere Links</h3>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Link I
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Link II
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-angle-right mr2"></i>
+                    Link III
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
+
+.side-nav--lefted - von links hineinfahren lassen
+
+Styleguide 725
+
+*/
+
+.side-nav-toggle a {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    position: relative;
+    border-radius: 50%;
+    background-color: $gray6;
+    border: 1px solid $gray5;
+
+    &:hover, &:active {
+        color: $white;
+        background-color: $primary;
+        transition:
+            color 100ms ease-in,
+            background-color 100ms ease-in;
+    }
+
+    > i.fas {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.side-nav-header {
+    text-align: right;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #dce0e7;
+}
+
+.side-nav {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 300;
+    overflow: auto;
+    position: fixed;
+    max-width: 100%;
+    background-color: $white;
+    padding: 2rem 3rem 1rem 2rem;
+    border-left: 1px solid $gray6;
+    animation: navDriveInRight 300ms ease;
+    box-shadow: $box-shadow-4;
+
+    &--lefted {
+        left: 0;
+        right: auto;
+        animation: navDriveInLeft 300ms ease;
+    }
+}
+
+.side-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side-nav ul li a {
+    display: block;
+    margin: 0.3rem 0;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+}
+
+.side-nav h3 {
+    margin-left: 1rem;
+}
+
+.side-nav-layer {
+    position: fixed;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+}
+
+@keyframes navDriveInRight {
+    from { right: -100%; }
+    to { right: 0%; }
+}
+@keyframes navDriveInLeft {
+    from { left: -100%; }
+    to { left: 0%; }
+}
