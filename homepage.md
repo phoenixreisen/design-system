@@ -23,18 +23,12 @@
 
 <hr />
 
-<h2>Hitlist</h2>
+<h2>Anwendung</h2>
 
 <p>
-  Unter anderem in folgenden Anwendungen steckt das Design-System & seine diversen Komponenten <strong>bisher</strong>.
+  Das Design-System kommt vor allem für die Entwicklung der Reiseverwaltung <a href="https://meinereise.phoenixreisen.com/">Mein Phoenix</a> zum Einsatz, als auch zur Entwicklung diverser Intranetanwendungen.
 </p>
-<ul>
-  <li><a href="https://meinereise.phoenixreisen.com">Mein Phoenix</a></li>
-  <li><a href="https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20">Phoenix Katalog</a></li>
-  <li><a href="https://design-system.phoenixreisen.net">Phoenix Design System</a></li>
-  <li>Phoenix Kabinenpräsente (kommt)</li>
-  <li>Phoenix Mitarbeiter Suite (nur Intranet)</li>
-</ul>
+
 
 <hr id="osw" />
 
