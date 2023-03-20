@@ -10,6 +10,8 @@ Möchte man die Navigation von links hineinfahren lassen, muss zusätzlich der M
 Die Seitenleiste wurde zu Demozwecken `static` statt `fixed` positioniert. Der äußere Container ist
 ebenfalls nur zu Demozwecken und kann gelöscht werden - siehe Markup.
 
+Folgende Linkliste steht zur Verfügung: https://meinereise.phoenixreisen.com/cdn/links.json
+
 Markup:
 <div class="relative" style="height: 700px; width: 100%"> <!-- Demostyles. Löschen. -->
     <aside class="side-nav {{modifier_class}}" style="position: absolute"> <!-- Inline Style nur zu Demozwecken -->
