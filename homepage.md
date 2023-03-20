@@ -26,7 +26,7 @@
 <h2>Anwendung</h2>
 
 <p>
-  Das Design-System kommt vor allem für die Entwicklung der Reiseverwaltung <a href="https://meinereise.phoenixreisen.com/">Mein Phoenix</a> zum Einsatz, als auch zur Entwicklung diverser Intranetanwendungen.
+  Das Design-System kommt für die Entwicklung der Reiseverwaltung <a href="https://meinereise.phoenixreisen.com/">Mein Phoenix</a> zum Einsatz als auch zur Entwicklung diverser Intranetanwendungen.
 </p>
 
 
