@@ -110,9 +110,11 @@ Markup:
                 <i class="fas fa-user avatar__symbol"></i>
             </a>
         </article>
-        <a href="#" class="nav-btn top-bar__nav-btn noprint" title="Navigation ein-/ausblenden">
-            <i class="fas fa-bars"></i>
-        </a>
+        <article class="top-bar__nav-btn noprint">
+          <a href="#" class="nav-btn" title="Navigation ein-/ausblenden">
+              <i class="fas fa-bars"></i>
+          </a>
+        </article>
     </div>
 </article>
 
@@ -123,6 +125,7 @@ Styleguide 650.2
 .top-bar {
   $delay: 150ms;
   $duration: 150ms;
+  $navBtnMaxSize: 2rem;
 
   margin: 0;
   padding: 0;
@@ -200,16 +203,20 @@ Styleguide 650.2
     right: 1rem;
     max-width: 0;
     max-height: 0;
-    color: $white;
     position: absolute;
-    background-color: transparent;
 
     @media all and (min-width: $M) {
       right: 1rem;
     }
 
-    &:hover,
-    &:active {
+    a {
+        max-width: 0;
+        max-height: 0;
+        color: $white;
+        background-color: transparent;
+    }
+    a:hover,
+    a:active {
       color: $light-blue;
       background-color: $white;
     }
@@ -262,19 +269,23 @@ Styleguide 650.2
 
     .top-bar__nav-btn {
       bottom: 50%;
-      max-width: 2rem;
-      max-height: 2rem;
-      padding: 0.5rem 0;
+      max-width: $navBtnMaxSize;
+      max-height: $navBtnMaxSize;
       transform: translateY(50%);
       transition:
-        padding $duration linear $delay,
-        max-width $duration linear $delay,
-        max-height $duration linear $delay;
+          padding $duration linear $delay,
+          max-width $duration linear $delay,
+          max-height $duration linear $delay;
 
-      &:hover {
-        transition:
-          color $duration linear,
-          background-color $duration linear;
+      a {
+          padding: 0.5rem 0;
+          max-width: $navBtnMaxSize;
+          max-height: $navBtnMaxSize;
+      }
+      a:hover {
+          transition:
+              color $duration linear,
+              background-color $duration linear;
       }
     }
   }
