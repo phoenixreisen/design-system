@@ -10,27 +10,62 @@ Styleguide 650.0
 
 Header
 
+<span class="f4">mit Navigations Button</span>
+
 **Module:**
 [Mithril](https://github.com/phoenixreisen/mithrils/tree/main/src/header) |
 [React](https://github.com/phoenixreisen/reacts/tree/main/src/header)
 
 Markup:
 <article class="header">
-    <a href="/cdn/mein-phoenix/uebersicht/">
-        <picture class="header__logo">
-            <img src="./kss-assets/phx.logo.svg" />
-        </picture>
+  <a href="/cdn/mein-phoenix/uebersicht/">
+    <picture class="header__logo">
+      <img src="./kss-assets/phx.logo.svg" />
+    </picture>
+  </a>
+  <div class="header__version">
+    Phoenix Reisen - Standard Header
+  </div>
+  <div class="header__nav-btn noprint">
+    <a href="javascript:" class="nav-btn" 
+      title="Navigation ein-/ausblenden">
+      <i class="fas fa-bars"></i>
     </a>
-    <div class="header__version">
-        Phoenix Reisen - Standard Header
-    </div>
-    <a href="javascript:" title="Navigation ein-/ausblenden"
-        class="nav-btn header__nav-btn noprint">
-        <i class="fas fa-bars"></i>
-    </a>
+  </div>
 </article>
 
 Styleguide 650.1
+
+*/
+
+/*
+
+Header
+
+<span class="f4">mit Abmelden Link</span>
+
+**Module:**
+[Mithril](https://github.com/phoenixreisen/mithrils/tree/main/src/header) |
+[React](https://github.com/phoenixreisen/reacts/tree/main/src/header)
+
+Markup:
+<article class="header">
+  <a href="/cdn/mein-phoenix/uebersicht/">
+    <picture class="header__logo">
+        <img src="./kss-assets/phx.logo.svg" />
+    </picture>
+  </a>
+  <div class="header__version">
+    Phoenix Reisen - Standard Header
+  </div>
+  <article class="header__logout-btn noprint">
+    <a href="#" class="btn btn--link" title="abmelden">
+      <i class="fas fa-sign-out-alt"></i> <span class="logout-btn-text">abmelden</span>
+    </a>
+  </article>
+</article>
+
+Styleguide 650.10
 
 */
 
@@ -69,6 +104,7 @@ header.header {
   .header__nav-btn {
     top: 0.25rem;
     right: 0.75rem;
+    line-height: 1;
     position: absolute;
     display: inline-block;
 
@@ -78,6 +114,22 @@ header.header {
 
     @media all and (min-width: $M) {
       right: 1.25rem;
+    }
+  }
+
+  .header__logout-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+
+    .logout-btn-text {
+      display: none;
+      
+      @media all and (min-width: $S) {
+        display: inline-block;
+        margin-left: 0.3rem;
+      }
     }
   }
 }
@@ -118,7 +170,7 @@ Markup:
     </div>
 </article>
 
-Styleguide 650.2
+Styleguide 650.20
 
 */
 
@@ -381,7 +433,7 @@ Markup:
     </div>
 </footer>
 
-Styleguide 650.3
+Styleguide 650.30
 
 */
 
