@@ -8,7 +8,7 @@ Zum Beispiel für:
 - [Phoenix Katalog](https://meinereise.phoenixreisen.com/cdn/phoenix-katalog/#!/fluss20)
 - [Phoenix Design System](https://design-system.phoenixreisen.net)
 - Phoenix Kabinenpräsente (kommt)
-- Phoenix Mitarbeiter Suite (nur Intranet)
+- Phoenix Mitarbeiter Workspace (nur Intranet)
 
 Unterstützt wird es durch diverse designprägende Drittbibliotheken, die da wären:
 
