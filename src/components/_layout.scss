@@ -240,6 +240,7 @@ Styleguide 650.20
 
   .top-bar__avatar {
     right: 1rem;
+    z-index: 200;
     bottom: -1.5rem;
     position: absolute;
     transition: bottom $duration linear;
