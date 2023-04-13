@@ -103,17 +103,13 @@ header.header {
 
   .header__nav-btn {
     top: 0.25rem;
-    right: 0.75rem;
+    right: 0.25rem;
     line-height: 1;
     position: absolute;
     display: inline-block;
 
-    @media all and (min-width: $S) {
-      right: 0.25rem;
-    }
-
     @media all and (min-width: $M) {
-      right: 1.25rem;
+      right: 0.85rem;
     }
   }
 
