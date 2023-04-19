@@ -1,3 +1,5 @@
+$phxDesignSystemFontsPath: "./" !default;
+
 /* calistoga-regular - latin */
 @font-face {
   font-family: "Calistoga";
@@ -6,6 +8,6 @@
   src:
     local("Calistoga Regular"),
     local("Calistoga-Regular"),
-    url("./calistoga/calistoga-v1-latin-regular.woff2") format("woff2"),
-    url("./calistoga/calistoga-v1-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("#{$phxDesignSystemFontsPath}/calistoga/calistoga-v1-latin-regular.woff2") format("woff2"),
+    url("#{$phxDesignSystemFontsPath}/calistoga/calistoga-v1-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

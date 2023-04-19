@@ -1,36 +1,38 @@
+$phxDesignSystemFontsPath: "./" !default;
+
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 400;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-bold.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-bold.woff') format('woff');
 }
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 400;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-condensed.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-condensed.woff') format('woff');
 }
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 300;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-condensed-light.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-condensed-light.woff') format('woff');
 }
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 300;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-condensed-light.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-condensed-light.woff') format('woff');
 }
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 700;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-bold.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-bold.woff') format('woff');
 }
 @font-face {
     font-family: 'American Typewriter';
     font-style: normal;
     font-weight: 700;
-    src: local('American Typewriter'), url('./american-typewriter/american-typewriter-condensed-bold.woff') format('woff');
+    src: local('American Typewriter'), url('#{$phxDesignSystemFontsPath}/american-typewriter/american-typewriter-condensed-bold.woff') format('woff');
 }

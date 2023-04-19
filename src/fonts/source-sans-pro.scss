@@ -1,3 +1,5 @@
+$phxDesignSystemFontsPath: "./" !default;
+
 /* source-sans-pro-regular - latin */
 @font-face {
   font-family: "Source Sans Pro";
@@ -5,8 +7,8 @@
   font-weight: 400;
   src:
     local(""),
-    url("./source-sans-pro/source-sans-pro-v14-latin-regular.woff2") format("woff2"),
-    url("./source-sans-pro/source-sans-pro-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-regular.woff2") format("woff2"),
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* source-sans-pro-600 - latin */
@@ -16,8 +18,8 @@
   font-weight: 600;
   src:
     local(""),
-    url("./source-sans-pro/source-sans-pro-v14-latin-600.woff2") format("woff2"),
-    url("./source-sans-pro/source-sans-pro-v14-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-600.woff2") format("woff2"),
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* source-sans-pro-700 - latin */
@@ -27,6 +29,6 @@
   font-weight: 700;
   src:
     local(""),
-    url("./source-sans-pro/source-sans-pro-v14-latin-700.woff2") format("woff2"),
-    url("./source-sans-pro/source-sans-pro-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-700.woff2") format("woff2"),
+    url("#{$phxDesignSystemFontsPath}/source-sans-pro/source-sans-pro-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
