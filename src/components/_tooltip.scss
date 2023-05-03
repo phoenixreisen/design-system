@@ -99,6 +99,10 @@ Styleguide 950.3
     position: relative;
     display: inline-block;
 
+    &:hover, &:active, &:focus {
+        cursor: pointer;
+    }
+
     &--click {
         cursor: pointer;
     }
@@ -147,10 +151,10 @@ Styleguide 950.3
             text-align: left;
         }
         &.tip.tip--below {
-            top: 130%;
+            top: 150%;
         }
         &.tip.tip--above {
-            bottom: 130%;
+            bottom: 150%;
         }
     
         &.tip.tip--left,
@@ -159,19 +163,12 @@ Styleguide 950.3
             transform: translateY(-50%);
         }
         &.tip.tip--left {
-            right: 105%;
+            right: 110%;
             text-align: right;
         }
         &.tip.tip--right {
-            left: 105%;
+            left: 110%;
             text-align: left;
         }
-    }
-
-    .tip > .tip--colored {
-        color: #fff;
-        display: inline-block;
-        padding: 0.1em 0.5em;
-        border-radius: 5px;
     }
 }
