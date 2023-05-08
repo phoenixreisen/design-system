@@ -105,7 +105,9 @@ Styleguide 750.0
     color: $danger;
     background-color: $light-danger;
 
-    a { color: $danger; }
+    a, a:visited { 
+      color: $danger; 
+    }
 
     a:hover,
     a:active,
@@ -118,7 +120,9 @@ Styleguide 750.0
     color: $success;
     background-color: $light-success;
 
-    a { color: $success; }
+    a, a:visited { 
+      color: $success; 
+    }
 
     a:hover,
     a:active,
@@ -131,7 +135,9 @@ Styleguide 750.0
     color: $info;
     background-color: $light-info;
 
-    a { color: $info; }
+    a, a:visited { 
+      color: $info; 
+    }
 
     a:hover,
     a:active,
