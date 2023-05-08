@@ -532,12 +532,18 @@ Styleguide 400.60
     border-left: 0.4rem solid transparent;
     border-right: 0.4rem solid transparent;
     border-top: 0.4rem solid $primary;
-    height: 0;
     margin-top: -0.5rem;
     position: absolute;
-    right: 1rem;
     bottom: 0.8rem;
+    right: 1rem;
+    height: 0;
     width: 0;
+  }
+}
+
+.select.disabled {
+  &::after {
+    border-top: 0.4rem solid $gray3;
   }
 }
 
