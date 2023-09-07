@@ -76,6 +76,10 @@ header.header {
 .header {
   position: relative;
 
+  &.staging {
+      border-bottom-color: $yellow;
+  }
+
   .header__logo {
     margin: 0;
     padding: 0;
