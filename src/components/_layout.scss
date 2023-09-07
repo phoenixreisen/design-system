@@ -76,7 +76,7 @@ header.header {
 .header {
   position: relative;
 
-  &.staging {
+  &--staging {
       border-bottom-color: $yellow;
   }
 
