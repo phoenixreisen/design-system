@@ -31,12 +31,12 @@ Markup:
 */
 
 .tabs {
+
   .tabs__tabs-bar {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    border-bottom: 2px solid $gray6;
   }
 
   .tab {
