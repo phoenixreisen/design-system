@@ -164,6 +164,7 @@ button[disabled] {
 }
 
 .radio__label,
+.switch__label,
 .checkbox__label {
   color: $gray3;
   line-height: 125%;
@@ -359,10 +360,15 @@ Styleguide 400.30
 .switch__input {
   display: inline-block;
   position: relative;
+  margin-top: 0.3rem;
   flex-shrink: 0;
   flex-grow: 0;
   height: 34px;
   width: 60px;
+
+  @media all and (min-width: $M) {
+    margin-top: 0.2rem;
+  }
 
   input {
     width: 0;
@@ -375,7 +381,6 @@ Styleguide 400.30
   display: inline-block;
   margin-left: 1rem;
   cursor: pointer;
-  line-height: 2;
   flex-grow: 1;
 }
 
