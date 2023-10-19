@@ -167,7 +167,8 @@ button[disabled] {
 .switch__label,
 .checkbox__label {
   color: $gray3;
-  line-height: 125%;
+  line-height: 150%;
+  align-self: center;
 }
 
 .radio__label::after,
@@ -345,7 +346,7 @@ Markup:
   </span>
   <span class="switch__label">
     Licht an oder aus, das ist hier die Frage. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
   </span>
 </label>
 
