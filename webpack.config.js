@@ -60,7 +60,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new CopyPlugin({'patterns': [{
-            from: 'node_modules/@phoenixreisen/footer/src/icons/',
+            from: 'node_modules/@phoenixreisen/mithrils/src/footer/icons/',
             to: 'template/kss-assets/footer-icons/'
         }, {
             from: './netlify.toml',
