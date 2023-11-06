@@ -169,6 +169,8 @@ button[disabled] {
   color: $gray3;
   line-height: 150%;
   align-self: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .radio__label::after,
