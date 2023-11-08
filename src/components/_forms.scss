@@ -146,8 +146,8 @@ button[disabled] {
 
   &::before {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    aspect-ratio: 1;
     position: absolute;
     left: 0;
     top: 0.9rem;
@@ -177,18 +177,17 @@ button[disabled] {
 .checkbox__label::after {
   content: "";
   width: 18px;
-  height: 18px;
+  aspect-ratio: 1;
   position: absolute;
   left: 0;
   top: 0.9rem;
   margin-top: -10px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .radio input[type="radio"]:focus + .radio__label::after,
 .checkbox input[type="checkbox"]:focus + .checkbox__label::after {
-  border-color: $primary;
-  box-shadow: 0 1px 2px 1px $gray5 inset;
+  border-color: $primary; 
 }
 
 //
@@ -277,15 +276,23 @@ Styleguide 400.10
 }
 
 .radio input[type="radio"]:checked + .radio__label::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
+  // Icons
+  content: "\2714";
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-align: center;
+  color: $white;
+  // Kreis drumherum
+  height: 18px;
+  aspect-ratio: 1;
   position: absolute;
-  top: 0.9rem;
-  left: 5px;
   border-radius: 20px;
-  background-color: $primary-dark;
+  background-color: $primary;
+  border: 2px solid transparent;
+  // Positionierung
+  top: 0.6rem;
+  left: 0rem;
+  margin-top: -5px;
 }
 
 /*
@@ -325,10 +332,11 @@ Styleguide 400.20
 
 .checkbox input[type="checkbox"]:checked + .checkbox__label::after {
   content: "\2714";
-  color: $primary-dark;
-  font-size: $font-size;
+  color: $white;
   line-height: 18px;
   text-align: center;
+  font-size: $font-size;
+  background-color: $primary;
 }
 
 /*
