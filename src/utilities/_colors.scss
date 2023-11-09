@@ -23,14 +23,14 @@ Utilities | Colors
 
 .black { background-color: $black; }
 .white { background-color: $white; }
-
-.info { background-color: $info; }
 .yellow { background-color: $yellow; }
-.danger { background-color: $danger; }
-.success { background-color: $success; }
-.warning { background-color: $warning; }
 
-.staging { background-color: $staging; }
+.info { background-color: $info; color: $white; }
+.danger { background-color: $danger; color: $white; }
+.success { background-color: $success; color: $white; }
+.warning { background-color: $warning; color: $white; }
+
+.staging { background-color: $staging; color: $gray1; }
 
 /*
 
