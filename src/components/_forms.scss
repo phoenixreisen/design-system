@@ -182,7 +182,7 @@ button[disabled] {
   aspect-ratio: 1;
   position: absolute;
   left: 0;
-  top: 0.9rem;
+  top: 0.8rem;
   margin-top: -10px;
   border: 2px solid transparent;
 }
@@ -232,6 +232,7 @@ button[disabled] {
 
 .textfield *:focus,
 .select select:focus {
+  border-bottom-width: 2px; 
   border-bottom-color: $primary;
   box-shadow: 0 1px 2px 0 $gray5 inset;
   outline: none;
@@ -292,7 +293,7 @@ Styleguide 400.10
   background-color: $primary;
   border: 2px solid transparent;
   // Positionierung
-  top: 0.6rem;
+  top: 0.5rem;
   left: 0rem;
   margin-top: -5px;
 }
