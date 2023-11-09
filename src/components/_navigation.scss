@@ -2,15 +2,15 @@
 
 Navigation
 
-Standard-Seitennavigation (Sidenav) für Phoenix Applikationen auf Grundlage dieses Design Systems. Sie fährt 
-(normalerweise) bei Klick auf einen Toggle von links oder rechts rein.
+Standard-Seitennavigation für Phoenix Applikationen auf Grundlage dieses Design Systems. 
+Sie fährt, bei Klick auf einen Toggle, von links oder rechts rein.
 
 Möchte man die Navigation von links hineinfahren lassen, muss zusätzlich der Modifier `.side-nav--lefted` gesetzt werden.
 
 Die Seitenleiste wurde zu Demozwecken `static` statt `fixed` positioniert. Der äußere Container ist
 ebenfalls nur zu Demozwecken und kann gelöscht werden - siehe Markup.
 
-Folgende Linkliste steht zur Verfügung: https://meinereise.phoenixreisen.com/cdn/links.json
+Folgende Linkliste steht zur Verfügung: [https://meinereise.phoenixreisen.com/cdn/links.json](https://meinereise.phoenixreisen.com/cdn/links.json)
 
 Markup:
 <div class="relative" style="height: 700px; width: 100%"> <!-- Demostyles. Löschen. -->
