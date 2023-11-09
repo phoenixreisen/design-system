@@ -96,6 +96,7 @@ textarea {
 
 textarea {
   resize: vertical;
+  font-size: 0.85rem;
 }
 
 /* remove yellow from chrome auto-fill background */
@@ -150,7 +151,7 @@ button[disabled] {
     aspect-ratio: 1;
     position: absolute;
     left: 0;
-    top: 0.9rem;
+    top: 0.8rem;
     margin-top: -10px;
     border: 2px solid $gray4;
     background-color: $white;
