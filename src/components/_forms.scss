@@ -140,6 +140,7 @@ button[disabled] {
 .radio,
 .checkbox {
   cursor: pointer;
+  text-wrap: balance;
   position: relative;
   display: inline-block;
   margin-bottom: 0.5rem;

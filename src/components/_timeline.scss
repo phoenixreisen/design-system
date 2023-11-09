@@ -237,6 +237,7 @@ $circle-position-left: 0.6rem;
 }
 
 .timeline .timeline-box .timeline-content {
+    text-wrap: balance;
     min-height: $content-min-height;
     padding-left: $axis-position-left + 0.5;
 }
