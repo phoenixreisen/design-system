@@ -41,6 +41,10 @@
   transition: opacity 500ms ease;
 }
 
+/**
+ * DEPRECATED!
+ * Nur wegen Abwärtskompatiblität noch drin.
+ **/
 .fade-out {
   position: absolute;
   top: -1000em;
