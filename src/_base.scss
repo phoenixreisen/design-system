@@ -39,6 +39,7 @@ h5,
 h6 {
   font-weight: 500;
   line-height: 140%;
+  text-wrap: balance;
   color: $primary-dark;
   font-family: $heading;
 }
@@ -63,6 +64,7 @@ h5 { font-size: 1rem; }
 h6 { font-size: 1rem; }
 
 p {
+  text-wrap: wrap;
   padding-bottom: 0.75rem;
 }
 
@@ -124,6 +126,11 @@ ul {
   line-height: 150%;
   margin-left: 2rem;
   padding: 0 0 1rem;
+}
+
+ol li,
+ul li {
+  text-wrap: wrap;
 }
 
 ol {
