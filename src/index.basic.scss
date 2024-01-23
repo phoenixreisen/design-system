@@ -1,6 +1,22 @@
 // Phx generic values (Variables, Mixins, etc.)
 @import "variables";
 
+// Phx standards
+@import "base";
+
+// Used 3rd party vendor libs
+@import "vendors/animate";
+@import "vendors/tachyons";
+
+// Phx utilities
+@import "utilities/grid";
+@import "utilities/width";
+@import "utilities/colors";
+@import "utilities/wrapper";
+@import "utilities/flexbox";
+@import "utilities/typography";
+@import "utilities/visibility";
+
 // Phx components
 @import "components/forms";
 @import "components/table";
@@ -10,16 +26,3 @@
 @import "components/loader";
 @import "components/buttons";
 @import "components/notification";
-
-// Phx utilities
-@import "utilities/grid";
-@import "utilities/colors";
-@import "utilities/wrapper";
-@import "utilities/visibility";
-
-// Used 3rd party vendor libs
-@import "vendors/animate";
-@import "vendors/tachyons";
-
-// Phx standards
-@import "base";

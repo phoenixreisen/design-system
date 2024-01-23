@@ -1,6 +1,24 @@
 // Phx generic values (Variables, Mixins, etc.)
 @import "variables";
 
+// Phx standards
+@import "base";
+
+// Used 3rd party vendor libs
+@import "vendors/tachyons";
+@import "vendors/pikaday";
+@import "vendors/animate";
+@import "vendors/swiper";
+
+// Phx utilities
+@import "utilities/grid";
+@import "utilities/width";
+@import "utilities/colors";
+@import "utilities/wrapper";
+@import "utilities/flexbox";
+@import "utilities/typography";
+@import "utilities/visibility";
+
 // Phx components
 @import "components/tabs";
 @import "components/forms";
@@ -19,19 +37,3 @@
 @import "components/accordeon";
 @import "components/navigation";
 @import "components/notification";
-
-// Phx utilities
-@import "utilities/grid";
-@import "utilities/width";
-@import "utilities/colors";
-@import "utilities/wrapper";
-@import "utilities/visibility";
-
-// Used 3rd party vendor libs
-@import "vendors/pikaday";
-@import "vendors/animate";
-@import "vendors/tachyons";
-@import "vendors/swiper";
-
-// Phx standards
-@import "base";
