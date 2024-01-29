@@ -9,10 +9,21 @@ Styleguide 600.0
 [React](https://github.com/phoenixreisen/reacts/tree/main/src/loader)
 
 Markup:
+<div class="loader-parent gray6" style="height: 250px">
+    <article class="loader">
+        <p class="loader__spinner">
+            <img src="/imgs/ship.gif" alt="Schiff" />
+            <br />
+            <i class="fab fa-cuttlefish fa-spin mr1"></i>
+            Daten werden geladen...
+        </p>
+    </article>
+</div>
 <div class="loader-parent gray6" style="height: 200px">
     <article class="loader {{modifier_class}}">
         <p class="loader__spinner">
-            <i class="fab fa-cuttlefish fa-spin"></i><br />
+            <i class="fab fa-cuttlefish fa-spin"></i>
+            <br />
             Daten werden geladen...
         </p>
     </article>
@@ -61,5 +72,9 @@ Markup:
   }
   > img {
     border-radius: 6px;
+  }
+  > img ~ i {
+    color: $gray2;
+    font-size: 1rem;
   }
 }

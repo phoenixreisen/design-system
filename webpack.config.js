@@ -65,6 +65,9 @@ module.exports = {
         }, {
             from: './netlify.toml',
             to: './netlify.toml'
+        }, {
+            from: './src/images/',
+            to: './imgs/'
         }]}),
         new MiniCssExtractPlugin({
             filename: `${filename}.css`,
