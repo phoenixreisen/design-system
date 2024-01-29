@@ -59,4 +59,7 @@ Markup:
     font-size: 2rem;
     color: $primary-dark;
   }
+  > img {
+    border-radius: 6px;
+  }
 }
