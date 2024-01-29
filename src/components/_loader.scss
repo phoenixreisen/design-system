@@ -42,6 +42,23 @@ Markup:
   text-align: center;
 }
 
+.loader__spinner {
+  text-align: center;
+  line-height: 1.5rem;
+
+  > i {
+    font-size: 2rem;
+    color: $primary-dark;
+  }
+  > img {
+    border-radius: 6px;
+  }
+  > img ~ i {
+    color: $gray2;
+    font-size: 1rem;
+  }
+}
+
 .loader--overlay {
   position: absolute;
   top: 0;
@@ -59,22 +76,5 @@ Markup:
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-
-.loader__spinner {
-  text-align: center;
-  line-height: 1.5rem;
-
-  > i {
-    font-size: 2rem;
-    color: $primary-dark;
-  }
-  > img {
-    border-radius: 6px;
-  }
-  > img ~ i {
-    color: $gray2;
-    font-size: 1rem;
   }
 }
