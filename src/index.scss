@@ -4,20 +4,9 @@
 // Phx standards
 @import "base";
 
-// Used 3rd party vendor libs
-@import "vendors/tachyons";
-@import "vendors/pikaday";
-@import "vendors/animate";
+// Used 3rd party vendor component libs
 @import "vendors/swiper";
-
-// Phx utilities
-@import "utilities/grid";
-@import "utilities/width";
-@import "utilities/colors";
-@import "utilities/wrapper";
-@import "utilities/flexbox";
-@import "utilities/typography";
-@import "utilities/visibility";
+@import "vendors/pikaday";
 
 // Phx components
 @import "components/tabs";
@@ -37,3 +26,16 @@
 @import "components/accordeon";
 @import "components/navigation";
 @import "components/notification";
+
+// Vendor utilities
+@import "vendors/animate";
+@import "vendors/tachyons";
+
+// Phx utilities
+@import "utilities/grid";
+@import "utilities/width";
+@import "utilities/colors";
+@import "utilities/wrapper";
+@import "utilities/flexbox";
+@import "utilities/typography";
+@import "utilities/visibility";
