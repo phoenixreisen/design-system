@@ -4,10 +4,6 @@
 // Phx standards
 @import "base";
 
-// Used 3rd party vendor component libs
-@import "vendors/swiper";
-@import "vendors/pikaday";
-
 // Phx components
 @import "components/tabs";
 @import "components/forms";
@@ -30,6 +26,8 @@
 // Vendor utilities
 @import "vendors/animate";
 @import "vendors/tachyons";
+@import "vendors/pikaday";
+@import "vendors/swiper";
 
 // Phx utilities
 @import "utilities/grid";
