@@ -372,13 +372,14 @@ Styleguide 400.30
 }
 
 .switch__input {
-  display: inline-block;
-  position: relative;
-  margin-top: 0.3rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  height: 34px;
   width: 60px;
+  height: 34px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+  position: relative;
+  display: inline-block;
+  border: 1px solid transparent;
 
   @media all and (min-width: $M) {
     margin-top: 0.2rem;
@@ -388,6 +389,14 @@ Styleguide 400.30
     width: 0;
     height: 0;
     opacity: 0;
+  }
+  
+  &:focus,
+  &:active,
+  &:focus-within {
+    border-radius: 0.2rem;
+    border-color: $primary;
+    box-shadow: 0 0 4px $primary;
   }
 }
 
@@ -416,7 +425,7 @@ Styleguide 400.30
     height: 26px;
     position: absolute;
     left: 4px;
-    bottom: 4px;
+    bottom: 3px;
     background-color: white;
     border-radius: 0.2rem;
     transition: 0.4s;
@@ -432,9 +441,9 @@ input:focus + .switch__slider {
 }
 
 input:checked + .switch__slider::before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
 }
 
 /*
