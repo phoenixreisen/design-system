@@ -157,6 +157,11 @@ button[disabled] {
     border: 2px solid $gray4;
     background-color: $white;
   }
+
+  &:active,
+  &:focus-within {
+    border-bottom: 2px solid $primary;
+  }
 }
 
 .checkbox input[type="checkbox"],
