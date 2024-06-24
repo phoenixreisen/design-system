@@ -9,7 +9,7 @@
 }
 
 .mobile-only {
-  @media all and (min-width: $M) {
+  @media all and (min-width: ($M - 1)) {
     display: none !important;
   }
 }
