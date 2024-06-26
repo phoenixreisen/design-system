@@ -130,6 +130,15 @@ Styleguide 950.3
         }
     }
 
+    .tip.tip--text {
+        > * {
+            border-radius: 3px;
+            padding: 0.2rem 0.5rem;
+            display: inline-block;
+            white-space: nowrap;
+        }
+    }
+
     .tip.tip--visible {
         opacity: 1;
         z-index: 100;
@@ -170,10 +179,5 @@ Styleguide 950.3
             left: 110%;
             text-align: left;
         }
-    }
-
-    .tip .tip--colored {
-        border-radius: 3px;
-        padding: 0.2rem 0.5rem;
     }
 }
