@@ -10,6 +10,6 @@
   "devDependencies": {
     "highlight.js": "^11.0.1",
     "sass": "^1.56.1",
-    "sass-loader": "^13.2.0"
+    "sass-loader": "^14.2.1"
   }
 }
