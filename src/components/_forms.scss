@@ -108,7 +108,7 @@ select:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
 }
 
-.disabled {
+%disabled {
   cursor: default;
   opacity: 0.5;
   pointer-events: none;
@@ -118,10 +118,10 @@ select:-webkit-autofill {
 .select [disabled],
 .checkbox [disabled],
 .textfield [disabled] {
-  @extend .disabled;
+  @extend %disabled;
 
   & + * {
-    @extend .disabled;
+    @extend %disabled;
   }
 }
 
@@ -129,7 +129,7 @@ select:-webkit-autofill {
 [type="submit"][disabled],
 fieldset[disabled] input,
 button[disabled] {
-  @extend .disabled;
+  @extend %disabled;
 }
 
 //
@@ -259,10 +259,10 @@ Radio
 Markup:
 <label class="radio {{modifier_class}}">
   <input
-    type="radio"
     name=""
     checked=""
     onclick=""
+    type="radio"
   />
   <span class="radio__label">
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
@@ -271,8 +271,22 @@ Markup:
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
   </span>
 </label>
-
-.disabled - disabled
+<p><em>Deaktiviert</em></p>
+<label class="radio {{modifier_class}}">
+  <input
+    name=""
+    checked=""
+    onclick=""
+    type="radio"
+    disabled="disabled"
+  />
+  <span class="radio__label">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+  </span>
+</label>
 
 Styleguide 400.10
 
@@ -308,7 +322,7 @@ Styleguide 400.10
 Checkbox
 
 Markup:
-<label class="checkbox {{modifier_class}}">
+<label class="checkbox">
   <input
     name=""
     checked=""
@@ -322,8 +336,22 @@ Markup:
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
   </span>
 </label>
-
-.disabled - disabled
+<p><em>Deaktiviert</em></p>
+<label class="checkbox">
+  <input
+    name=""
+    checked=""
+    onclick=""
+    type="checkbox"
+    disabled="disabled"
+  />
+  <span class="checkbox__label">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+  </span>
+</label>
 
 Styleguide 400.20
 
@@ -456,7 +484,7 @@ input:checked + .switch__slider::before {
 Input & Textareas
 
 Markup:
-<label class="textfield {{modifier_class}}">
+<label class="textfield">
   <input
     type="text"
     name=""
@@ -468,7 +496,7 @@ Markup:
   />
   <span class="textfield__label">Input</span>
 </label>
-<label class="textfield {{modifier_class}}">
+<label class="textfield">
   <textarea
     name=""
     value=""
@@ -478,8 +506,31 @@ Markup:
   </textarea>
   <span class="textfield__label">Textarea</span>
 </label>
-
-.disabled - disabled
+<p><em>Deaktiviert</em></p>
+<label class="textfield">
+  <input
+    type="text"
+    name=""
+    value=""
+    oninput=""
+    maxlength=""
+    autocomplete=""
+    placeholder="..."
+    disabled="disabled"
+  />
+  <span class="textfield__label">Input</span>
+</label>
+<label class="textfield">
+  <textarea
+    name=""
+    value=""
+    oninput=""
+    maxlength=""
+    placeholder="..."
+    disabled="disabled">
+  </textarea>
+  <span class="textfield__label">Textarea</span>
+</label>
 
 Styleguide 400.40
 
@@ -551,10 +602,22 @@ Markup:
     <option value="">Option 2</option>
     <option value="">Option 3</option>
   </select>
-  <span class="select__label">Select Label</span>
+  <span class="select__label">
+    Select Label
+  </span>
 </label>
-
-.disabled - disabled
+<p><em>Deaktiviert</em></p>
+<label class="select {{modifier_class}}">
+  <select name="" onchange="" disabled="disabled">
+    <option selected="">Select</option>
+    <option value="">Option 1</option>
+    <option value="">Option 2</option>
+    <option value="">Option 3</option>
+  </select>
+  <span class="select__label">
+    Select Label
+  </span>
+</label>
 
 Styleguide 400.60
 
@@ -572,12 +635,6 @@ Styleguide 400.60
     right: 1rem;
     height: 0;
     width: 0;
-  }
-}
-
-.select.disabled {
-  &::after {
-    border-top: 0.4rem solid $gray3;
   }
 }
 
