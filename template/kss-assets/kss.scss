@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // ------------------------------------------------------------------------------
 //   Variables - Colors, Fonts, etc.
 // ------------------------------------------------------------------------------
@@ -8,9 +10,9 @@ $kss-colors-heading       : #111;
 $kss-colors-quotes        : #666;
 
 $kss-colors-link          : #0645ad;
-$kss-colors-link-visited  : #0645ad;
-$kss-colors-link-hover    : lighten($kss-colors-link, 20%);
 $kss-colors-link-active   : #faa700;
+$kss-colors-link-visited  : #0645ad;
+$kss-colors-link-hover    : color.adjust($kss-colors-link, $lightness: 20%);
 
 $kss-font-body            : Helvetica, 'Helvetica Neue', Arial, sans-serif;
 $kss-font-code            : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
@@ -82,8 +84,8 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     display: block;
     height: 2px;
     border: 0;
-    border-top: 1px solid lighten($kss-colors-foreground, 60%);
-    border-bottom: 1px solid darken($kss-colors-background, 10%);
+    border-top: 1px solid color.adjust($kss-colors-foreground, $lightness: 60%);
+    border-bottom: 1px solid color.adjust($kss-colors-background, $lightness: 10%);
     margin: $kss-vertical-rhythm 0;
     padding: 0;
   }

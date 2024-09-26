@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /*
 
 Buttons
@@ -57,7 +59,7 @@ Styleguide 300.10
   background:
     $primary linear-gradient(
       to bottom right,
-      lighten($primary, 5%) 0%,
+      color.adjust($primary, $lightness: 5%) 0%,
       $primary 100%
     );
 

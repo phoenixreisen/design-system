@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // A beautiful selection of our branded colors
 //
 // Styleguide
@@ -12,8 +14,8 @@ $primary-dark: #00377a !default;
 $light-blue: $primary !default;
 $dark-blue: $primary-dark !default;
 $link: $primary !default;
-$link--hover: darken($link, 5%) !default;
-$link--active: darken($link, 15%) !default;
+$link--hover: color.adjust($link, $lightness: 5%) !default;
+$link--active: color.adjust($link, $lightness: 15%) !default;
 
 // Dunkle Grautöne
 $gray1: #333 !default;
@@ -42,14 +44,14 @@ $staging: #ffd700;    // Gelb
 // Transformationen von existierenden Farben (shading)
 $lighten-grade: 45%;
 $darken-grade: 15%;
-$dark-info: darken($info, $darken-grade);
-$dark-danger: darken($danger, $darken-grade);
-$dark-success: darken($success, $darken-grade);
-$dark-warning: darken($warning, $darken-grade);
-$light-info: lighten($info, $lighten-grade);
-$light-danger: lighten($danger, $lighten-grade);
-$light-success: lighten($success, $lighten-grade);
-$light-warning: lighten($warning, $lighten-grade);
+$dark-info: color.adjust($info, $lightness: - $darken-grade);
+$dark-danger: color.adjust($danger, $lightness: - $darken-grade);
+$dark-success: color.adjust($success, $lightness: - $darken-grade);
+$dark-warning: color.adjust($warning, $lightness: - $darken-grade);
+$light-info: color.adjust($info, $lightness: $lighten-grade);
+$light-danger: color.adjust($danger, $lightness: $lighten-grade);
+$light-success: color.adjust($success, $lightness: $lighten-grade);
+$light-warning: color.adjust($warning, $lightness: $lighten-grade);
 
 // Typografie
 //
