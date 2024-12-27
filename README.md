@@ -121,6 +121,30 @@ require('@phoenixreisen/design-system/src/fonts/titillium.css');
 
 Wird im Service die index.js des Design-System inkludiert, so sind die Font-Imports bereits enthalten.
 
+## Icons / Iconset / Icon Font
+
+Das verwendete Iconset bzw. die Icon Font ist die free version von ```Font Awesome 5```. Es gibt mittlerweile auch Version 6, die ist allerdings nicht free. Version 5 hat bislang für alles gereicht.
+
+### Icon Suche
+
+https://fontawesome.com/v5/search?o=r&m=free
+
+### npm package - Installationsanweisung
+
+https://www.npmjs.com/package/@fortawesome/fontawesome-free/v/5.1.0-9
+
+### Weitere Sets
+
+Alle sonstigen verfügbaren Sets sind unter folgender URL ersichtlich:
+
+https://fortawesome.com/sets
+
+Zurzeit ist eingebunden:
+
+- Fontawesome 5 - Regular
+- Fontawesome 5 - Solid
+- Fontawesome 5 - Brand
+
 ## Authors
 
 * Fabian Marcus (<f.marcus@phoenixreisen.com>)
